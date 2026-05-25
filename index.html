@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -2487,7 +2488,7 @@ footer {
     <h2>Your first consultation<br>is <em>complimentary.</em></h2>
     <p>A focused conversation about your tax situation and where the real opportunities are. No pressure. No commitment. Just clarity from people who genuinely understand your world.</p>
     <div class="cta-btns">
-      <a href="tel:+18089467297" class="btn-white">☎ Call 808-946-7297</a>
+      <a href="#contact" class="btn-white">☎ Call 808-946-7297</a>
       <a href="https://rptaxservice.taxdome.com/login" target="_blank" class="btn-teal">Access Client Portal</a>
     </div>
     <p class="cta-note">In-office or online service available · Honolulu · Nevada · Utah · California</p>
@@ -2629,10 +2630,155 @@ document.getElementById('faq-list').addEventListener('click', e => {
   }
 });
 document.querySelector('.portal-sign-in').addEventListener('click', function(e) {
-  if (this.tagName === 'A') return; // let link work
+  if (this.tagName === 'A') return;
   e.preventDefault();
-  window.open('https://rptaxservice.taxdome.com', '_blank');
+  window.open('https://rptaxservice.taxdome.com/login', '_blank');
+});
+
+// ── CONTACT MODAL ──
+function openModal(subject) {
+  document.getElementById('contact-modal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+  if (subject) document.getElementById('modal-subject').value = subject;
+}
+function closeModal() {
+  document.getElementById('contact-modal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+// Wire up all CTA buttons that point to #contact
+document.querySelectorAll('a[href="#contact"]').forEach(btn => {
+  btn.addEventListener('click', e => {
+    e.preventDefault();
+    const subject = btn.textContent.trim().includes('Collectibles') ? 'Collectibles Tax Strategy' :
+                    btn.textContent.trim().includes('Set Up') ? 'Accountable Plan Setup' :
+                    btn.textContent.trim().includes('IRS') ? 'IRS Resolution Help' :
+                    'General Inquiry';
+    openModal(subject);
+  });
+});
+
+// Close on backdrop click
+document.getElementById('contact-modal').addEventListener('click', e => {
+  if (e.target === document.getElementById('contact-modal')) closeModal();
+});
+
+// Close on ESC
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+// Form submission
+document.getElementById('contact-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const name    = document.getElementById('modal-name').value;
+  const phone   = document.getElementById('modal-phone').value;
+  const email   = document.getElementById('modal-email').value;
+  const subject = document.getElementById('modal-subject').value;
+  const message = document.getElementById('modal-message').value;
+  const body = `Name: ${name}%0APhone: ${phone}%0AEmail: ${email}%0A%0ASubject: ${subject}%0A%0AMessage:%0A${encodeURIComponent(message)}`;
+  window.location.href = `mailto:Admin@rptaxes.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+  // Show thank you state
+  document.getElementById('contact-form').innerHTML = `
+    <div style="text-align:center;padding:40px 20px">
+      <div style="font-size:48px;margin-bottom:16px">✅</div>
+      <h3 style="font-family:'Libre Baskerville',serif;font-size:24px;color:var(--navy);margin-bottom:12px">Thank you, ${name}!</h3>
+      <p style="color:var(--text-body);font-size:15px;line-height:1.7">Your message has been sent to our team. We'll be in touch shortly.<br>Or call us directly: <a href="tel:+18089467297" style="color:var(--teal);font-weight:600">808-946-7297</a></p>
+      <button onclick="closeModal()" style="margin-top:24px;background:var(--teal);color:#fff;border:none;padding:12px 32px;border-radius:4px;font-size:14px;cursor:pointer;font-family:'Source Sans 3',sans-serif">Close</button>
+    </div>`;
 });
 </script>
+
+<!-- ── CONTACT MODAL ── -->
+<div id="contact-modal" style="
+  display:none; position:fixed; inset:0; z-index:1000;
+  background:rgba(28,48,80,0.7); backdrop-filter:blur(4px);
+  align-items:center; justify-content:center; padding:20px;
+">
+<div style="
+  background:#fff; border-radius:12px; width:100%; max-width:520px;
+  box-shadow:0 20px 60px rgba(28,48,80,0.25); overflow:hidden;
+  max-height:90vh; overflow-y:auto;
+">
+  <!-- Header -->
+  <div style="background:var(--teal-deeper);padding:24px 28px;display:flex;align-items:center;justify-content:space-between">
+    <div>
+      <h3 style="font-family:'Libre Baskerville',serif;font-size:20px;color:#fff;font-weight:400;margin-bottom:4px">Get in Touch</h3>
+      <p style="font-size:12px;color:rgba(255,255,255,0.6)">We'll get back to you within 1 business day</p>
+    </div>
+    <button onclick="closeModal()" style="background:rgba(255,255,255,0.1);border:none;color:#fff;width:32px;height:32px;border-radius:50%;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;line-height:1">×</button>
+  </div>
+  <!-- Body -->
+  <div style="padding:28px">
+    <!-- Quick contact strip -->
+    <div style="display:flex;gap:10px;margin-bottom:24px;flex-wrap:wrap">
+      <a href="tel:+18089467297" style="flex:1;min-width:140px;display:flex;align-items:center;gap:8px;background:var(--teal-pale);border:1px solid var(--border);border-radius:6px;padding:10px 14px;text-decoration:none;color:var(--navy);font-size:13px;font-weight:500">
+        <span style="font-size:16px">📞</span> 808-946-7297
+      </a>
+      <a href="mailto:Admin@rptaxes.com" style="flex:1;min-width:140px;display:flex;align-items:center;gap:8px;background:var(--teal-pale);border:1px solid var(--border);border-radius:6px;padding:10px 14px;text-decoration:none;color:var(--navy);font-size:13px;font-weight:500">
+        <span style="font-size:16px">✉️</span> Email Us
+      </a>
+    </div>
+    <div style="text-align:center;color:var(--text-muted);font-size:12px;margin-bottom:20px;position:relative">
+      <span style="background:#fff;padding:0 12px;position:relative;z-index:1">or send us a message</span>
+      <div style="position:absolute;top:50%;left:0;right:0;height:1px;background:var(--border-sub)"></div>
+    </div>
+    <form id="contact-form">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px">
+        <div>
+          <label style="display:block;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-muted);margin-bottom:5px;font-weight:500">Your Name *</label>
+          <input id="modal-name" type="text" required placeholder="First Last"
+            style="width:100%;background:#fff;border:1px solid var(--border-sub);border-radius:5px;padding:10px 13px;color:var(--text-dark);font-family:'Source Sans 3',sans-serif;font-size:14px;outline:none">
+        </div>
+        <div>
+          <label style="display:block;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-muted);margin-bottom:5px;font-weight:500">Phone Number</label>
+          <input id="modal-phone" type="tel" placeholder="(808) 000-0000"
+            style="width:100%;background:#fff;border:1px solid var(--border-sub);border-radius:5px;padding:10px 13px;color:var(--text-dark);font-family:'Source Sans 3',sans-serif;font-size:14px;outline:none">
+        </div>
+      </div>
+      <div style="margin-bottom:12px">
+        <label style="display:block;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-muted);margin-bottom:5px;font-weight:500">Email Address *</label>
+        <input id="modal-email" type="email" required placeholder="you@email.com"
+          style="width:100%;background:#fff;border:1px solid var(--border-sub);border-radius:5px;padding:10px 13px;color:var(--text-dark);font-family:'Source Sans 3',sans-serif;font-size:14px;outline:none">
+      </div>
+      <div style="margin-bottom:12px">
+        <label style="display:block;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-muted);margin-bottom:5px;font-weight:500">How Can We Help?</label>
+        <select id="modal-subject"
+          style="width:100%;background:#fff;border:1px solid var(--border-sub);border-radius:5px;padding:10px 13px;color:var(--text-dark);font-family:'Source Sans 3',sans-serif;font-size:14px;outline:none;appearance:none">
+          <option value="General Inquiry">General Inquiry</option>
+          <option value="Personal Tax Return">Personal Tax Return</option>
+          <option value="Business Tax Return">Business Tax Return</option>
+          <option value="Tax Planning & Strategy">Tax Planning &amp; Strategy</option>
+          <option value="IRS Resolution Help">IRS Resolution Help</option>
+          <option value="Crypto & Investment Taxes">Crypto &amp; Investment Taxes</option>
+          <option value="Collectibles Tax Strategy">Collectibles Tax Strategy</option>
+          <option value="S-Corp Optimization">S-Corp Optimization</option>
+          <option value="Accountable Plan Setup">Accountable Plan Setup</option>
+          <option value="Extension Request">Extension Request</option>
+          <option value="New Client Application">New Client Application</option>
+        </select>
+      </div>
+      <div style="margin-bottom:20px">
+        <label style="display:block;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-muted);margin-bottom:5px;font-weight:500">Message</label>
+        <textarea id="modal-message" rows="3" placeholder="Tell us a little about your situation..."
+          style="width:100%;background:#fff;border:1px solid var(--border-sub);border-radius:5px;padding:10px 13px;color:var(--text-dark);font-family:'Source Sans 3',sans-serif;font-size:14px;outline:none;resize:vertical"></textarea>
+      </div>
+      <button type="submit" style="width:100%;background:var(--teal);color:#fff;border:none;border-radius:6px;padding:14px;font-family:'Source Sans 3',sans-serif;font-size:15px;font-weight:500;cursor:pointer;letter-spacing:0.03em;transition:background 0.25s">
+        Send Message →
+      </button>
+      <p style="text-align:center;font-size:11px;color:var(--text-muted);margin-top:12px">
+        Or call us directly: <a href="tel:+18089467297" style="color:var(--teal)">808-946-7297</a> · <a href="mailto:Admin@rptaxes.com" style="color:var(--teal)">Admin@rptaxes.com</a>
+      </p>
+    </form>
+  </div>
+</div>
+</div>
+
+<style>
+#contact-modal { display:none; }
+#contact-modal.open { display:flex; }
+#contact-modal input:focus,
+#contact-modal select:focus,
+#contact-modal textarea:focus { border-color:var(--teal) !important; }
+</style>
+
 </body>
 </html>
