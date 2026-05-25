@@ -53,24 +53,24 @@ h1,h2,h3 { color:var(--text-dark); }
 /* ── TOP BAR ── */
 .topbar {
   background:var(--teal-deeper);
-  padding:11px 0;
+  padding:10px 16px;
   text-align:center;
-  font-size:15px;
+  font-size:14px;
   font-weight:500;
-  color:#fff;
-  letter-spacing:0.02em;
-  border-bottom:2px solid var(--teal-dark);
+  color:rgba(255,255,255,0.9);
+  letter-spacing:0.03em;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
 }
 .topbar a {
   color:#fff;
   text-decoration:none;
-  font-weight:700;
-  background:rgba(255,255,255,0.15);
-  padding:3px 12px;
-  border-radius:20px;
-  transition:background 0.2s;
+  font-weight:600;
+  border-bottom:1px solid rgba(255,255,255,0.4);
+  transition:border-color 0.2s;
 }
-.topbar a:hover { background:rgba(255,255,255,0.25); }
+.topbar a:hover { border-bottom-color:#fff; }
 
 /* ── NAV ── */
 nav {
@@ -1220,8 +1220,7 @@ footer {
 @media(max-width:600px){
   body { font-size:17px; }
   .container { padding:0 20px; }
-.topbar { font-size:13px; padding:10px 12px; }
-  .topbar a { font-size:13px; display:inline-block; margin-top:2px; }
+  .topbar { font-size:13px; padding:9px 12px; }
   .topbar-locations { display:none; }
   .nav-inner { height:64px; }
   .hero h1 { font-size:clamp(34px,9vw,50px); }
@@ -1249,9 +1248,7 @@ footer {
 
 <!-- TOP BAR -->
 <div class="topbar">
-  <span class="topbar-locations">📍 Honolulu &nbsp;·&nbsp; Nevada &nbsp;·&nbsp; Utah &nbsp;·&nbsp; California</span>
-  &nbsp;&nbsp;
-  <a href="tel:+18089467297">☎ 808-946-7297</a>
+  <span class="topbar-locations">Honolulu &nbsp;·&nbsp; Nevada &nbsp;·&nbsp; Utah &nbsp;·&nbsp; California &nbsp;·&nbsp;</span><a href="tel:+18089467297">808-946-7297</a>
 </div>
 
 <!-- NAV -->
@@ -1268,7 +1265,7 @@ footer {
         <li><a href="#collectibles">Collectibles</a></li>
         <li><a href="#faq">FAQ</a></li>
         <li><a href="#extension">Extension</a></li>
-        <li><a href="#portal-new" class="nav-portal-btn">🔒 Client Portal</a></li>
+        <li><a href="#portal-new" class="nav-portal-btn">Client Portal</a></li>
         <li><a href="#contact" class="nav-cta-btn">Free Consultation</a></li>
       </ul>
       <button class="hamburger" id="hamburger" aria-label="Menu">☰</button>
@@ -1295,22 +1292,19 @@ footer {
           Personal taxes, business returns, IRS problems, crypto — we've seen it all. Affordable rates, fast turnaround, and advice that actually helps.
         </p>
         <div class="hero-ctas">
-          <a href="tel:+18089467297" class="btn-teal">☎ Call 808-946-7297</a>
+          <a href="tel:+18089467297" class="btn-teal">Call 808-946-7297</a>
           <a href="#contact" class="btn-outline-light" data-modal="Schedule a Free Consultation">Schedule a Free Consultation</a>
         </div>
         <div class="hero-trust">
           <div class="hero-trust-item">
-            <span class="hero-trust-icon">⭐</span>
-            <span>4.6 Google · 4.5 Yelp</span>
+            <span>★ 4.6 Google · 4.5 Yelp</span>
           </div>
           <div class="hero-trust-sep"></div>
           <div class="hero-trust-item">
-            <span class="hero-trust-icon">🏅</span>
             <span>Top 3 Tax Service in Honolulu</span>
           </div>
           <div class="hero-trust-sep"></div>
           <div class="hero-trust-item">
-            <span class="hero-trust-icon">🌺</span>
             <span>In-Office or Online</span>
           </div>
         </div>
@@ -1337,7 +1331,7 @@ footer {
               <a href="#contact">Become a client →</a>
             </div>
             <div class="portal-taxdome-note">
-              <span style="font-size:20px">🔒</span>
+              
               <span>
                 <strong>Secured by TaxDome</strong>
                 Encrypted document portal · E-signatures · Year-round access
@@ -1458,22 +1452,22 @@ footer {
     <p class="section-body">From personal filers to complex business structures — we've helped thousands of clients navigate their unique tax situations.</p>
     <div class="who-grid">
       <div class="who-card">
-        <div class="who-icon">🏢</div>
+        
         <h3>Business Owners</h3>
         <p>Entity optimization, deduction strategy, and proactive planning designed around your operations and growth goals.</p>
       </div>
       <div class="who-card">
-        <div class="who-icon">💼</div>
+        
         <h3>Self-Employed &amp; Contractors</h3>
         <p>SE tax minimization, quarterly planning, home office, vehicle strategy, and retirement accounts for independents.</p>
       </div>
       <div class="who-card">
-        <div class="who-icon">🏠</div>
+        
         <h3>Real Estate Investors</h3>
         <p>Cost segregation, bonus depreciation, short-term rental strategies, and 1031 exchange planning.</p>
       </div>
       <div class="who-card">
-        <div class="who-icon">👨‍👩‍👧</div>
+        
         <h3>Families &amp; Individuals</h3>
         <p>Personal tax returns, life event planning, education credits, and charitable giving strategies.</p>
       </div>
@@ -1483,7 +1477,7 @@ footer {
         <p>Cryptocurrency tax compliance, capital gains strategy, investment loss harvesting, and cost basis tracking.</p>
       </div>
       <div class="who-card">
-        <div class="who-icon">🚀</div>
+        
         <h3>Entrepreneurs</h3>
         <p>From startup structure to scaling — we help entrepreneurs make financially intelligent decisions at every stage.</p>
       </div>
@@ -1509,7 +1503,7 @@ footer {
       </div>
       <div id="svc-panels">
         <div class="svc-panel active" id="p-tax-plan">
-          <div class="svc-icon-wrap">📊</div>
+          
           <h3>Tax Planning &amp; Strategy</h3>
           <p>Proactive, year-round planning that positions you before opportunities close. We analyze your current situation, model future scenarios, and create a clear roadmap to legally minimize your tax burden.</p>
           <div class="svc-points">
@@ -1523,7 +1517,7 @@ footer {
           <a href="#contact" class="btn-teal">Discuss Tax Planning</a>
         </div>
         <div class="svc-panel" id="p-entity">
-          <div class="svc-icon-wrap">🏗</div>
+          
           <h3>Entity Structuring</h3>
           <p>The right business structure is one of the highest-leverage decisions you can make. We help you build, restructure, or optimize the legal entity that best protects your assets and minimizes tax exposure.</p>
           <div class="svc-points">
@@ -1537,7 +1531,7 @@ footer {
           <a href="#contact" class="btn-teal">Discuss Entity Structure</a>
         </div>
         <div class="svc-panel" id="p-scorp">
-          <div class="svc-icon-wrap">⚙️</div>
+          
           <h3>S-Corp Optimization</h3>
           <p>Converting to an S-Corp at the right time can save self-employed professionals thousands annually by reducing self-employment tax. We handle the analysis, election, setup, and ongoing management.</p>
           <div class="svc-points">
@@ -1551,7 +1545,7 @@ footer {
           <a href="#contact" class="btn-teal">Explore S-Corp Savings</a>
         </div>
         <div class="svc-panel" id="p-realestate">
-          <div class="svc-icon-wrap">🏠</div>
+          
           <h3>Real Estate Tax Strategy</h3>
           <p>Real estate offers some of the most powerful tax advantages in the code. We help investors structure portfolios, use depreciation aggressively, and protect gains through intelligent planning.</p>
           <div class="svc-points">
@@ -1579,7 +1573,7 @@ footer {
           <a href="#contact" class="btn-teal">Discuss Crypto Taxes</a>
         </div>
         <div class="svc-panel" id="p-bookkeeping">
-          <div class="svc-icon-wrap">📒</div>
+          
           <h3>Bookkeeping &amp; Payroll</h3>
           <p>Accurate, strategic bookkeeping is the foundation of good tax planning. We provide clean, audit-ready records and payroll services designed to support your overall advisory strategy.</p>
           <div class="svc-points">
@@ -1593,7 +1587,7 @@ footer {
           <a href="#contact" class="btn-teal">Get Bookkeeping Help</a>
         </div>
         <div class="svc-panel" id="p-retirement">
-          <div class="svc-icon-wrap">🏦</div>
+          
           <h3>Retirement Planning</h3>
           <p>Business owners have access to some of the most powerful tax-advantaged retirement vehicles available. We help you identify the right accounts and use retirement planning as an active tax reduction tool.</p>
           <div class="svc-points">
@@ -1607,7 +1601,7 @@ footer {
           <a href="#contact" class="btn-teal">Plan Retirement Strategy</a>
         </div>
         <div class="svc-panel" id="p-irs">
-          <div class="svc-icon-wrap">🏛</div>
+          
           <h3>IRS Resolution</h3>
           <p>Receiving IRS correspondence is stressful. We handle communication on your behalf, negotiate settlements, resolve back taxes, and create payment plans — so you can focus on your business.</p>
           <div class="svc-points">
@@ -1796,17 +1790,17 @@ footer {
       </div>
       <div>
         <div class="collect-benefit">
-          <span class="collect-benefit-icon">📦</span>
+          
           <h4>Hobby vs. Business Income</h4>
           <p>The IRS distinction between hobby income and business income changes everything. We help you qualify as a business — so your expenses are deductible.</p>
         </div>
         <div class="collect-benefit">
-          <span class="collect-benefit-icon">💰</span>
+          
           <h4>Cost Basis &amp; Capital Gains</h4>
           <p>Know exactly what you paid for every card and collection. Proper cost basis tracking is the foundation of minimizing capital gains when you sell.</p>
         </div>
         <div class="collect-benefit">
-          <span class="collect-benefit-icon">🧾</span>
+          
           <h4>Platform Income &amp; 1099-Ks</h4>
           <p>eBay, TCGPlayer, StockX, and PayPal now issue 1099-Ks at lower thresholds. We help you reconcile these and avoid overpaying.</p>
         </div>
@@ -1858,19 +1852,19 @@ footer {
         <p class="section-body" style="margin-bottom:36px">We use TaxDome — a secure, professional client portal — so working with us is organized, efficient, and fully transparent. No chasing emails. No lost documents.</p>
         <div class="portal-features">
           <div class="pf-item">
-            <div class="pf-icon">🔒</div>
+            
             <div><h4>Secure Document Portal</h4><p>Upload, receive, and sign documents in one encrypted, organized location. Bank-level security.</p></div>
           </div>
           <div class="pf-item">
-            <div class="pf-icon">✍️</div>
+            
             <div><h4>E-Signatures &amp; Digital Workflows</h4><p>Sign returns, authorization forms, and engagement letters digitally — no printing required.</p></div>
           </div>
           <div class="pf-item">
-            <div class="pf-icon">📅</div>
+            
             <div><h4>Year-Round Access</h4><p>Your documents and communication history are always accessible, not just during tax season.</p></div>
           </div>
           <div class="pf-item">
-            <div class="pf-icon">🔔</div>
+            
             <div><h4>Progress Tracking</h4><p>Always know exactly where your return or project stands with real-time status updates.</p></div>
           </div>
         </div>
@@ -2094,19 +2088,19 @@ footer {
         <p style="font-size:14px;color:var(--text-body);line-height:1.7;margin-bottom:28px">Returning clients: log into your active portal account and upload your documents directly. New clients: fill out our application and we'll send you a link to get started — choose your login, upload your documents, and you're set.</p>
         <div class="portal-features">
           <div class="pf-item">
-            <div class="pf-icon">🔒</div>
+            
             <div><h4>Secure Document Upload</h4><p>Upload all your tax documents from the comfort of your home. Encrypted, organized, and always accessible.</p></div>
           </div>
           <div class="pf-item">
-            <div class="pf-icon">✍️</div>
+            
             <div><h4>E-Signatures</h4><p>Sign returns and authorization forms digitally — no printing, no scanning, no office trips required.</p></div>
           </div>
           <div class="pf-item">
-            <div class="pf-icon">💬</div>
+            
             <div><h4>Direct Communication</h4><p>Message your advisor directly through the portal. All communication stays organized in one place.</p></div>
           </div>
           <div class="pf-item">
-            <div class="pf-icon">📅</div>
+            
             <div><h4>Year-Round Access</h4><p>Your entire history — returns, documents, notes — available any time, not just tax season.</p></div>
           </div>
         </div>
@@ -2140,7 +2134,7 @@ footer {
               <a href="tel:+18089467297">Need help? Call us</a>
             </div>
             <div class="portal-taxdome-note">
-              <span style="font-size:20px">🔒</span>
+              
               <span>
                 <strong>Secured by TaxDome</strong>
                 Bank-level encryption · E-signatures · Year-round access
@@ -2161,7 +2155,7 @@ footer {
         <div class="section-tag">FAQ</div>
         <h3>Common questions,<br>straight answers.</h3>
         <p>Don't see your question here? Give us a call or schedule a free consultation — we're happy to help.</p>
-        <a href="tel:+18089467297" class="btn-teal" style="font-size:12px;padding:11px 22px">☎ 808-946-7297</a>
+        <a href="tel:+18089467297" class="btn-teal" style="font-size:12px;padding:11px 22px">808-946-7297</a>
       </div>
       <div class="faq-list" id="faq-list">
 
@@ -2263,7 +2257,7 @@ footer {
       <!-- LEFT: INFO -->
       <div>
         <div class="ext-info-box" style="margin-top:36px">
-          <h4>⚠ Important: Extension to File ≠ Extension to Pay</h4>
+          <h4>Important: Extension to File ≠ Extension to Pay</h4>
           <p>An extension gives you more time to <strong style="color:var(--navy)">file</strong> your return — it does <strong style="color:var(--navy)">not</strong> extend your time to pay. If you owe taxes, penalties and interest begin accruing after April 15th on any unpaid balance.</p>
         </div>
 
@@ -2641,7 +2635,7 @@ footer {
     <h2>Your first consultation<br>is <em>complimentary.</em></h2>
     <p>A focused conversation about your tax situation and where the real opportunities are. No pressure. No commitment. Just clarity from people who genuinely understand your world.</p>
     <div class="cta-btns">
-      <a href="tel:+18089467297" class="btn-white">☎ Call 808-946-7297</a>
+      <a href="tel:+18089467297" class="btn-white">Call 808-946-7297</a>
       <a href="https://rptaxservice.taxdome.com/login" target="_blank" class="btn-teal">Access Client Portal</a>
     </div>
     <p class="cta-note">In-office or online service available · Honolulu · Nevada · Utah · California</p>
@@ -2658,7 +2652,7 @@ footer {
         </a>
         <p>A family-owned strategic tax advisory firm with 15+ years serving Honolulu and beyond. Competence, speed, and accuracy — always.</p>
         <div class="footer-contact">
-          <a href="tel:+18089467297">☎ 808-946-7297</a>
+          <a href="tel:+18089467297">808-946-7297</a>
           <a href="mailto:Admin@rptaxes.com">Admin@rptaxes.com</a>
           <a href="https://www.rptaxservice.com" target="_blank">rptaxservice.com</a>
         </div>
@@ -2863,10 +2857,10 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
     <!-- Quick contact strip -->
     <div style="display:flex;gap:10px;margin-bottom:24px;flex-wrap:wrap">
       <a href="tel:+18089467297" style="flex:1;min-width:140px;display:flex;align-items:center;gap:8px;background:var(--teal-pale);border:1px solid var(--border);border-radius:6px;padding:10px 14px;text-decoration:none;color:var(--navy);font-size:13px;font-weight:500">
-        <span style="font-size:16px">📞</span> 808-946-7297
+        808-946-7297
       </a>
       <a href="mailto:Admin@rptaxes.com" style="flex:1;min-width:140px;display:flex;align-items:center;gap:8px;background:var(--teal-pale);border:1px solid var(--border);border-radius:6px;padding:10px 14px;text-decoration:none;color:var(--navy);font-size:13px;font-weight:500">
-        <span style="font-size:16px">✉️</span> Email Us
+        Email Us
       </a>
     </div>
     <div style="text-align:center;color:var(--text-muted);font-size:12px;margin-bottom:20px;position:relative">
