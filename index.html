@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -107,8 +106,8 @@ nav.elevated { box-shadow:var(--shadow-md); }
 }
 .nav-links a {
   display:flex; align-items:center;
-  padding:0 14px;
-  font-size:14px; color:var(--text-body);
+  padding:0 13px;
+  font-size:13.5px; color:var(--text-body);
   text-decoration:none; font-weight:400;
   border-bottom:2px solid transparent;
   transition:all 0.25s; white-space:nowrap;
@@ -318,8 +317,8 @@ nav.elevated { box-shadow:var(--shadow-md); }
 }
 .cred-item {
   display:flex; align-items:center; gap:10px;
-  font-size:12px; font-weight:500; color:var(--text-muted);
-  letter-spacing:0.04em; text-transform:uppercase;
+  font-size:13px; font-weight:500; color:var(--text-muted);
+  letter-spacing:0.03em; text-transform:uppercase;
 }
 .cred-item .cred-icon {
   width:32px; height:32px; border-radius:50%;
@@ -338,14 +337,14 @@ nav.elevated { box-shadow:var(--shadow-md); }
 }
 .m-item {
   display:flex; align-items:center; gap:14px; flex-shrink:0;
-  font-size:11px; letter-spacing:0.18em; text-transform:uppercase;
-  color:rgba(255,255,255,0.6);
+  font-size:13px; letter-spacing:0.14em; text-transform:uppercase;
+  color:rgba(255,255,255,0.7);
 }
 .m-dot { width:3px; height:3px; border-radius:50%; background:var(--teal-light); flex-shrink:0; }
 @keyframes marquee { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
 
 /* ── SECTIONS ── */
-section { padding:88px 0; }
+section { padding:96px 0; }
 .section-tag {
   display:inline-flex; align-items:center; gap:8px;
   font-size:11px; letter-spacing:0.2em; text-transform:uppercase;
@@ -394,7 +393,7 @@ section { padding:88px 0; }
 .prob-col.new-way h3 { color:#fff; }
 .prob-list { list-style:none; display:flex; flex-direction:column; gap:10px; }
 .prob-list li {
-  font-size:14px; padding-left:16px; position:relative; line-height:1.5;
+  font-size:16px; padding-left:18px; position:relative; line-height:1.6;
 }
 .prob-list li::before { content:'—'; position:absolute; left:0; font-size:12px; }
 .prob-col.new-way .prob-list li { color:rgba(255,255,255,0.8); }
@@ -428,7 +427,7 @@ section { padding:88px 0; }
   padding:28px 24px; box-shadow:var(--shadow-sm);
   transition:all 0.3s; cursor:default;
 }
-.who-card:hover { transform:translateY(-3px); box-shadow:var(--shadow-md); border-color:var(--border); background:#fff; }
+.who-card:hover { transform:translateY(-3px); box-shadow:var(--shadow-md); border-color:var(--teal); border-left:3px solid var(--teal); background:#fff; }
 .who-icon {
   width:44px; height:44px; border-radius:10px;
   background:var(--teal-pale); display:flex; align-items:center;
@@ -613,7 +612,7 @@ section { padding:88px 0; }
                     radial-gradient(circle at 80% 20%, var(--teal-light) 1px, transparent 1px);
   background-size:60px 60px, 80px 80px;
 }
-.collect-section .section-title { color:#fff; }
+.collect-section .section-title { color:#fff; margin-bottom:8px; }
 .collect-intro { color:rgba(255,255,255,0.65); font-size:17px; line-height:1.75; max-width:580px; margin-bottom:48px; }
 .collect-grid {
   display:grid; grid-template-columns:repeat(3,1fr); gap:2px;
@@ -690,13 +689,13 @@ section { padding:88px 0; }
 }
 .process-step { padding:0 24px; text-align:center; }
 .p-num {
-  width:56px; height:56px; border-radius:50%;
-  border:1px solid rgba(255,255,255,0.2);
-  background:var(--teal-deeper);
+  width:60px; height:60px; border-radius:50%;
+  border:2px solid rgba(255,255,255,0.25);
+  background:rgba(255,255,255,0.08);
   display:flex; align-items:center; justify-content:center;
-  margin:0 auto 22px;
+  margin:0 auto 24px;
   font-family:'Libre Baskerville',serif;
-  font-size:22px; font-weight:400; color:var(--teal-light);
+  font-size:24px; font-weight:400; color:#fff;
   position:relative; z-index:1;
 }
 .process-step h4 { font-size:16px; font-weight:500; color:#fff; margin-bottom:10px; }
@@ -763,29 +762,29 @@ section { padding:88px 0; }
 .pf-item p { font-size:15px; color:var(--text-muted); line-height:1.6; }
 
 /* ── TESTIMONIALS ── */
-.test-section { background:var(--teal-pale); border-top:1px solid var(--border); }
+.test-section { background:var(--navy); border-top:1px solid rgba(255,255,255,0.05); }
 .test-grid {
-  display:grid; grid-template-columns:repeat(3,1fr); gap:16px;
+  display:grid; grid-template-columns:repeat(3,1fr); gap:20px;
   margin-top:48px;
 }
 .test-card {
-  background:#fff; border-radius:8px;
-  border:1px solid var(--border-sub); padding:32px 28px; box-shadow:var(--shadow-sm);
+  background:rgba(255,255,255,0.05); border-radius:8px;
+  border:1px solid rgba(255,255,255,0.1); padding:32px 28px;
 }
-.test-stars { color:var(--teal); font-size:15px; letter-spacing:2px; margin-bottom:16px; }
+.test-stars { color:#FCD34D; font-size:15px; letter-spacing:2px; margin-bottom:16px; }
 .test-card blockquote {
   font-family:'Libre Baskerville',serif;
-  font-size:20px; font-weight:400; color:var(--navy);
+  font-size:20px; font-weight:400; color:#fff;
   line-height:1.6; font-style:italic; margin-bottom:22px;
 }
 .test-author { display:flex; align-items:center; gap:11px; }
 .test-av {
   width:36px; height:36px; border-radius:50%;
-  background:var(--teal); display:flex; align-items:center;
-  justify-content:center; font-size:13px; font-weight:500; color:#fff; flex-shrink:0;
+  background:rgba(78,159,176,0.3); display:flex; align-items:center;
+  justify-content:center; font-size:13px; font-weight:500; color:var(--teal-light); flex-shrink:0;
 }
-.test-name { font-size:15px; font-weight:500; color:var(--navy); }
-.test-role { font-size:13px; color:var(--text-muted); }
+.test-name { font-size:15px; font-weight:500; color:#fff; }
+.test-role { font-size:13px; color:rgba(255,255,255,0.45); }
 
 /* ── REVIEWS ── */
 .reviews-section { background:var(--off-white); border-top:1px solid var(--border-sub); }
@@ -826,7 +825,7 @@ section { padding:88px 0; }
   border:1px solid var(--border-sub); padding:18px 20px;
   transition:background 0.25s;
 }
-.review-card:hover { background:var(--teal-mist); }
+.review-card:hover { background:var(--teal-pale); border-color:var(--border); }
 .review-card-top { display:flex; align-items:center; gap:12px; margin-bottom:12px; }
 .review-avatar {
   width:36px; height:36px; border-radius:50%; flex-shrink:0;
@@ -876,8 +875,8 @@ section { padding:88px 0; }
 .faq-list { display:flex; flex-direction:column; gap:2px; }
 .faq-item {
   border:1px solid var(--border-sub);
-  background:#fff;
-  border-radius:4px; overflow:hidden;
+  background:var(--off-white);
+  border-radius:6px; overflow:hidden;
   transition:border-color 0.25s;
 }
 .faq-item.open { border-color:var(--teal); }
@@ -948,7 +947,7 @@ section { padding:88px 0; }
 .ext-step p { font-size:15px; color:var(--text-body); line-height:1.6; }
 .ext-pricing {
   display:grid; grid-template-columns:1fr 1fr; gap:12px;
-  border-radius:6px; overflow:hidden; margin-bottom:28px;
+  margin-bottom:28px;
 }
 .ext-price-card { background:#fff; border:1px solid var(--border-sub); padding:20px 22px; }
 .ext-price-card .price-label { font-size:10px; letter-spacing:0.15em; text-transform:uppercase; color:var(--text-muted); margin-bottom:8px; }
@@ -1108,6 +1107,130 @@ section { padding:88px 0; }
 .taxlaw-disclaimer-icon { font-size:20px; flex-shrink:0; margin-top:1px; }
 @media(max-width:900px){ .taxlaw-grid { grid-template-columns:1fr; } }
 
+/* ── STATE TAX LOCAL KNOWLEDGE ── */
+.state-section { background:var(--off-white); border-top:1px solid var(--border-sub); }
+.state-tabs {
+  display:flex; gap:0; margin-top:48px; margin-bottom:0;
+  border:1px solid var(--border-sub); border-radius:8px 8px 0 0;
+  overflow:hidden; background:#fff;
+}
+.state-tab {
+  flex:1; padding:18px 16px; cursor:pointer;
+  border:none; background:transparent;
+  font-family:'Source Sans 3',sans-serif;
+  font-size:15px; font-weight:500; color:var(--text-muted);
+  border-right:1px solid var(--border-sub);
+  transition:all 0.25s; text-align:center;
+  display:flex; align-items:center; justify-content:center;
+}
+.state-tab:last-child { border-right:none; }
+.state-tab.active { background:var(--teal); color:#fff; }
+.state-tab:not(.active):hover { background:var(--teal-pale); color:var(--teal-dark); }
+.state-tab-flag { font-size:20px; }
+.state-tab-name { font-size:13px; }
+.state-panel { display:none; }
+.state-panel.active { display:block; }
+.state-panel-inner {
+  background:#fff; border:1px solid var(--border-sub);
+  border-top:none; border-radius:0 0 8px 8px;
+  padding:40px 44px;
+}
+.state-overview {
+  display:grid; grid-template-columns:1fr 1fr; gap:40px;
+  margin-bottom:40px; padding-bottom:40px;
+  border-bottom:1px solid var(--border-sub);
+}
+.state-overview-left h3 {
+  font-family:'Libre Baskerville',serif;
+  font-size:26px; font-weight:400; color:var(--navy);
+  margin-bottom:14px; line-height:1.2;
+}
+.state-overview-left p { font-size:15px; color:var(--text-body); line-height:1.75; }
+.state-stats { display:flex; flex-direction:column; gap:12px; }
+.state-stat {
+  display:flex; align-items:center; justify-content:space-between;
+  padding:12px 16px; background:var(--off-white);
+  border:1px solid var(--border-sub); border-radius:6px;
+}
+.state-stat-label { font-size:13px; color:var(--text-muted); font-weight:500; }
+.state-stat-val { font-size:15px; font-weight:600; color:var(--navy); }
+.state-stat-val.positive { color:#166534; }
+.state-stat-val.negative { color:#991B1B; }
+.state-stat-val.neutral { color:var(--teal-dark); }
+.state-updates { display:grid; grid-template-columns:repeat(2,1fr); gap:16px; }
+.state-update-card {
+  background:#fff; border:1px solid var(--border-sub);
+  border-radius:8px; padding:22px 24px;
+  border-left:3px solid var(--teal);
+  box-shadow:var(--shadow-sm);
+}
+.state-update-card.warning { border-left-color:#dc2626; }
+.state-update-card.positive { border-left-color:#16a34a; }
+.state-update-card.neutral { border-left-color:#d97706; }
+.state-update-tag {
+  display:inline-block; font-size:10px; font-weight:600;
+  letter-spacing:0.1em; text-transform:uppercase;
+  padding:2px 9px; border-radius:10px; margin-bottom:10px;
+}
+.tag-warning { background:rgba(220,38,38,0.08); color:#991B1B; }
+.tag-positive { background:rgba(22,163,74,0.08); color:#166534; }
+.tag-neutral { background:rgba(217,119,6,0.08); color:#92400E; }
+.tag-info { background:var(--teal-pale); color:var(--teal-dark); }
+.state-update-card h4 { font-size:15px; font-weight:600; color:var(--navy); margin-bottom:8px; line-height:1.3; }
+.state-update-card p { font-size:14px; color:var(--text-body); line-height:1.65; }
+.state-cta-strip {
+  margin-top:32px; padding:20px 24px;
+  background:var(--teal-pale); border:1px solid var(--border);
+  border-radius:6px; display:flex; align-items:center;
+  justify-content:space-between; gap:20px; flex-wrap:wrap;
+}
+.state-cta-strip p { font-size:14px; color:var(--teal-deeper); font-weight:500; }
+@media(max-width:900px){
+  .state-overview { grid-template-columns:1fr; gap:24px; }
+  .state-updates { grid-template-columns:1fr; }
+  .state-panel-inner { padding:24px 20px; }
+}
+@media(max-width:600px){
+  .state-tabs { border-radius:6px 6px 0 0; }
+  .state-tab { font-size:12px; padding:12px 6px; }
+  .state-tab-flag { font-size:16px; }
+}
+
+/* ── BACK TO TOP ── */
+.back-to-top {
+  position:fixed; bottom:28px; right:28px; z-index:99;
+  width:46px; height:46px; border-radius:50%;
+  background:var(--teal); color:#fff; border:none;
+  box-shadow:0 4px 16px rgba(78,159,176,0.4);
+  cursor:pointer; font-size:20px; line-height:1;
+  display:flex; align-items:center; justify-content:center;
+  opacity:0; transform:translateY(10px);
+  transition:all 0.3s; pointer-events:none;
+}
+.back-to-top.visible { opacity:1; transform:translateY(0); pointer-events:all; }
+.back-to-top:hover { background:var(--teal-dark); transform:translateY(-2px); }
+
+/* ── MOBILE STICKY CALL BAR ── */
+.mobile-cta-bar {
+  display:none;
+  position:fixed; bottom:0; left:0; right:0; z-index:98;
+  background:var(--navy); border-top:2px solid var(--teal);
+  padding:12px 20px;
+  gap:10px;
+}
+@media(max-width:600px){
+  .mobile-cta-bar { display:flex; }
+  .mobile-cta-bar a {
+    flex:1; text-align:center; padding:12px 10px;
+    border-radius:6px; font-size:14px; font-weight:600;
+    text-decoration:none; font-family:'Source Sans 3',sans-serif;
+  }
+  .mobile-cta-call { background:var(--teal); color:#fff; }
+  .mobile-cta-portal { background:rgba(255,255,255,0.1); color:rgba(255,255,255,0.8); border:1px solid rgba(255,255,255,0.2); }
+  body { padding-bottom:72px; }
+  .back-to-top { bottom:88px; }
+}
+
 /* ── CTA ── */
 .cta-section {
   background:linear-gradient(135deg, var(--navy) 0%, var(--teal-deeper) 100%);
@@ -1256,12 +1379,13 @@ footer {
   <div class="container">
     <div class="nav-inner">
       <a href="#" class="nav-logo">
-        <img src="https://samoanfro.github.io/rptaxservice/logo.png" alt="RP Tax Service" style="height:52px;width:auto;object-fit:contain;display:block;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div style="display:none;align-items:center;gap:10px"><div style="width:40px;height:40px;background:linear-gradient(135deg,var(--teal),var(--teal-dark));border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-family:Libre Baskerville,serif;font-size:17px;font-weight:600">RP</div><div><strong style="display:block;font-size:16px;font-weight:500;color:var(--navy)">RP Tax Service</strong><span style="font-size:11px;color:var(--teal);letter-spacing:0.12em;text-transform:uppercase">Strategic Tax Services</span></div></div>
+        <img src="https://samoanfro.github.io/rptaxservice/logo.png" alt="RP Tax Service" style="height:56px;width:auto;object-fit:contain;display:block;">
       </a>
       <ul class="nav-links" id="nav-links">
         <li><a href="#services">Services</a></li>
         <li><a href="#education">Insights</a></li>
         <li><a href="#tax-updates">Tax Updates</a></li>
+        <li><a href="#local-knowledge">Local Knowledge</a></li>
         <li><a href="#collectibles">Collectibles</a></li>
         <li><a href="#faq">FAQ</a></li>
         <li><a href="#extension">Extension</a></li>
@@ -1901,9 +2025,27 @@ footer {
 <!-- TESTIMONIALS -->
 <section class="test-section fade-up">
   <div class="container">
-    <div style="text-align:center;margin-bottom:16px">
-      <div class="section-tag" style="justify-content:center">Client Perspectives</div>
-      <h2 class="section-title" style="text-align:center">What our clients say.</h2>
+    <div style="text-align:center;margin-bottom:40px">
+      <div class="section-tag" style="justify-content:center;color:var(--teal-light)">Client Perspectives</div>
+      <h2 class="section-title" style="text-align:center;color:#fff">What our clients say.</h2>
+      <div style="display:flex;align-items:center;justify-content:center;gap:32px;margin-top:24px;flex-wrap:wrap">
+        <div style="text-align:center">
+          <div style="font-family:'Libre Baskerville',serif;font-size:44px;font-weight:400;color:#fff;line-height:1">4.6</div>
+          <div style="color:#FCD34D;font-size:16px;letter-spacing:2px;margin:4px 0">★★★★★</div>
+          <div style="font-size:13px;color:rgba(255,255,255,0.45)">144 Google Reviews</div>
+        </div>
+        <div style="width:1px;height:64px;background:rgba(255,255,255,0.1)"></div>
+        <div style="text-align:center">
+          <div style="font-family:'Libre Baskerville',serif;font-size:44px;font-weight:400;color:#fff;line-height:1">4.5</div>
+          <div style="color:#FCD34D;font-size:16px;letter-spacing:2px;margin:4px 0">★★★★½</div>
+          <div style="font-size:13px;color:rgba(255,255,255,0.45)">136 Yelp Reviews</div>
+        </div>
+        <div style="width:1px;height:64px;background:rgba(255,255,255,0.1)"></div>
+        <div style="text-align:center">
+          <div style="font-family:'Libre Baskerville',serif;font-size:44px;font-weight:400;color:#fff;line-height:1">15+</div>
+          <div style="font-size:13px;color:rgba(255,255,255,0.45);margin-top:8px">Years Serving<br>Honolulu</div>
+        </div>
+      </div>
     </div>
     <div class="test-grid">
       <div class="test-card">
@@ -2628,6 +2770,271 @@ footer {
   </div>
 </section>
 
+<!-- STATE TAX LOCAL KNOWLEDGE -->
+<section class="state-section" id="local-knowledge">
+  <div class="container">
+    <div class="section-tag">Local Knowledge</div>
+    <h2 class="section-title">State tax updates —<br>what you need to know where you live.</h2>
+    <p class="section-body">Federal taxes are only half the picture. Every state has its own rules, rates, deadlines, and quirks. We serve clients across Hawaii, Utah, Arizona, and California — and we know each state's tax code inside and out.</p>
+
+    <div class="state-tabs" id="state-tabs">
+      <button class="state-tab active" data-state="hawaii">
+        <span class="state-tab-name" style="font-size:15px;font-weight:600">Hawaii</span>
+      </button>
+      <button class="state-tab" data-state="utah">
+        <span class="state-tab-name" style="font-size:15px;font-weight:600">Utah</span>
+      </button>
+      <button class="state-tab" data-state="arizona">
+        <span class="state-tab-name" style="font-size:15px;font-weight:600">Arizona</span>
+      </button>
+      <button class="state-tab" data-state="california">
+        <span class="state-tab-name" style="font-size:15px;font-weight:600">California</span>
+      </button>
+    </div>
+
+    <!-- HAWAII -->
+    <div class="state-panel active" id="state-hawaii">
+      <div class="state-panel-inner">
+        <div class="state-overview">
+          <div class="state-overview-left">
+            <h3>Hawaii State Tax Overview</h3>
+            <p>Hawaii has one of the most complex state tax structures in the nation — with 12 income tax brackets, a General Excise Tax (GET) that functions differently from sales tax in other states, and unique rules for residents who earn income from mainland sources. Understanding the difference between the GET and income tax is critical for any Hawaii business owner.</p>
+          </div>
+          <div class="state-stats">
+            <div class="state-stat">
+              <span class="state-stat-label">Top Income Tax Rate</span>
+              <span class="state-stat-val negative">11% (highest in US)</span>
+            </div>
+            <div class="state-stat">
+              <span class="state-stat-label">Number of Tax Brackets</span>
+              <span class="state-stat-val neutral">12 brackets</span>
+            </div>
+            <div class="state-stat">
+              <span class="state-stat-label">General Excise Tax (GET)</span>
+              <span class="state-stat-val neutral">4% (4.5% Oahu)</span>
+            </div>
+            <div class="state-stat">
+              <span class="state-stat-label">State Filing Deadline</span>
+              <span class="state-stat-val neutral">April 20 (not April 15)</span>
+            </div>
+            <div class="state-stat">
+              <span class="state-stat-label">Capital Gains Rate</span>
+              <span class="state-stat-val negative">Up to 7.25%</span>
+            </div>
+          </div>
+        </div>
+        <div class="state-updates">
+          <div class="state-update-card warning">
+            <span class="state-update-tag tag-warning">Watch Out</span>
+            <h4>Hawaii GET Is Not a Sales Tax — It's a Business Tax</h4>
+            <p>The General Excise Tax applies to ALL business gross income — not just retail sales. Services, rentals, construction, and even wholesale transactions are subject to GET. Many new business owners get caught off guard because they treat it like a sales tax. It's not — it's a tax on the privilege of doing business in Hawaii, and it must be filed regularly regardless of whether you collected it from customers.</p>
+          </div>
+          <div class="state-update-card warning">
+            <span class="state-update-tag tag-warning">High Tax State</span>
+            <h4>Hawaii's 11% Top Rate — Planning Is Essential</h4>
+            <p>Hawaii's top marginal income tax rate of 11% is the highest in the nation. Combined with federal rates, high earners in Hawaii can face effective rates well above 40%. Strategic use of deductions, retirement accounts, and entity structure is not optional at this level — it's essential. The difference between good planning and no planning can be $10,000+ annually.</p>
+          </div>
+          <div class="state-update-card neutral">
+            <span class="state-update-tag tag-neutral">Deadline</span>
+            <h4>Hawaii Files April 20 — Not April 15</h4>
+            <p>Unlike most states, Hawaii's individual income tax deadline is April 20th, giving residents 5 extra days. However, if you also have federal obligations, the federal April 15 deadline still applies. Business returns (Form N-30, N-70NP) have their own schedule. Don't assume Hawaii's later deadline applies to all your filings.</p>
+          </div>
+          <div class="state-update-card positive">
+            <span class="state-update-tag tag-positive">Opportunity</span>
+            <h4>Hawaii Renewable Energy Tax Credit</h4>
+            <p>Hawaii offers a 35% state tax credit for solar energy systems installed on residential property — one of the most generous in the nation. Combined with the federal 30% credit, homeowners can offset 65% of installation costs through tax credits. If you're a Hawaii homeowner considering solar, the tax math is compelling and we can help you structure the credit correctly.</p>
+          </div>
+        </div>
+        <div class="state-cta-strip">
+          <p>Questions about Hawaii GET, N-11 filing, or the solar credit? We file Hawaii returns year-round.</p>
+          <a href="#contact" class="btn-teal" style="font-size:13px;padding:10px 22px;white-space:nowrap">Ask a Hawaii Tax Question</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- UTAH -->
+    <div class="state-panel" id="state-utah">
+      <div class="state-panel-inner">
+        <div class="state-overview">
+          <div class="state-overview-left">
+            <h3>Utah State Tax Overview</h3>
+            <p>Utah has a simple, flat income tax structure — making it one of the more predictable states for tax planning. Utah recently reduced its flat rate and is generally business-friendly. However, Utah has unique rules around Social Security taxation, pass-through entity taxes, and a sales tax structure that catches many business owners off guard. Utah also has a strong retirement income tax credit that many residents miss.</p>
+          </div>
+          <div class="state-stats">
+            <div class="state-stat">
+              <span class="state-stat-label">Income Tax Structure</span>
+              <span class="state-stat-val positive">Flat 4.55%</span>
+            </div>
+            <div class="state-stat">
+              <span class="state-stat-label">State Sales Tax</span>
+              <span class="state-stat-val neutral">4.85% (avg 7.19% w/ local)</span>
+            </div>
+            <div class="state-stat">
+              <span class="state-stat-label">Capital Gains</span>
+              <span class="state-stat-val neutral">Taxed as ordinary income</span>
+            </div>
+            <div class="state-stat">
+              <span class="state-stat-label">Filing Deadline</span>
+              <span class="state-stat-val neutral">April 15</span>
+            </div>
+            <div class="state-stat">
+              <span class="state-stat-label">Pass-Through Entity Tax</span>
+              <span class="state-stat-val positive">Available (SALT workaround)</span>
+            </div>
+          </div>
+        </div>
+        <div class="state-updates">
+          <div class="state-update-card positive">
+            <span class="state-update-tag tag-positive">Opportunity</span>
+            <h4>Utah's Pass-Through Entity Tax — The SALT Cap Workaround</h4>
+            <p>Utah allows S-Corps, partnerships, and LLCs to elect to pay state income tax at the entity level. This effectively bypasses the federal $10,000 SALT deduction cap — because the entity deducts the state tax as a business expense before income passes through to you. For Utah business owners paying significant state tax, this election can save thousands annually in federal taxes.</p>
+          </div>
+          <div class="state-update-card positive">
+            <span class="state-update-tag tag-positive">Opportunity</span>
+            <h4>Utah Retirement Tax Credit</h4>
+            <p>Utah offers a retirement tax credit of up to $450 for individuals and $900 for joint filers who receive qualifying retirement income. This is a credit — not just a deduction — meaning it directly reduces your Utah tax bill. Many retired Utah residents miss this entirely. If you or your spouse receive pension, IRA, or Social Security income, you likely qualify.</p>
+          </div>
+          <div class="state-update-card neutral">
+            <span class="state-update-tag tag-neutral">Know This</span>
+            <h4>Utah Taxes Social Security Income</h4>
+            <p>Unlike many states, Utah includes Social Security benefits in taxable income — though a retirement credit partially offsets this. Retirees moving to Utah from a state that exempts Social Security (like Hawaii) need to account for this in their planning. The difference can be significant depending on your benefit amount.</p>
+          </div>
+          <div class="state-update-card warning">
+            <span class="state-update-tag tag-warning">Watch Out</span>
+            <h4>Utah Sales Tax on Services — Expanding Scope</h4>
+            <p>Utah is one of a growing number of states expanding sales tax to cover certain services. If you operate a service-based business in Utah, you need to verify whether your specific services are subject to sales tax — the rules are more complex than most people assume and enforcement has increased. An incorrect determination can result in significant back taxes and penalties.</p>
+          </div>
+        </div>
+        <div class="state-cta-strip">
+          <p>Operating a business in Utah or planning a move there? Let's talk about your Utah tax situation.</p>
+          <a href="#contact" class="btn-teal" style="font-size:13px;padding:10px 22px;white-space:nowrap">Ask a Utah Tax Question</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ARIZONA -->
+    <div class="state-panel" id="state-arizona">
+      <div class="state-panel-inner">
+        <div class="state-overview">
+          <div class="state-overview-left">
+            <h3>Arizona State Tax Overview</h3>
+            <p>Arizona made a dramatic tax change in 2023 — moving to a flat 2.5% income tax rate, one of the lowest flat rates in the country. This was a major shift from the previous graduated structure and represents a significant opportunity for high earners who moved to Arizona for tax reasons. Arizona also has favorable treatment for retirees and has become a popular destination for California transplants looking to reduce their state tax burden.</p>
+          </div>
+          <div class="state-stats">
+            <div class="state-stat">
+              <span class="state-stat-label">Income Tax Rate (2024)</span>
+              <span class="state-stat-val positive">Flat 2.5%</span>
+            </div>
+            <div class="state-stat">
+              <span class="state-stat-label">Previous Top Rate</span>
+              <span class="state-stat-val neutral">Was 4.5% (2022)</span>
+            </div>
+            <div class="state-stat">
+              <span class="state-stat-label">State Sales Tax</span>
+              <span class="state-stat-val neutral">5.6% (avg 8.4% w/ local)</span>
+            </div>
+            <div class="state-stat">
+              <span class="state-stat-label">Social Security Tax</span>
+              <span class="state-stat-val positive">Fully exempt</span>
+            </div>
+            <div class="state-stat">
+              <span class="state-stat-label">Filing Deadline</span>
+              <span class="state-stat-val neutral">April 15</span>
+            </div>
+          </div>
+        </div>
+        <div class="state-updates">
+          <div class="state-update-card positive">
+            <span class="state-update-tag tag-positive">Major Change</span>
+            <h4>Arizona's Flat 2.5% Rate — One of the Lowest in the US</h4>
+            <p>As of 2023, Arizona taxes all income at a flat 2.5% — down from a top rate of 4.5% just two years prior. For a household earning $200,000, this change alone saves $4,000 in Arizona state taxes annually. Combined with no tax on Social Security and favorable treatment of retirement income, Arizona has become one of the most tax-efficient states for retirees and high earners in the Southwest.</p>
+          </div>
+          <div class="state-update-card positive">
+            <span class="state-update-tag tag-positive">Opportunity</span>
+            <h4>Arizona Pass-Through Entity Tax Election</h4>
+            <p>Like Utah, Arizona allows pass-through entities to elect to pay state tax at the entity level — bypassing the federal SALT cap. For Arizona business owners who are also federal taxpayers subject to the $10,000 SALT limit, this election can convert a non-deductible expense into a fully deductible business cost. The savings can be 2-3x the Arizona state tax paid.</p>
+          </div>
+          <div class="state-update-card neutral">
+            <span class="state-update-tag tag-neutral">Know This</span>
+            <h4>Moving From California to Arizona — Residency Rules Matter</h4>
+            <p>Many California residents move to Arizona to escape California's high taxes — but California aggressively audits high earners who claim to have moved. You must genuinely establish Arizona domicile: driver's license, voter registration, spending more than 183 days in Arizona, and changing professional and social ties. We help California-to-Arizona movers document their residency change correctly from day one.</p>
+          </div>
+          <div class="state-update-card warning">
+            <span class="state-update-tag tag-warning">Watch Out</span>
+            <h4>Arizona Transaction Privilege Tax (TPT) — Not Your Typical Sales Tax</h4>
+            <p>Arizona's sales tax is called the Transaction Privilege Tax and it works differently from sales tax in most states — it's a tax on the seller's privilege of doing business, not a tax on the buyer. Business owners in Arizona must register, collect, and remit TPT correctly. Contractors, remote sellers, and service businesses often get this wrong, resulting in audits and back taxes.</p>
+          </div>
+        </div>
+        <div class="state-cta-strip">
+          <p>Recently moved to Arizona or own a business there? We know Arizona's TPT and flat tax inside and out.</p>
+          <a href="#contact" class="btn-teal" style="font-size:13px;padding:10px 22px;white-space:nowrap">Ask an Arizona Tax Question</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- CALIFORNIA -->
+    <div class="state-panel" id="state-california">
+      <div class="state-panel-inner">
+        <div class="state-overview">
+          <div class="state-overview-left">
+            <h3>California State Tax Overview</h3>
+            <p>California has the highest state income tax rate in the nation at 13.3% and is one of the most aggressive states when it comes to tax enforcement and auditing. California also has unique rules around residency, source income, and business taxation that can surprise people who move in or out of the state. For business owners and investors, California's treatment of capital gains, stock options, and pass-through income requires careful planning.</p>
+          </div>
+          <div class="state-stats">
+            <div class="state-stat">
+              <span class="state-stat-label">Top Income Tax Rate</span>
+              <span class="state-stat-val negative">13.3% (highest in US)</span>
+            </div>
+            <div class="state-stat">
+              <span class="state-stat-label">Capital Gains Rate</span>
+              <span class="state-stat-val negative">Taxed as ordinary income</span>
+            </div>
+            <div class="state-stat">
+              <span class="state-stat-label">State Sales Tax</span>
+              <span class="state-stat-val negative">7.25% base (up to 10.75%)</span>
+            </div>
+            <div class="state-stat">
+              <span class="state-stat-label">LLC Annual Fee</span>
+              <span class="state-stat-val negative">$800 minimum franchise tax</span>
+            </div>
+            <div class="state-stat">
+              <span class="state-stat-label">Filing Deadline</span>
+              <span class="state-stat-val neutral">April 15</span>
+            </div>
+          </div>
+        </div>
+        <div class="state-updates">
+          <div class="state-update-card warning">
+            <span class="state-update-tag tag-warning">High Impact</span>
+            <h4>California's $800 LLC Minimum Franchise Tax</h4>
+            <p>Every LLC doing business in California must pay a minimum $800 franchise tax annually — even if the business made no money. New LLCs are exempt in their first year (as of 2021), but from year two onward, the $800 is due regardless of income. LLCs with revenues over $250,000 pay additional fees that can reach $11,790. Many out-of-state LLCs that do business in California are surprised to learn they owe this tax too.</p>
+          </div>
+          <div class="state-update-card positive">
+            <span class="state-update-tag tag-positive">Opportunity</span>
+            <h4>California Pass-Through Entity Tax (AB 150)</h4>
+            <p>California's PTE tax election (AB 150) allows S-Corps, partnerships, and LLCs to pay a 9.3% entity-level tax — generating a 9.3% California tax credit for each owner. Because the entity deducts this as a business expense federally, it bypasses the SALT cap entirely. For California business owners in high brackets, this can save $5,000–$20,000+ in federal taxes annually. This is one of the highest-value tax strategies available to California business owners right now.</p>
+          </div>
+          <div class="state-update-card warning">
+            <span class="state-update-tag tag-warning">Watch Out</span>
+            <h4>California Residency Audits — The FTB Is Aggressive</h4>
+            <p>The California Franchise Tax Board (FTB) is one of the most aggressive state tax agencies in the country. When high earners leave California, the FTB may continue to assert that they are still California residents — and can audit up to 4 years back. Triggers include: maintaining a California home, frequent visits, keeping California business ties, or children in California schools. If you've recently left California, proper documentation of your departure is essential.</p>
+          </div>
+          <div class="state-update-card warning">
+            <span class="state-update-tag tag-warning">Know This</span>
+            <h4>California Taxes Stock Options & RSUs — Even After You Leave</h4>
+            <p>California has source-based taxation on stock options and RSUs. If you were a California resident when your equity vested or was granted, California may claim a portion of the income even if you've since moved to another state. The allocation formula is complex and often results in unexpected California tax bills for people who moved to Nevada, Texas, or Arizona. This is a major planning issue for anyone with significant equity compensation.</p>
+          </div>
+        </div>
+        <div class="state-cta-strip">
+          <p>California taxes are among the most complex in the country. Don't navigate them alone.</p>
+          <a href="#contact" class="btn-teal" style="font-size:13px;padding:10px 22px;white-space:nowrap">Ask a California Tax Question</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 <!-- CTA -->
 <section class="cta-section" id="contact">
   <div class="cta-inner">
@@ -2648,7 +3055,7 @@ footer {
     <div class="footer-top">
       <div class="footer-brand">
         <a href="#" class="nav-logo" style="text-decoration:none">
-          <img src="https://samoanfro.github.io/rptaxservice/logo.png" alt="RP Tax Service" style="height:52px;width:auto;object-fit:contain;filter:brightness(0) invert(1);opacity:0.85;">
+          <img src="https://samoanfro.github.io/rptaxservice/logo.png" alt="RP Tax Service" style="height:48px;width:auto;object-fit:contain;filter:brightness(0) invert(1);opacity:0.9;">
         </a>
         <p>A family-owned strategic tax advisory firm with 15+ years serving Honolulu and beyond. Competence, speed, and accuracy — always.</p>
         <div class="footer-contact">
@@ -2671,12 +3078,12 @@ footer {
       <div class="footer-col">
         <h5>Resources</h5>
         <ul class="footer-links">
-          <li><a href="#education">Tax Insights</a></li>
-          <li><a href="#collectibles">Collectibles Tax</a></li>
-          <li><a href="#education">LLC vs S-Corp</a></li>
-          <li><a href="#education">Augusta Rule</a></li>
-          <li><a href="#education">Crypto Tax Guide</a></li>
-          <li><a href="#faq">FAQ</a></li>
+          <li><a href="blog.html">Tax Insights Blog</a></li>
+          <li><a href="index.html#education">Strategy Guides</a></li>
+          <li><a href="index.html#local-knowledge">LLC vs S-Corp</a></li>
+          <li><a href="index.html#education">Augusta Rule</a></li>
+          <li><a href="index.html#education">Crypto Tax Guide</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -2687,7 +3094,8 @@ footer {
           <li><a href="#extension">Extension Request</a></li>
           <li><a href="#extension">Documents Needed</a></li>
           <li><a href="mailto:Admin@rptaxes.com?subject=PDF%20Forms%20Request">PDF Forms</a></li>
-          <li><a href="#contact">Meet the Team</a></li>
+          <li><a href="team.html">Meet the Team</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
         </ul>
         <h5 style="margin-top:28px">Follow Us</h5>
         <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:8px">
@@ -2700,7 +3108,7 @@ footer {
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2026 RP Tax Service · All rights reserved · <a href="mailto:Admin@rptaxes.com?subject=Privacy%20Policy%20Request">Privacy Policy</a></p>
+      <p>© 2026 RP Tax Service · All rights reserved · <a href="mailto:Admin@rptaxes.com?subject=Privacy%20Policy%20Request">Privacy Policy</a> · <a href="team.html">Meet the Team</a> · <a href="blog.html">Blog</a> · <a href="contact.html">Contact</a></p>
       <div class="footer-creds">
         <span class="footer-cred"><span class="footer-cred-dot"></span>IRS Enrolled Agent</span>
         <span class="footer-cred"><span class="footer-cred-dot"></span>Authorized e-File Provider</span>
@@ -2711,10 +3119,23 @@ footer {
   </div>
 </footer>
 
+<!-- BACK TO TOP -->
+<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
+
+<!-- MOBILE STICKY CTA BAR -->
+<div class="mobile-cta-bar">
+  <a href="tel:+18089467297" class="mobile-cta-call">Call Now</a>
+  <a href="https://rptaxservice.taxdome.com/login" target="_blank" class="mobile-cta-portal">Client Portal</a>
+</div>
+
 <script>
 // Nav scroll
 const nav = document.getElementById('nav');
-window.addEventListener('scroll', () => nav.classList.toggle('elevated', scrollY > 40));
+const backToTop = document.getElementById('backToTop');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('elevated', scrollY > 40);
+  backToTop.classList.toggle('visible', scrollY > 400);
+});
 
 // Mobile menu
 const ham = document.getElementById('hamburger');
@@ -2754,6 +3175,17 @@ const io = new IntersectionObserver(entries => {
   entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
 }, { threshold: 0.1 });
 document.querySelectorAll('.fade-up').forEach(el => io.observe(el));
+
+// State tax tabs
+document.getElementById('state-tabs').addEventListener('click', e => {
+  const tab = e.target.closest('.state-tab');
+  if (!tab) return;
+  const state = tab.dataset.state;
+  document.querySelectorAll('.state-tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.state-panel').forEach(p => p.classList.remove('active'));
+  tab.classList.add('active');
+  document.getElementById('state-' + state).classList.add('active');
+});
 
 // FAQ accordion
 document.getElementById('faq-list').addEventListener('click', e => {
