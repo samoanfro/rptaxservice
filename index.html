@@ -83,8 +83,27 @@
         "bestRating": "5"
       },
       "employee": [
-        {"@type": "Person","name": "Robert P.","jobTitle": "Owner, IRS Enrolled Agent","worksFor": {"@id": "https://www.rptaxes.com/#business"}},
-        {"@type": "Person","name": "Jacob Siaosi","jobTitle": "Tax Professional","worksFor": {"@id": "https://www.rptaxes.com/#business"}}
+        {
+          "@type": "Person",
+          "name": "Robert P.",
+          "jobTitle": "Owner, IRS Enrolled Agent",
+          "worksFor": {"@id": "https://www.rptaxes.com/#business"},
+          "hasCredential": [
+            {"@type": "EducationalOccupationalCredential","credentialCategory": "IRS Enrolled Agent","recognizedBy": {"@type": "GovernmentOrganization","name": "Internal Revenue Service","url": "https://www.irs.gov"}},
+            {"@type": "EducationalOccupationalCredential","credentialCategory": "Registered Tax Return Preparer"}
+          ],
+          "sameAs": [
+            "https://www.linkedin.com/company/rp-tax-service",
+            "https://irs.treasury.gov/rpo/rpo.jsf"
+          ]
+        },
+        {
+          "@type": "Person",
+          "name": "Jacob Siaosi",
+          "jobTitle": "Tax Professional",
+          "worksFor": {"@id": "https://www.rptaxes.com/#business"},
+          "sameAs": ["https://www.linkedin.com/company/rp-tax-service"]
+        }
       ],
       "sameAs": [
         "https://www.facebook.com/rptaxservice2",
@@ -187,6 +206,7 @@ nav.elevated { box-shadow:var(--shadow-md); }
   height:64px;
 }
 .nav-logo {
+  max-width:220px;
   display:flex; align-items:center; gap:11px;
   text-decoration:none; flex-shrink:0;
 }
@@ -1480,10 +1500,10 @@ footer {
   <div class="container">
     <div class="nav-inner">
       <a href="#" class="nav-logo">
-        <img src="https://samoanfro.github.io/rptaxservice/logo.png" alt="RP Tax Service" style="height:56px;width:auto;object-fit:contain;display:block;">
+        <img src="https://samoanfro.github.io/rptaxservice/logo.png" alt="RP Tax Service" style="height:48px;max-width:200px;width:auto;object-fit:contain;display:block;">
       </a>
       <ul class="nav-links" id="nav-links">
-        <li><a href="services/s-corp-optimization/">S-Corp</a></li>
+        <li><a href="services/s-corp-optimization/">Entrepreneur</a></li>
         <li><a href="services/real-estate-tax-strategy/">Real Estate</a></li>
         <li><a href="services/crypto-capital-gains/">Crypto</a></li>
         <li><a href="#education">Insights</a></li>
@@ -1606,7 +1626,7 @@ footer {
 <div class="marquee-wrap">
   <div class="marquee-track">
     <span class="m-item"><span class="m-dot"></span>Tax Planning</span>
-    <span class="m-item"><span class="m-dot"></span>S-Corp Optimization</span>
+    <span class="m-item"><span class="m-dot"></span>Entrepreneur Advisory</span>
     <span class="m-item"><span class="m-dot"></span>Entity Structuring</span>
     <span class="m-item"><span class="m-dot"></span>Real Estate Strategy</span>
     <span class="m-item"><span class="m-dot"></span>Cost Segregation</span>
@@ -1618,7 +1638,7 @@ footer {
     <span class="m-item"><span class="m-dot"></span>Augusta Rule</span>
     <span class="m-item"><span class="m-dot"></span>Section 179</span>
     <span class="m-item"><span class="m-dot"></span>Tax Planning</span>
-    <span class="m-item"><span class="m-dot"></span>S-Corp Optimization</span>
+    <span class="m-item"><span class="m-dot"></span>Entrepreneur Advisory</span>
     <span class="m-item"><span class="m-dot"></span>Entity Structuring</span>
     <span class="m-item"><span class="m-dot"></span>Real Estate Strategy</span>
     <span class="m-item"><span class="m-dot"></span>Cost Segregation</span>
@@ -1704,7 +1724,7 @@ footer {
       <div class="who-card">
         
         <h3>Entrepreneurs</h3>
-        <p>The decisions you make in year one — entity, compensation structure, retirement plan — compound for decades. We help you get them right before they're expensive to undo.</p>
+        <p>From idea to incorporated to scaling — the tax decisions you make early define what you keep later. We're the advisor in the room when structure, compensation, and reinvestment strategy actually matter.</p>
       </div>
     </div>
   </div>
@@ -1719,7 +1739,7 @@ footer {
       <div class="svc-nav" id="svc-nav">
         <div class="svc-nav-item active" data-p="tax-plan"><span class="svc-nav-dot"></span>Tax Planning &amp; Strategy</div>
         <div class="svc-nav-item" data-p="entity"><span class="svc-nav-dot"></span>Entity Structuring</div>
-        <div class="svc-nav-item" data-p="scorp"><span class="svc-nav-dot"></span>S-Corp Optimization</div>
+        <div class="svc-nav-item" data-p="scorp"><span class="svc-nav-dot"></span>Entrepreneur Advisory</div>
         <div class="svc-nav-item" data-p="realestate"><span class="svc-nav-dot"></span>Real Estate Tax Strategy</div>
         <div class="svc-nav-item" data-p="crypto"><span class="svc-nav-dot"></span>Crypto &amp; Investments</div>
         <div class="svc-nav-item" data-p="bookkeeping"><span class="svc-nav-dot"></span>Bookkeeping &amp; Payroll</div>
@@ -1735,11 +1755,11 @@ footer {
             <div class="svc-point">Year-round advisory sessions</div>
             <div class="svc-point">Quarterly tax projections</div>
             <div class="svc-point">Income timing strategies</div>
-            <div class="svc-point">Deduction maximization</div>
-            <div class="svc-point">Multi-year planning models</div>
-            <div class="svc-point">Business expense strategy</div>
           </div>
-          <a href="#contact" class="btn-teal">Discuss Tax Planning</a>
+          <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center;">
+            <a href="#contact" class="btn-teal">Start Your Tax Plan</a>
+            <a href="index.html#services" style="font-size:13px;color:var(--teal);font-weight:500;text-decoration:none;letter-spacing:0.04em;">Explore All Planning Strategies →</a>
+          </div>
         </div>
         <div class="svc-panel" id="p-entity">
           
@@ -1749,25 +1769,25 @@ footer {
             <div class="svc-point">LLC vs S-Corp analysis</div>
             <div class="svc-point">Multi-entity strategy</div>
             <div class="svc-point">Holding company structures</div>
-            <div class="svc-point">Operating agreement review</div>
-            <div class="svc-point">State tax optimization</div>
-            <div class="svc-point">Asset protection planning</div>
           </div>
-          <a href="#contact" class="btn-teal">Discuss Entity Structure</a>
+          <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center;">
+            <a href="#contact" class="btn-teal">Review My Structure</a>
+            <a href="services/s-corp-optimization/" style="font-size:13px;color:var(--teal);font-weight:500;text-decoration:none;letter-spacing:0.04em;">Compare Entity Structures →</a>
+          </div>
         </div>
         <div class="svc-panel" id="p-scorp">
           
-          <h3>S-Corp Optimization</h3>
-          <p>The S-Corp election is one of the most misunderstood tools in the tax code. Done correctly, it splits your income into salary (subject to payroll tax) and distributions (not subject). Done incorrectly, it triggers IRS scrutiny or costs more than it saves. We've done hundreds of these — we know the line.</p>
+          <h3>Entrepreneur Advisory</h3>
+          <p>The financial decisions you make in your first few years compound for decades. Structure, compensation, retirement, reinvestment — these aren't accounting tasks. They're the difference between a business that builds wealth and one that generates income you can't keep.</p>
           <div class="svc-points">
-            <div class="svc-point">SE tax savings analysis</div>
-            <div class="svc-point">Reasonable salary guidance</div>
-            <div class="svc-point">Distribution strategy</div>
-            <div class="svc-point">Payroll setup &amp; management</div>
-            <div class="svc-point">Election timing strategy</div>
-            <div class="svc-point">Ongoing compliance</div>
+            <div class="svc-point">Business structure & entity selection</div>
+            <div class="svc-point">Growth-stage tax planning</div>
+            <div class="svc-point">Founder compensation strategy</div>
           </div>
-          <a href="#contact" class="btn-teal">Explore S-Corp Savings</a>
+          <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center;">
+            <a href="#contact" class="btn-teal">Talk to an Advisor</a>
+            <a href="contact.html" style="font-size:13px;color:var(--teal);font-weight:500;text-decoration:none;letter-spacing:0.04em;">See What We Cover →</a>
+          </div>
         </div>
         <div class="svc-panel" id="p-realestate">
           
@@ -1775,27 +1795,27 @@ footer {
           <p>Real estate investors often have six-figure deductions sitting in their properties that no one has unlocked. Cost segregation, bonus depreciation, the short-term rental exception, 1031 exchanges, real estate professional status — most Schedule E filers use none of these. We use all of them.</p>
           <div class="svc-points">
             <div class="svc-point">Cost segregation studies</div>
-            <div class="svc-point">Bonus depreciation strategy</div>
             <div class="svc-point">Short-term rental exception</div>
             <div class="svc-point">1031 exchange planning</div>
-            <div class="svc-point">Real estate professional status</div>
-            <div class="svc-point">Passive loss optimization</div>
           </div>
-          <a href="#contact" class="btn-teal">Discuss Real Estate Strategy</a>
+          <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center;">
+            <a href="#contact" class="btn-teal">Review My Properties</a>
+            <a href="services/real-estate-tax-strategy/" style="font-size:13px;color:var(--teal);font-weight:500;text-decoration:none;letter-spacing:0.04em;">Compare Real Estate Strategies →</a>
+          </div>
         </div>
         <div class="svc-panel" id="p-crypto">
           <div class="svc-icon-wrap">₿</div>
           <h3>Crypto &amp; Investments</h3>
           <p>Your crypto platform doesn't track your taxes — it tracks your trades. Cost basis, holding period, DeFi income, 1099-K reconciliation — these are your responsibility and the IRS is watching. We've seen clients overpay by tens of thousands because no one built their cost basis correctly from the start.</p>
           <div class="svc-points">
-            <div class="svc-point">Cryptocurrency reporting</div>
             <div class="svc-point">Cost basis tracking</div>
             <div class="svc-point">Capital gains strategy</div>
-            <div class="svc-point">Wash-sale rule guidance</div>
-            <div class="svc-point">Harvest losses strategically</div>
             <div class="svc-point">DeFi &amp; NFT tax treatment</div>
           </div>
-          <a href="#contact" class="btn-teal">Discuss Crypto Taxes</a>
+          <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center;">
+            <a href="#contact" class="btn-teal">Review My Crypto Position</a>
+            <a href="services/crypto-capital-gains/" style="font-size:13px;color:var(--teal);font-weight:500;text-decoration:none;letter-spacing:0.04em;">Explore Crypto Tax Strategies →</a>
+          </div>
         </div>
         <div class="svc-panel" id="p-bookkeeping">
           
@@ -1803,13 +1823,13 @@ footer {
           <p>Bad books don't just create compliance risk — they prevent good tax planning. You can't optimize what you can't see. We build your financials around your tax strategy: the right accounts, the right timing, the right documentation for every deduction you plan to take.</p>
           <div class="svc-points">
             <div class="svc-point">Monthly bookkeeping</div>
-            <div class="svc-point">Strategic chart of accounts</div>
             <div class="svc-point">Payroll processing</div>
             <div class="svc-point">Accountable plan setup</div>
-            <div class="svc-point">Financial statement prep</div>
-            <div class="svc-point">Audit-ready records</div>
           </div>
-          <a href="#contact" class="btn-teal">Get Bookkeeping Help</a>
+          <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center;">
+            <a href="#contact" class="btn-teal">Clean Up My Books</a>
+            <a href="#contact" style="font-size:13px;color:var(--teal);font-weight:500;text-decoration:none;letter-spacing:0.04em;">See What Clean Books Unlock →</a>
+          </div>
         </div>
         <div class="svc-panel" id="p-retirement">
           
@@ -1817,13 +1837,13 @@ footer {
           <p>A Solo 401(k) can shelter $70,000+ per year from taxes. A defined benefit plan can shelter even more. Most business owners are using a SEP-IRA and leaving real money behind. Retirement planning isn't just about the future — it's one of the highest-leverage deductions available to you right now.</p>
           <div class="svc-points">
             <div class="svc-point">Solo 401(k) strategy</div>
-            <div class="svc-point">SEP-IRA optimization</div>
             <div class="svc-point">Defined benefit plans</div>
             <div class="svc-point">Roth conversion strategy</div>
-            <div class="svc-point">Employer contribution planning</div>
-            <div class="svc-point">Contribution timing</div>
           </div>
-          <a href="#contact" class="btn-teal">Plan Retirement Strategy</a>
+          <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center;">
+            <a href="#contact" class="btn-teal">Maximize My Retirement Contributions</a>
+            <a href="blog.html" style="font-size:13px;color:var(--teal);font-weight:500;text-decoration:none;letter-spacing:0.04em;">See SECURE 2.0 Updates →</a>
+          </div>
         </div>
         <div class="svc-panel" id="p-irs">
           
@@ -1831,13 +1851,13 @@ footer {
           <p>An IRS notice isn't always a disaster — but responding incorrectly turns a manageable situation into an expensive one. As Enrolled Agents, we hold the highest credential the IRS issues to non-attorneys. We speak their language, know the programs, and represent your interests at every level of the agency.</p>
           <div class="svc-points">
             <div class="svc-point">Offer in Compromise</div>
-            <div class="svc-point">Installment agreements</div>
             <div class="svc-point">Audit representation</div>
             <div class="svc-point">Penalty abatement</div>
-            <div class="svc-point">Innocent spouse relief</div>
-            <div class="svc-point">Wage garnishment release</div>
           </div>
-          <a href="#contact" class="btn-teal">Get IRS Help Now</a>
+          <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center;">
+            <a href="#contact" class="btn-teal">Get IRS Help Now</a>
+            <a href="#contact" style="font-size:13px;color:var(--teal);font-weight:500;text-decoration:none;letter-spacing:0.04em;">See All Resolution Options →</a>
+          </div>
         </div>
       </div>
     </div>
@@ -3170,7 +3190,7 @@ footer {
         <ul class="footer-links">
           <li><a href="#services">Tax Planning</a></li>
           <li><a href="#services">Entity Structuring</a></li>
-          <li><a href="#services">S-Corp Optimization</a></li>
+          <li><a href="#services">Entrepreneur Advisory</a></li>
           <li><a href="#services">Real Estate Strategy</a></li>
           <li><a href="#services">Crypto &amp; Investments</a></li>
           <li><a href="#services">IRS Resolution</a></li>
@@ -3193,7 +3213,7 @@ footer {
           <li><a href="#contact">Free Consultation</a></li>
           <li><a href="portal/">Client Portal</a></li>
           <li><a href="tax-extension/">Extension Request</a></li>
-          <li><a href="services/s-corp-optimization/">S-Corp Optimization</a></li>
+          <li><a href="services/s-corp-optimization/">Entrepreneur Advisory</a></li>
           <li><a href="services/real-estate-tax-strategy/">Real Estate Strategy</a></li>
           <li><a href="services/crypto-capital-gains/">Crypto & Capital Gains</a></li>
           <li><a href="team.html">Meet the Team</a></li>
@@ -3429,7 +3449,7 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
           <option value="IRS Resolution Help">IRS Resolution Help</option>
           <option value="Crypto & Investment Taxes">Crypto &amp; Investment Taxes</option>
           <option value="Collectibles Tax Strategy">Collectibles Tax Strategy</option>
-          <option value="S-Corp Optimization">S-Corp Optimization</option>
+          <option value="S-Corp Optimization">Entrepreneur Advisory</option>
           <option value="Accountable Plan Setup">Accountable Plan Setup</option>
           <option value="Extension Request">Extension Request</option>
           <option value="New Client Application">New Client Application</option>
@@ -3459,5 +3479,24 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
 #contact-modal textarea:focus { border-color:var(--teal) !important; }
 </style>
 
+
+<!-- GEO REDIRECT — Hawaii visitors go to /honolulu-hi/ -->
+<script>
+(function(){
+  // Don't redirect if already on a sub-page
+  if (window.location.pathname !== '/' && window.location.pathname !== '/index.html') return;
+  // Don't redirect if user manually navigated back
+  if (sessionStorage.getItem('geo_checked')) return;
+  sessionStorage.setItem('geo_checked', '1');
+  fetch('https://ipapi.co/json/')
+    .then(r => r.json())
+    .then(d => {
+      if (d && d.region_code === 'HI') {
+        window.location.replace('/honolulu-hi/');
+      }
+    })
+    .catch(() => {}); // silent fail — just show homepage
+})();
+</script>
 </body>
 </html>
