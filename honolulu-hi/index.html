@@ -141,7 +141,7 @@
     .mobile-menu a:last-child { border-bottom: none; }
     .mobile-menu.open { display: flex; }
 
-    /* HERO & FIXED BUTTONS */
+    /* HERO */
     .hero {
       background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 60%, #1e4a6e 100%);
       color: var(--white);
@@ -217,18 +217,23 @@
       line-height: 1.1;
       margin-bottom: 6px;
     }
-    .metric-label {
+    .metric-item .metric-label {
       font-size: 0.8rem;
       color: rgba(255,255,255,0.6);
       line-height: 1.3;
     }
 
-    /* BOTTOM CREDENTIALS BAR WITH CLEAN IMAGE CONTROLLERS */
+    /* HERO TRUST CREDENTIALS */
+    .hero-trust { display: flex; align-items: center; justify-content: center; gap: 16px; flex-wrap: wrap; margin-top: 36px; border-top: 1px solid rgba(255,255,255,0.15); padding-top: 20px; }
+    .hero-trust-item { display: flex; align-items: center; gap: 7px; font-size: 14px; color: rgba(255,255,255,0.85); font-weight: 500; letter-spacing: 0.03em; text-transform: uppercase; }
+    .hero-trust-sep { width: 1px; height: 16px; background: rgba(255,255,255,0.25); }
+
+    /* BOTTOM CREDENTIALS BAR WITH IMAGE CONTROLLERS */
     .credentials-bar {
       background: var(--white);
       border-top: 1px solid #e5eef2;
       border-bottom: 1px solid #e5eef2;
-      padding: 32px 24px;
+      padding: 24px;
     }
     .credentials-inner {
       max-width: 1100px;
@@ -236,21 +241,21 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 20px;
+      gap: 16px;
       flex-wrap: wrap;
     }
     .cred-box {
       border: 1.5px solid;
       border-radius: 6px;
-      padding: 12px;
+      padding: 10px 18px;
       display: flex;
       align-items: center;
-      justify-content: center; /* Center images inside boxes */
+      gap: 14px;
       background: var(--white);
-      height: 72px; /* Uniform height constraints */
+      min-height: 64px;
       flex: 1;
-      min-width: 200px;
-      max-width: 250px;
+      min-width: 240px;
+      max-width: 280px;
     }
     .cred-box.three-best { border-color: #d1b46a; }
     .cred-box.ea { border-color: #2b4570; }
@@ -258,9 +263,29 @@
     .cred-box.reg { border-color: #a05c28; }
     
     .cred-img-asset {
-      height: 100%;
-      width: 100%;
-      object-fit: contain; /* Prevent crushing or stretching */
+      height: 42px;
+      width: 55px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+
+    .cred-title-text {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+    }
+    .cred-subhead {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text-muted);
+      margin-bottom: 1px;
+    }
+    .cred-mainhead {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.2;
     }
 
     /* SECTIONS */
@@ -402,7 +427,7 @@
     .rating-source { text-align: center; }
     .rating-source .score { font-family: 'Libre Baskerville', serif; font-size: 3rem; color: var(--gold); line-height: 1; }
     .rating-source .label { font-size: 0.85rem; color: rgba(255,255,255,0.6); margin-top: 4px; }
-    
+        
     .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
     .testimonial { background: rgba(255,255,255,0.07); border-radius: 10px; padding: 28px 24px; border: 1px solid rgba(255,255,255,0.1); }
     .testimonial p { font-style: italic; color: rgba(255,255,255,0.85); font-size: 0.95rem; line-height: 1.7; margin-bottom: 16px; }
@@ -442,6 +467,8 @@
       .hero-metrics { grid-template-columns: repeat(2, 1fr); gap: 20px; padding-top: 28px; }
       .credentials-inner { gap: 12px; }
       .cred-box { min-width: 45%; max-width: 100%; height: 64px; }
+      .hero-trust { flex-direction: column; align-items: flex-start; gap: 10px; }
+      .hero-trust-sep { display: none; }
     }
   </style>
 </head>
@@ -451,7 +478,7 @@
 <nav>
   <div class="nav-inner">
     <a class="nav-logo" href="/honolulu-hi/">
-      <img src="/logo.png" alt="RP Tax Service Logo" style="height:44px; width:auto; object-fit:contain; display:block;">
+      <img src="../logo.png" alt="RP Tax Service Logo" style="height:44px; width:auto; object-fit:contain; display:block;">
       <span style="font-family:'Libre Baskerville', serif; font-size:18px; font-weight:700; color:#1C3050; white-space:nowrap; letter-spacing:0.02em;">RP Tax Service</span>
     </a>
     <ul class="nav-links">
@@ -506,6 +533,15 @@
       <div class="metric-label">First Consultation</div>
     </div>
   </div>
+
+  <!-- RESTORED HERO TRUST CREDENTIALS BAR -->
+  <div class="hero-trust">
+    <div class="hero-trust-item">IRS Enrolled Agent</div>
+    <div class="hero-trust-sep"></div>
+    <div class="hero-trust-item">IRS Authorized e-File Provider</div>
+    <div class="hero-trust-sep"></div>
+    <div class="hero-trust-item">Registered Tax Return Preparer</div>
+  </div>
 </section>
 
 <!-- BOTTOM CREDENTIALS BAR WITH CORE ALIGNED BRAND IMAGES -->
@@ -514,16 +550,16 @@
     
     <!-- Certification 1: Three Best Rated -->
     <div class="cred-box three-best">
-      <img src="/download.jpg" alt="Three Best Rated Certification" class="cred-img-asset">
+      <img src="../download.jpg" alt="Three Best Rated Certification" class="cred-img-asset">
       <div class="cred-title-text">
         <span class="cred-subhead">Three Best Rated</span>
         <span class="cred-mainhead">Tax Services · Hawaii</span>
       </div>
     </div>
 
-    <!-- Certification 2: IRS Enrolled Agent (Classic Logo) -->
+    <!-- Certification 2: IRS Enrolled Agent -->
     <div class="cred-box ea">
-      <img src="/download-1.jpg" alt="IRS Enrolled Agent Logo" class="cred-img-asset">
+      <img src="../download-1.jpg" alt="IRS Enrolled Agent Logo" class="cred-img-asset">
       <div class="cred-title-text">
         <span class="cred-subhead">Federally Credentialed</span>
         <span class="cred-mainhead">IRS Enrolled Agent</span>
@@ -532,16 +568,16 @@
 
     <!-- Certification 3: IRS Authorized e-File Provider -->
     <div class="cred-box efile">
-      <img src="/download.png" alt="IRS Authorized e-File Provider" class="cred-img-asset">
+      <img src="../download.png" alt="IRS Authorized e-File Provider" class="cred-img-asset">
       <div class="cred-title-text">
         <span class="cred-subhead">IRS Authorized</span>
         <span class="cred-mainhead">e-File Provider</span>
       </div>
     </div>
 
-    <!-- Certification 4: Registered Tax Return Preparer -->
+    <!-- Certification 4: Registered Tax Return Preparer (IRS Logo) -->
     <div class="cred-box reg">
-      <img src="/irs-logo-png.png" alt="IRS Registered Tax Return Preparer Logo" class="cred-img-asset">
+      <img src="../irs-logo-png.png" alt="IRS Registered Tax Return Preparer Logo" class="cred-img-asset">
       <div class="cred-title-text">
         <span class="cred-subhead">IRS Registered</span>
         <span class="cred-mainhead">Tax Return Preparer</span>
