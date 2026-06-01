@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact Us | RP Tax Service — Honolulu, Hawaii</title>
-<meta name="description" content="Contact RP Tax Service in Honolulu, Hawaii. Call 808-946-7297, email Admin@rptaxes.com, or fill out our contact form. In-office and online service available.">
+<meta name="description" content="Contact RP Tax Service in Honolulu, Hawaii. Call 808-946-7297, email info@rptaxes.com, or fill out our contact form. In-office and online service available.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -63,7 +63,7 @@ footer a{color:var(--teal-light);text-decoration:none;}
 <meta name="robots" content="index, follow">
 <meta name="author" content="RP Tax Service">
 <meta property="og:url" content="https://www.rptaxes.com/contact.html">
-<meta property="og:image" content="https://samoanfro.github.io/rptaxservice/logo.png">
+<meta property="og:image" content="https://www.rptaxes.com/logo.png">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -96,7 +96,7 @@ footer a{color:var(--teal-light);text-decoration:none;}
 <div class="topbar"><span>Honolulu · Nevada · Utah · California &nbsp;·&nbsp;</span><a href="tel:+18089467297">808-946-7297</a></div>
 <nav>
   <div class="nav-inner">
-    <a href="index.html" class="nav-logo"><img src="https://samoanfro.github.io/rptaxservice/logo.png" alt="RP Tax Service" style="height:52px;width:auto;object-fit:contain;"></a>
+    <a href="index.html" class="nav-logo"><img src="/logo.png" alt="RP Tax Service" style="height:52px;width:auto;object-fit:contain;"></a>
     <a href="index.html" class="nav-back">← Back to Home</a>
   </div>
 </nav>
@@ -125,15 +125,8 @@ footer a{color:var(--teal-light);text-decoration:none;}
           <div class="contact-method-icon">✉</div>
           <div>
             <h4>Email</h4>
-            <a href="mailto:Admin@rptaxes.com" class="primary">Admin@rptaxes.com</a>
+            <a href="mailto:info@rptaxes.com" class="primary">info@rptaxes.com</a>
             <p>We respond within 1 business day</p>
-          </div>
-        </div>
-        <div class="contact-method">
-          <div class="contact-method-icon">📠</div>
-          <div>
-            <h4>Fax</h4>
-            <p class="primary">714-644-8426</p>
           </div>
         </div>
         <div class="contact-method">
@@ -169,29 +162,32 @@ footer a{color:var(--teal-light);text-decoration:none;}
           </div>
           <div class="form-body">
             <form id="contact-form">
+              <input type="hidden" name="_subject" value="New contact from rptaxes.com">
+              <input type="hidden" name="_template" value="table">
+              <input type="hidden" name="_captcha" value="true">
               <div class="form-row">
                 <div class="form-field">
                   <label>First Name *</label>
-                  <input type="text" required placeholder="First name">
+                  <input type="text" name="First Name" required placeholder="First name">
                 </div>
                 <div class="form-field">
                   <label>Last Name *</label>
-                  <input type="text" required placeholder="Last name">
+                  <input type="text" name="Last Name" required placeholder="Last name">
                 </div>
               </div>
               <div class="form-row">
                 <div class="form-field">
                   <label>Email *</label>
-                  <input type="email" id="cf-email" required placeholder="you@email.com">
+                  <input type="email" name="Email" id="cf-email" required placeholder="you@email.com">
                 </div>
                 <div class="form-field">
                   <label>Phone</label>
-                  <input type="tel" id="cf-phone" placeholder="(808) 000-0000">
+                  <input type="tel" name="Phone" id="cf-phone" placeholder="(808) 000-0000">
                 </div>
               </div>
               <div class="form-field">
                 <label>How Can We Help?</label>
-                <select id="cf-subject">
+                <select name="How Can We Help" id="cf-subject">
                   <option>General Inquiry</option>
                   <option>Personal Tax Return</option>
                   <option>Business Tax Return</option>
@@ -206,9 +202,10 @@ footer a{color:var(--teal-light);text-decoration:none;}
               </div>
               <div class="form-field">
                 <label>Message</label>
-                <textarea id="cf-message" placeholder="Tell us a little about your situation..."></textarea>
+                <textarea name="Message" id="cf-message" placeholder="Tell us a little about your situation..."></textarea>
               </div>
-              <button type="submit" class="submit-btn">Send Message</button>
+              <button type="submit" class="submit-btn" id="cf-submit">Send Message</button>
+              <p id="cf-status" style="text-align:center;margin-top:12px;font-size:14px;display:none;"></p>
               <p class="form-note">Or call us directly: <a href="tel:+18089467297" style="color:var(--teal)">808-946-7297</a></p>
             </form>
           </div>
@@ -232,18 +229,36 @@ footer a{color:var(--teal-light);text-decoration:none;}
 </section>
 
 <footer>
-  <p>© 2026 RP Tax Service · <a href="index.html">Home</a> · <a href="tel:+18089467297">808-946-7297</a> · <a href="mailto:Admin@rptaxes.com">Admin@rptaxes.com</a></p>
+  <p>© 2026 RP Tax Service · <a href="index.html">Home</a> · <a href="tel:+18089467297">808-946-7297</a> · <a href="mailto:info@rptaxes.com">info@rptaxes.com</a></p>
 </footer>
 
 <script>
 document.getElementById('contact-form').addEventListener('submit', function(e) {
   e.preventDefault();
-  const email = document.getElementById('cf-email').value;
-  const phone = document.getElementById('cf-phone').value;
-  const subject = document.getElementById('cf-subject').value;
-  const message = document.getElementById('cf-message').value;
-  window.location.href = `mailto:Admin@rptaxes.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent('Email: ' + email + '\nPhone: ' + phone + '\n\n' + message)}`;
-  this.innerHTML = '<div style="text-align:center;padding:40px"><h3 style="font-family:Libre Baskerville,serif;color:#1C3050;margin-bottom:12px">Message Sent!</h3><p style="color:#7090A0">We\'ll be in touch within 1 business day.<br>Or call us: <a href="tel:+18089467297" style="color:#4E9FB0">808-946-7297</a></p></div>';
+  const form = this;
+  const btn = document.getElementById('cf-submit');
+  const status = document.getElementById('cf-status');
+  btn.disabled = true;
+  btn.textContent = 'Sending...';
+  status.style.display = 'none';
+
+  fetch('https://formsubmit.co/ajax/info@rptaxes.com', {
+    method: 'POST',
+    headers: { 'Accept': 'application/json' },
+    body: new FormData(form)
+  })
+  .then(r => r.json())
+  .then(data => {
+    if (!data.success && data.success !== 'true') throw new Error('Send failed');
+    form.innerHTML = '<div style="text-align:center;padding:40px"><h3 style="font-family:Libre Baskerville,serif;color:#1C3050;margin-bottom:12px">Message Sent!</h3><p style="color:#7090A0">We\'ll be in touch within 1 business day.<br>Or call us: <a href="tel:+18089467297" style="color:#4E9FB0">808-946-7297</a></p></div>';
+  })
+  .catch(() => {
+    status.textContent = 'Something went wrong. Please email info@rptaxes.com or call 808-946-7297.';
+    status.style.color = '#991B1B';
+    status.style.display = 'block';
+    btn.disabled = false;
+    btn.textContent = 'Send Message';
+  });
 });
 </script>
 </body>

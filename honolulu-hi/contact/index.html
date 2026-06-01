@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Contact RP Tax Service | Honolulu Hawaii | 808-946-7297</title>
-<meta name="description" content="Contact RP Tax Service in Honolulu. Call 808-946-7297, email Admin@rptaxes.com, or visit us at 930 McCully Street, Suite 203. First consultation is free.">
+<meta name="description" content="Contact RP Tax Service in Honolulu. Call 808-946-7297, email info@rptaxes.com, or visit us at 930 McCully Street, Suite 203. First consultation is free.">
 <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
 <link rel="canonical" href="https://www.rptaxes.com/honolulu-hi/contact/">
 <meta property="og:title" content="Contact RP Tax Service | Honolulu Hawaii | 808-946-7297">
-<meta property="og:description" content="Contact RP Tax Service in Honolulu. Call 808-946-7297, email Admin@rptaxes.com, or visit us at 930 McCully Street, Suite 203. First consultation is free.">
+<meta property="og:description" content="Contact RP Tax Service in Honolulu. Call 808-946-7297, email info@rptaxes.com, or visit us at 930 McCully Street, Suite 203. First consultation is free.">
 <meta property="og:url" content="https://www.rptaxes.com/honolulu-hi/contact/">
-<meta property="og:image" content="https://samoanfro.github.io/rptaxservice/logo.png">
+<meta property="og:image" content="https://www.rptaxes.com/logo.png">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"AccountingService","name":"RP Tax Service — Honolulu","url":"https://www.rptaxes.com/honolulu-hi/","telephone":"+1-808-946-7297","address":{"@type":"PostalAddress","streetAddress":"930 McCully Street, Suite 203","addressLocality":"Honolulu","addressRegion":"HI","postalCode":"96826","addressCountry":"US"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.6","reviewCount":"144","bestRating":"5"},"hasCredential":[{"@type":"EducationalOccupationalCredential","credentialCategory":"IRS Enrolled Agent"},{"@type":"EducationalOccupationalCredential","credentialCategory":"IRS Authorized e-File Provider"}]}
 </script>
@@ -102,7 +102,7 @@ input:focus,select:focus,textarea:focus{border-color:var(--teal) !important;back
 <div class="topbar">930 McCully St, Suite 203 · Honolulu · <a href="tel:+18089467297">808-946-7297</a></div>
 <nav id="nav">
   <div class="nav-inner">
-    <a href="/honolulu-hi/" class="nav-logo"><img src="https://samoanfro.github.io/rptaxservice/logo.png" alt="RP Tax Service Honolulu"></a>
+    <a href="/honolulu-hi/" class="nav-logo"><img src="/logo.png" alt="RP Tax Service Honolulu"></a>
     <ul class="nav-links-hi" id="nav-links">
       <li><a href="/honolulu-hi/" >Home</a></li>
       <li><a href="/honolulu-hi/services/" >Services</a></li>
@@ -147,7 +147,7 @@ input:focus,select:focus,textarea:focus{border-color:var(--teal) !important;back
             <div style="width:40px;height:40px;border-radius:8px;background:var(--teal-pale);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;">✉</div>
             <div>
               <div style="font-size:12px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted);margin-bottom:4px;">Email</div>
-              <a href="mailto:Admin@rptaxes.com" style="font-size:17px;font-weight:600;color:var(--navy);text-decoration:none;">Admin@rptaxes.com</a>
+              <a href="mailto:info@rptaxes.com" style="font-size:17px;font-weight:600;color:var(--navy);text-decoration:none;">info@rptaxes.com</a>
               <div style="font-size:13px;color:var(--text-muted);margin-top:2px;">We respond within 1 business day</div>
             </div>
           </div>
@@ -221,7 +221,8 @@ input:focus,select:focus,textarea:focus{border-color:var(--teal) !important;back
                 <label style="display:block;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted);font-weight:500;margin-bottom:5px;">Message</label>
                 <textarea id="msg" rows="3" placeholder="Tell us a little about your situation..." style="width:100%;background:var(--off-white);border:1px solid var(--border-sub);border-radius:5px;padding:10px 13px;font-family:'Source Sans 3',sans-serif;font-size:14px;color:var(--navy);outline:none;resize:vertical;"></textarea>
               </div>
-              <button type="submit" style="width:100%;background:var(--teal);color:#fff;border:none;border-radius:5px;padding:13px;font-family:'Source Sans 3',sans-serif;font-size:15px;font-weight:500;cursor:pointer;">Send Message</button>
+              <button type="submit" id="cf-btn" style="width:100%;background:var(--teal);color:#fff;border:none;border-radius:5px;padding:13px;font-family:'Source Sans 3',sans-serif;font-size:15px;font-weight:500;cursor:pointer;">Send Message</button>
+              <p id="cf-status" style="text-align:center;font-size:13px;margin-top:10px;display:none;"></p>
               <p style="text-align:center;font-size:12px;color:var(--text-muted);margin-top:10px;">Or call us directly: <a href="tel:+18089467297" style="color:var(--teal);">808-946-7297</a></p>
             </form>
           </div>
@@ -240,17 +241,41 @@ function submitForm(e) {
   const em=document.getElementById('em').value;
   const sv=document.getElementById('sv').value;
   const msg=document.getElementById('msg').value;
-  const body=`Name: ${fn} ${ln}%0APhone: ${ph}%0AEmail: ${em}%0AService: ${sv}%0A%0A${encodeURIComponent(msg)}`;
-  window.location.href=`mailto:Admin@rptaxes.com?subject=${encodeURIComponent('New Inquiry - '+sv)}&body=${body}`;
-  document.getElementById('cf').innerHTML='<div style="text-align:center;padding:32px"><h3 style="font-family:Libre Baskerville,serif;color:var(--navy);margin-bottom:10px;">Message Sent!</h3><p style="color:var(--text-muted);font-size:15px;line-height:1.7">We'll be in touch within one business day.<br>Or call us: <a href="tel:+18089467297" style="color:var(--teal)">808-946-7297</a></p></div>';
+  const btn=document.getElementById('cf-btn');
+  const status=document.getElementById('cf-status');
+  btn.disabled=true; btn.textContent='Sending...'; status.style.display='none';
+
+  const data=new FormData();
+  data.append('Name', (fn+' '+ln).trim());
+  data.append('Phone', ph);
+  data.append('Email', em);
+  data.append('Service', sv);
+  data.append('Message', msg);
+  data.append('_subject', 'New Inquiry - '+sv);
+  data.append('_template', 'table');
+  data.append('_captcha', 'true');
+
+  fetch('https://formsubmit.co/ajax/info@rptaxes.com', {
+    method:'POST', headers:{'Accept':'application/json'}, body:data
+  })
+  .then(r=>r.json())
+  .then(d=>{
+    if(!d.success && d.success!=='true') throw new Error('fail');
+    document.getElementById('cf').innerHTML='<div style="text-align:center;padding:32px"><h3 style="font-family:Libre Baskerville,serif;color:var(--navy);margin-bottom:10px;">Message Sent!</h3><p style="color:var(--text-muted);font-size:15px;line-height:1.7">We\'ll be in touch within one business day.<br>Or call us: <a href="tel:+18089467297" style="color:var(--teal)">808-946-7297</a></p></div>';
+  })
+  .catch(()=>{
+    status.textContent='Something went wrong. Please email info@rptaxes.com or call 808-946-7297.';
+    status.style.color='#991B1B'; status.style.display='block';
+    btn.disabled=false; btn.textContent='Send Message';
+  });
 }
 </script>
 
 <footer>
   <div class="container">
-    <img src="https://samoanfro.github.io/rptaxservice/logo.png" alt="RP Tax Service">
+    <img src="/logo.png" alt="RP Tax Service">
     <p>© 2026 RP Tax Service · 930 McCully Street, Suite 203 · Honolulu, HI 96826</p>
-    <p><a href="tel:+18089467297">808-946-7297</a> · <a href="mailto:Admin@rptaxes.com">Admin@rptaxes.com</a> · <a href="/index.html">Main Site</a></p>
+    <p><a href="tel:+18089467297">808-946-7297</a> · <a href="mailto:info@rptaxes.com">info@rptaxes.com</a> · <a href="/index.html">Main Site</a></p>
     <p class="footer-creds">IRS Enrolled Agent · IRS Authorized e-File Provider · Registered Tax Return Preparer</p>
   </div>
 </footer>
