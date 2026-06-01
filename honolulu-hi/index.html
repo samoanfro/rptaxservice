@@ -32,8 +32,12 @@ body{font-family:'Source Sans 3',sans-serif;background:#fff;color:var(--text-bod
 .topbar a{color:#fff;text-decoration:none;font-weight:600;}
 nav{background:#fff;border-bottom:3px solid var(--teal);position:sticky;top:0;z-index:100;box-shadow:0 2px 12px rgba(28,48,80,0.07);transition:box-shadow 0.3s;}
 .nav-inner{max-width:1000px;margin:0 auto;padding:0 28px;display:flex;align-items:center;justify-content:space-between;height:68px;}
-.nav-inner a:first-child{flex-shrink:0;max-width:130px;overflow:hidden;display:flex;align-items:center;}
-.nav-logo img{height:32px !important;max-height:32px !important;width:auto !important;max-width:120px !important;object-fit:contain;display:block;}
+
+/* Logo Fixes */
+.nav-logo {display:flex;align-items:center;gap:12px;text-decoration:none;flex-shrink:0;}
+.nav-logo img {height:44px !important;width:auto !important;max-width:160px !important;object-fit:contain;display:block;}
+.nav-logo-text {font-family:'Libre Baskerville', serif;font-size:18px;font-weight:700;color:var(--navy);white-space:nowrap;letter-spacing:0.02em;}
+
 .nav-links-hi{display:flex;gap:0;list-style:none;align-items:stretch;}
 .nav-links-hi a{display:flex;align-items:center;padding:0 14px;color:var(--text-muted);text-decoration:none;font-size:13.5px;border-bottom:2px solid transparent;transition:all 0.2s;white-space:nowrap;}
 .nav-links-hi a:hover,.nav-links-hi a.active{color:var(--teal);border-bottom-color:var(--teal);}
@@ -42,6 +46,12 @@ nav{background:#fff;border-bottom:3px solid var(--teal);position:sticky;top:0;z-
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;}
 .hamburger span{width:22px;height:2px;background:var(--navy);border-radius:1px;display:block;}
 .container{max-width:1000px;margin:0 auto;padding:0 28px;}
+
+/* HERO TRUST BAR */
+.hero-trust { display:flex; align-items:center; justify-content:center; gap:16px; flex-wrap:wrap; margin-top:32px; margin-bottom:48px; border-top:1px solid rgba(255,255,255,0.15); border-bottom:1px solid rgba(255,255,255,0.15); padding:16px 0; }
+.hero-trust-item { display:flex; align-items:center; gap:7px; font-size:13px; color:rgba(255,255,255,0.85); font-weight:600; letter-spacing:0.04em; text-transform:uppercase; }
+.hero-trust-sep { width:1px; height:16px; background:rgba(255,255,255,0.25); }
+
 .page-header{background:linear-gradient(160deg,var(--navy) 0%,#1e3d5c 100%);padding:64px 0 52px;position:relative;overflow:hidden;}
 .page-header::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--teal),var(--teal-light),var(--teal));}
 .page-header-eyebrow{font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--teal-light);margin-bottom:12px;}
@@ -93,6 +103,9 @@ footer a{color:var(--teal-light);text-decoration:none;}
   .mobile-cta{display:flex;}
   body{padding-bottom:72px;}
   .page-header{padding:40px 0 32px;}
+  .nav-logo-text {display:none;}
+  .hero-trust { flex-direction:column; align-items:center; gap:10px; border:none; padding:0; margin-bottom:40px; }
+  .hero-trust-sep { display:none; }
 }
 </style>
 </head>
@@ -100,7 +113,10 @@ footer a{color:var(--teal-light);text-decoration:none;}
 <div class="topbar">930 McCully St, Suite 203 · Honolulu · <a href="tel:+18089467297">808-946-7297</a></div>
 <nav id="nav">
   <div class="nav-inner">
-    <a href="/honolulu-hi/"><img src="https://samoanfro.github.io/rptaxservice/logo.png" alt="RP Tax Service Honolulu"></a>
+    <a href="/honolulu-hi/" class="nav-logo">
+      <img src="https://samoanfro.github.io/rptaxservice/logo.png" alt="RP Tax Service Honolulu">
+      <span class="nav-logo-text">RP Tax Service</span>
+    </a>
     <ul class="nav-links-hi" id="nav-links">
       <li><a href="/honolulu-hi/" class='active'>Home</a></li>
       <li><a href="/honolulu-hi/services/" >Services</a></li>
@@ -122,11 +138,22 @@ footer a{color:var(--teal-light);text-decoration:none;}
     <div style="font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--teal-light);margin-bottom:18px;display:flex;align-items:center;gap:8px;justify-content:center;"><span style="width:20px;height:2px;background:var(--teal-light);display:inline-block;"></span>Honolulu, Hawaii · Family-Owned Since 2009<span style="width:20px;height:2px;background:var(--teal-light);display:inline-block;"></span></div>
     <h1 style="font-family:'Libre Baskerville',serif;font-size:clamp(38px,6vw,68px);font-weight:400;color:#fff;line-height:1.05;margin-bottom:20px;">Your Honolulu tax team.<br><em style="color:var(--teal-light);">Local. Trusted. Here.</em></h1>
     <p style="font-size:18px;color:rgba(255,255,255,0.65);max-width:520px;margin:0 auto 40px;line-height:1.7;">We've been on McCully Street since 2009. IRS Enrolled Agent on staff. Over 280 five-star reviews. We pick up the phone.</p>
-    <div style="display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-bottom:56px;">
+    
+    <div style="display:flex;justify-content:center;gap:14px;flex-wrap:wrap;">
       <a href="tel:+18089467297" class="btn-teal" style="font-size:16px;padding:15px 32px;">Call 808-946-7297</a>
       <a href="/honolulu-hi/contact/" class="btn-ghost-white" style="font-size:16px;padding:15px 32px;">Free Consultation</a>
     </div>
-    <!-- TRUST ROW -->
+
+    <!-- RESTORED HERO TRUST CREDENTIALS BAR -->
+    <div class="hero-trust">
+      <div class="hero-trust-item">IRS Enrolled Agent</div>
+      <div class="hero-trust-sep"></div>
+      <div class="hero-trust-item">IRS Authorized e-File Provider</div>
+      <div class="hero-trust-sep"></div>
+      <div class="hero-trust-item">Registered Tax Return Preparer</div>
+    </div>
+
+    <!-- TRUST ROW GRID -->
     <div style="display:flex;justify-content:center;gap:32px;flex-wrap:wrap;padding:24px 32px;background:rgba(255,255,255,0.05);border-radius:10px;border:1px solid rgba(255,255,255,0.08);max-width:720px;margin:0 auto;">
       <div style="text-align:center;">
         <div style="font-family:'Libre Baskerville',serif;font-size:28px;color:#fff;font-weight:400;">15+</div>
