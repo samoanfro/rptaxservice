@@ -53,6 +53,12 @@ nav{background:#fff;border-bottom:3px solid var(--teal);position:sticky;top:0;z-
 .page-header h1{font-family:'Libre Baskerville',serif;font-size:clamp(28px,4vw,44px);font-weight:400;color:#fff;line-height:1.15;margin-bottom:10px;}
 .page-header h1 em{font-style:italic;color:var(--teal-light);}
 .page-header p{font-size:16px;color:rgba(255,255,255,0.65);max-width:520px;line-height:1.7;}
+
+/* WHITE CERTS BAND */
+.cert-band {background:#fff; padding:36px 0; border-bottom:1px solid var(--border-sub);}
+.cert-band-inner {display:flex; justify-content:center; align-items:center; gap:36px; flex-wrap:wrap;}
+.cert-band img {height:65px; width:auto; object-fit:contain;}
+
 .section-tag{font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--teal-dark);font-weight:600;margin-bottom:14px;display:flex;align-items:center;gap:8px;}
 .section-tag::before{content:'';width:18px;height:2px;background:var(--teal);}
 h2.sh{font-family:'Libre Baskerville',serif;font-size:clamp(24px,3.5vw,38px);font-weight:400;color:var(--navy);line-height:1.25;margin-bottom:16px;}
@@ -99,6 +105,8 @@ footer a{color:var(--teal-light);text-decoration:none;}
   body{padding-bottom:72px;}
   .page-header{padding:40px 0 32px;}
   .nav-logo-text {display:none;}
+  .cert-band img {height:55px;}
+  .cert-band-inner {gap:20px;}
 }
 </style>
 </head>
@@ -137,6 +145,7 @@ footer a{color:var(--teal-light);text-decoration:none;}
       <a href="/honolulu-hi/contact/" class="btn-ghost-white" style="font-size:16px;padding:15px 32px;">Free Consultation</a>
     </div>
 
+    <!-- TRUST ROW GRID -->
     <div style="display:flex;justify-content:center;gap:32px;flex-wrap:wrap;padding:24px 32px;background:rgba(255,255,255,0.05);border-radius:10px;border:1px solid rgba(255,255,255,0.08);max-width:720px;margin:0 auto;">
       <div style="text-align:center;">
         <div style="font-family:'Libre Baskerville',serif;font-size:28px;color:#fff;font-weight:400;">15+</div>
@@ -161,20 +170,100 @@ footer a{color:var(--teal-light);text-decoration:none;}
   </div>
 </section>
 
-<section style="background:#fff; padding:32px 0; border-bottom:1px solid var(--border-sub);">
+<!-- CREDENTIALS BAND (WHITE SECTION) -->
+<section class="cert-band">
   <div class="container">
-    <div style="display:flex; justify-content:center; align-items:center; gap:24px; flex-wrap:wrap;">
-      <img src="https://samoanfro.github.io/rptaxservice/three-best.jpg" alt="Three Best Rated Honolulu" onerror="this.src='../three-best.jpg'" style="height:70px; width:auto; object-fit:contain;">
-      <img src="https://samoanfro.github.io/rptaxservice/irs-ea.jpg" alt="IRS Enrolled Agent" onerror="this.src='../irs-ea.jpg'" style="height:70px; width:auto; object-fit:contain;">
-      <img src="https://samoanfro.github.io/rptaxservice/irs-efile.png" alt="IRS Authorized e-File Provider" onerror="this.src='../irs-efile.png'" style="height:70px; width:auto; object-fit:contain;">
-      <img src="https://samoanfro.github.io/rptaxservice/irs-reg.png" alt="Registered Tax Return Preparer" onerror="this.src='../irs-reg.png'" style="height:70px; width:auto; object-fit:contain;">
+    <div class="cert-band-inner">
+      <img src="https://samoanfro.github.io/rptaxservice/three-best.jpg" alt="Three Best Rated Honolulu" onerror="this.src='../three-best.jpg'">
+      <img src="https://samoanfro.github.io/rptaxservice/irs-ea.jpg" alt="IRS Enrolled Agent" onerror="this.src='../irs-ea.jpg'">
+      <img src="https://samoanfro.github.io/rptaxservice/irs-efile.png" alt="IRS Authorized e-File Provider" onerror="this.src='../irs-efile.png'">
+      <img src="https://samoanfro.github.io/rptaxservice/irs-reg.png" alt="Registered Tax Return Preparer" onerror="this.src='../irs-reg.png'">
     </div>
   </div>
 </section>
 
+<!-- NAV CARDS -->
 <section style="padding:72px 0;background:var(--off-white);">
   <div class="container">
     <div class="section-tag" style="justify-content:center;">Where do you want to go?</div>
     <h2 class="sh" style="text-align:center;margin-bottom:40px;">Everything you need,<br>one click away.</h2>
     <div class="grid3" style="gap:16px;">
       <a href="/honolulu-hi/services/" style="text-decoration:none;">
+        <div class="card card-teal" style="cursor:pointer;text-align:center;padding:32px 20px;transition:all 0.3s;">
+          <h3 style="font-size:20px;margin-bottom:10px;line-height:1.2;">Our Services</h3>
+          <p style="font-size:14px;">Personal returns, business taxes, IRS help, planning, and more.</p>
+          <div style="margin-top:14px;font-size:13px;font-weight:600;color:var(--teal);">See Services →</div>
+        </div>
+      </a>
+      <a href="/honolulu-hi/about/" style="text-decoration:none;">
+        <div class="card card-teal" style="cursor:pointer;text-align:center;padding:32px 20px;transition:all 0.3s;">
+          <h3 style="font-size:20px;margin-bottom:10px;line-height:1.2;">About Us</h3>
+          <p style="font-size:14px;">Meet Robert, Jacob, and the team. Here since 2009.</p>
+          <div style="margin-top:14px;font-size:13px;font-weight:600;color:var(--teal);">Meet the Team →</div>
+        </div>
+      </a>
+      <a href="/honolulu-hi/hawaii-taxes/" style="text-decoration:none;">
+        <div class="card card-teal" style="cursor:pointer;text-align:center;padding:32px 20px;transition:all 0.3s;">
+          <h3 style="font-size:20px;margin-bottom:10px;line-height:1.2;">Hawaii Taxes</h3>
+          <p style="font-size:14px;">GET, April 20 deadline, the 11% rate, and what you need to know.</p>
+          <div style="margin-top:14px;font-size:13px;font-weight:600;color:var(--teal);">Learn More →</div>
+        </div>
+      </a>
+      <a href="/honolulu-hi/reviews/" style="text-decoration:none;">
+        <div class="card card-teal" style="cursor:pointer;text-align:center;padding:32px 20px;transition:all 0.3s;">
+          <h3 style="font-size:20px;margin-bottom:10px;line-height:1.2;">Client Reviews</h3>
+          <p style="font-size:14px;">4.6 Google · 4.5 Yelp · 280+ reviews from real Hawaii clients.</p>
+          <div style="margin-top:14px;font-size:13px;font-weight:600;color:var(--teal);">Read Reviews →</div>
+        </div>
+      </a>
+      <a href="/honolulu-hi/portal/" style="text-decoration:none;">
+        <div class="card card-teal" style="cursor:pointer;text-align:center;padding:32px 20px;transition:all 0.3s;">
+          <h3 style="font-size:20px;margin-bottom:10px;line-height:1.2;">Client Portal</h3>
+          <p style="font-size:14px;">Upload documents, sign returns, access your files anytime.</p>
+          <div style="margin-top:14px;font-size:13px;font-weight:600;color:var(--teal);">Sign In →</div>
+        </div>
+      </a>
+      <a href="/honolulu-hi/contact/" style="text-decoration:none;">
+        <div class="card card-teal" style="cursor:pointer;text-align:center;padding:32px 20px;transition:all 0.3s;">
+          <h3 style="font-size:20px;margin-bottom:10px;line-height:1.2;">Contact Us</h3>
+          <p style="font-size:14px;">Call, email, or visit us at 930 McCully Street, Suite 203.</p>
+          <div style="margin-top:14px;font-size:13px;font-weight:600;color:var(--teal);">Get in Touch →</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="cta-band">
+  <div class="container">
+    <h2>First consultation is free.</h2>
+    <p>Call us, email us, or come see us on McCully Street. We'll take it from there.</p>
+    <div class="cta-btns">
+      <a href="tel:+18089467297" class="btn-teal">Call 808-946-7297</a>
+      <a href="/honolulu-hi/contact/" class="btn-ghost-white">Send a Message</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <img src="https://samoanfro.github.io/rptaxservice/logo.png" alt="RP Tax Service">
+    <p>© 2026 RP Tax Service · 930 McCully Street, Suite 203 · Honolulu, HI 96826</p>
+    <p><a href="tel:+18089467297">808-946-7297</a> · <a href="mailto:Admin@rptaxes.com">Admin@rptaxes.com</a> · <a href="/index.html">Main Site</a></p>
+    <p class="footer-creds">IRS Enrolled Agent · IRS Authorized e-File Provider · Registered Tax Return Preparer</p>
+  </div>
+</footer>
+<div class="mobile-cta">
+  <a href="tel:+18089467297" style="flex:1;text-align:center;padding:11px;border-radius:5px;background:var(--teal);color:#fff;font-size:14px;font-weight:600;text-decoration:none;">Call Now</a>
+  <a href="/honolulu-hi/portal/" style="flex:1;text-align:center;padding:11px;border-radius:5px;background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.8);font-size:14px;font-weight:600;text-decoration:none;border:1px solid rgba(255,255,255,0.2);">Client Portal</a>
+</div>
+<script>
+// Close mobile nav when link clicked
+document.querySelectorAll('.nav-links-hi a').forEach(a => {
+  a.addEventListener('click', () => {
+    document.getElementById('nav-links').classList.remove('open');
+  });
+});
+</script>
+</body>
+</html>
