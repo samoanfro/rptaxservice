@@ -48,9 +48,8 @@ nav{background:#fff;border-bottom:3px solid var(--teal);position:sticky;top:0;z-
 .container{max-width:1000px;margin:0 auto;padding:0 28px;}
 
 /* HERO TRUST BAR */
-.hero-trust { display:flex; align-items:center; justify-content:center; gap:16px; flex-wrap:wrap; margin-top:32px; margin-bottom:48px; border-top:1px solid rgba(255,255,255,0.15); border-bottom:1px solid rgba(255,255,255,0.15); padding:16px 0; }
-.hero-trust-item { display:flex; align-items:center; gap:7px; font-size:13px; color:rgba(255,255,255,0.85); font-weight:600; letter-spacing:0.04em; text-transform:uppercase; }
-.hero-trust-sep { width:1px; height:16px; background:rgba(255,255,255,0.25); }
+.hero-trust { display:flex; align-items:center; justify-content:center; gap:40px; flex-wrap:wrap; margin-top:32px; margin-bottom:48px; border-top:1px solid rgba(255,255,255,0.15); border-bottom:1px solid rgba(255,255,255,0.15); padding:20px 0; }
+.hero-trust img { height:65px; width:auto; object-fit:contain; filter:drop-shadow(0 2px 4px rgba(0,0,0,0.2)); }
 
 .page-header{background:linear-gradient(160deg,var(--navy) 0%,#1e3d5c 100%);padding:64px 0 52px;position:relative;overflow:hidden;}
 .page-header::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--teal),var(--teal-light),var(--teal));}
@@ -104,8 +103,8 @@ footer a{color:var(--teal-light);text-decoration:none;}
   body{padding-bottom:72px;}
   .page-header{padding:40px 0 32px;}
   .nav-logo-text {display:none;}
-  .hero-trust { flex-direction:column; align-items:center; gap:10px; border:none; padding:0; margin-bottom:40px; }
-  .hero-trust-sep { display:none; }
+  .hero-trust { flex-direction:column; align-items:center; gap:16px; border:none; padding:0; margin-bottom:40px; }
+  .hero-trust img { height: 50px; }
 }
 </style>
 </head>
@@ -144,13 +143,11 @@ footer a{color:var(--teal-light);text-decoration:none;}
       <a href="/honolulu-hi/contact/" class="btn-ghost-white" style="font-size:16px;padding:15px 32px;">Free Consultation</a>
     </div>
 
-    <!-- RESTORED HERO TRUST CREDENTIALS BAR -->
+    <!-- IMAGE CREDENTIALS BAR -->
     <div class="hero-trust">
-      <div class="hero-trust-item">IRS Enrolled Agent</div>
-      <div class="hero-trust-sep"></div>
-      <div class="hero-trust-item">IRS Authorized e-File Provider</div>
-      <div class="hero-trust-sep"></div>
-      <div class="hero-trust-item">Registered Tax Return Preparer</div>
+      <img src="https://samoanfro.github.io/rptaxservice/irs-ea.jpg" alt="IRS Enrolled Agent" onerror="this.src='../irs-ea.jpg'">
+      <img src="https://samoanfro.github.io/rptaxservice/irs-efile.png" alt="IRS Authorized e-File Provider" onerror="this.src='../irs-efile.png'">
+      <img src="https://samoanfro.github.io/rptaxservice/irs-reg.png" alt="Registered Tax Return Preparer" onerror="this.src='../irs-reg.png'">
     </div>
 
     <!-- TRUST ROW GRID -->
