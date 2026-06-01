@@ -3,228 +3,65 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Meet the Team | RP Tax Service — Honolulu, Hawaii</title>
-<meta name="description" content="Meet the RP Tax Service team — Robert and Jacob, Honolulu's trusted tax professionals with 15+ years serving Hawaii families and businesses.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+<title>RP Tax Service | Professional Tax Preparation & Planning</title>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
 :root {
-  --teal:#4E9FB0; --teal-dark:#3D8A9A; --teal-deeper:#2F7283;
-  --teal-light:#6DBDCC; --teal-pale:#EBF7F9; --teal-mist:#F4FAFB;
-  --navy:#1C3050; --off-white:#F6F9FA;
-  --text-body:#3D5060; --text-muted:#7090A0;
-  --border:rgba(78,159,176,0.18); --border-sub:rgba(28,48,80,0.09);
+  --teal:#4E9FB0; --navy:#1C3050; --off-white:#F6F9FA; --text-body:#3D5060;
   --shadow-sm:0 2px 12px rgba(28,48,80,0.07);
-  --shadow-md:0 6px 32px rgba(28,48,80,0.11);
 }
 *{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:'Source Sans 3',sans-serif;background:#fff;color:var(--text-body);line-height:1.7;font-size:17px;}
-.topbar{background:var(--teal-deeper);padding:10px 16px;text-align:center;font-size:14px;color:rgba(255,255,255,0.9);}
-.topbar a{color:#fff;text-decoration:none;font-weight:600;border-bottom:1px solid rgba(255,255,255,0.4);}
-nav{background:#fff;border-bottom:3px solid var(--teal);padding:0;box-shadow:0 2px 12px rgba(28,48,80,0.07);}
+body{font-family:'Source Sans 3',sans-serif;background:#fff;color:var(--text-body);line-height:1.7;}
+/* Navigation */
+nav{background:#fff;border-bottom:3px solid var(--teal);padding:0;box-shadow:var(--shadow-sm);}
 .nav-inner{max-width:1120px;margin:0 auto;padding:0 32px;display:flex;align-items:center;justify-content:space-between;height:70px;}
-.nav-logo img{height:52px;width:auto;}
-.nav-back{display:flex;align-items:center;gap:8px;color:var(--teal-dark);text-decoration:none;font-size:14px;font-weight:500;}
-.nav-back:hover{color:var(--navy);}
-.container{max-width:1120px;margin:0 auto;padding:0 32px;}
-.page-hero{background:linear-gradient(160deg,var(--navy) 0%,var(--teal-deeper) 100%);padding:80px 0;text-align:center;}
-.page-hero h1{font-family:'Libre Baskerville',serif;font-size:clamp(36px,5vw,56px);font-weight:400;color:#fff;margin-bottom:16px;}
-.page-hero p{font-size:18px;color:rgba(255,255,255,0.7);max-width:520px;margin:0 auto;}
-.section-tag{font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--teal);font-weight:500;margin-bottom:14px;display:flex;align-items:center;gap:8px;}
-.section-tag::before{content:'';width:24px;height:2px;background:var(--teal);border-radius:1px;}
-.team-section{padding:88px 0;}
-.team-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:52px;}
-.team-card{background:#fff;border:1px solid var(--border-sub);border-radius:12px;overflow:hidden;box-shadow:var(--shadow-sm);}
-.team-photo{width:100%;aspect-ratio:4/3;background:var(--teal-pale);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;}
-.team-photo img{width:100%;height:100%;object-fit:cover;object-position:top;}
-.team-info{padding:28px 32px;}
-.team-name{font-family:'Libre Baskerville',serif;font-size:26px;font-weight:400;color:var(--navy);margin-bottom:4px;}
-.team-title{font-size:14px;color:var(--teal-dark);font-weight:500;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:16px;}
-.team-bio{font-size:15px;color:var(--text-body);line-height:1.75;margin-bottom:20px;}
-.team-creds{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px;}
-.team-cred{background:var(--teal-pale);border:1px solid var(--border);color:var(--teal-deep, #2F7283);padding:4px 12px;border-radius:20px;font-size:12px;font-weight:500;}
-.team-specialties{border-top:1px solid var(--border-sub);padding-top:18px;}
-.team-specialties h4{font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-muted);margin-bottom:10px;}
-.team-spec-list{display:flex;flex-direction:column;gap:6px;}
-.team-spec-item{font-size:14px;color:var(--text-body);display:flex;align-items:center;gap:8px;}
-.team-spec-item::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--teal);flex-shrink:0;}
-.values-section{background:var(--off-white);padding:80px 0;border-top:1px solid var(--border-sub);}
-.values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px;}
-.value-card{background:#fff;border:1px solid var(--border-sub);border-radius:8px;padding:28px 24px;box-shadow:var(--shadow-sm);}
-.value-card h3{font-family:'Libre Baskerville',serif;font-size:20px;font-weight:400;color:var(--navy);margin-bottom:10px;}
-.value-card p{font-size:14px;color:var(--text-muted);line-height:1.65;}
-.cta-band{background:linear-gradient(135deg,var(--navy),var(--teal-deeper));padding:64px 0;text-align:center;}
-.cta-band h2{font-family:'Libre Baskerville',serif;font-size:36px;font-weight:400;color:#fff;margin-bottom:14px;}
-.cta-band p{font-size:17px;color:rgba(255,255,255,0.7);margin-bottom:32px;}
-.btn-teal{background:var(--teal);color:#fff;padding:13px 28px;border-radius:4px;font-family:'Source Sans 3',sans-serif;font-size:14px;font-weight:500;text-decoration:none;display:inline-block;transition:background 0.3s;}
-.btn-teal:hover{background:var(--teal-dark);}
-.btn-outline{background:transparent;color:#fff;padding:13px 28px;border:1px solid rgba(255,255,255,0.4);border-radius:4px;font-family:'Source Sans 3',sans-serif;font-size:14px;text-decoration:none;display:inline-block;margin-left:12px;transition:all 0.3s;}
-.btn-outline:hover{border-color:#fff;}
-footer{background:var(--navy);color:rgba(255,255,255,0.5);padding:32px 0;text-align:center;font-size:13px;}
-footer a{color:var(--teal-light);text-decoration:none;}
-@media(max-width:768px){.team-grid{grid-template-columns:1fr;}.values-grid{grid-template-columns:1fr;}}
+.nav-logo img{height:52px;width:auto;object-fit:contain;}
+.nav-links a{color:var(--navy);text-decoration:none;font-weight:600;margin-left:24px;font-size:15px;}
+/* Hero Section */
+.page-hero{background:linear-gradient(160deg,var(--navy) 0%,#2F7283 100%);padding:120px 0;text-align:center;color:#fff;}
+.page-hero h1{font-family:'Libre Baskerville',serif;font-size:clamp(40px,5vw,60px);margin-bottom:20px;}
+.btn-teal{background:var(--teal);color:#fff;padding:18px 40px;border-radius:4px;text-decoration:none;display:inline-block;font-weight:600;font-size:16px;}
+/* Content Section */
+.content-wrapper{max-width:1120px;margin:0 auto;padding:80px 32px;}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:40px;}
+.card{background:var(--off-white);padding:30px;border-radius:8px;}
+/* Footer */
+footer{background:var(--navy);color:rgba(255,255,255,0.6);padding:60px 0;text-align:center;}
+footer a{color:#fff;text-decoration:none;margin:0 10px;}
 </style>
-<link rel="canonical" href="https://www.rptaxes.com/team.html">
-<meta name="robots" content="index, follow">
-<meta name="author" content="RP Tax Service">
-<meta property="og:url" content="https://www.rptaxes.com/team.html">
-<meta property="og:image" content="https://samoanfro.github.io/rptaxservice/logo.png">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "AboutPage",
-  "url": "https://www.rptaxes.com/team.html",
-  "name": "Meet the Team | RP Tax Service — Honolulu, Hawaii",
-  "isPartOf": {
-    "@type": "WebSite",
-    "url": "https://www.rptaxes.com",
-    "name": "RP Tax Service"
-  },
-  "publisher": {
-    "@type": "AccountingService",
-    "name": "RP Tax Service",
-    "url": "https://www.rptaxes.com",
-    "telephone": "+1-808-946-7297",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "930 McCully Street, Suite 203",
-      "addressLocality": "Honolulu",
-      "addressRegion": "HI",
-      "postalCode": "96826",
-      "addressCountry": "US"
-    }
-  }
-}
-</script>
 </head>
 <body>
-<div class="topbar"><span>Honolulu · Nevada · Utah · California &nbsp;·&nbsp;</span><a href="tel:+18089467297">808-946-7297</a></div>
+
 <nav>
   <div class="nav-inner">
-    <a href="index.html" class="nav-logo"><img src="https://samoanfro.github.io/rptaxservice/logo.png" alt="RP Tax Service" style="height:52px;width:auto;object-fit:contain;"></a>
-    <a href="index.html" class="nav-back">← Back to Home</a>
+    <a href="/" class="nav-logo"><img src="https://samoanfro.github.io/rptaxservice/logo.png" alt="RP Tax Service"></a>
+    <div class="nav-links">
+      <a href="/about/">Meet the Team</a>
+    </div>
   </div>
 </nav>
 
 <div class="page-hero">
-  <div class="container">
-    <div class="section-tag" style="justify-content:center;color:var(--teal-light)">Our People</div>
-    <h1>Meet the Team</h1>
-    <p>A family-owned firm built on competence, speed, and accuracy. We treat every client like a neighbor — because most of you are.</p>
+  <h1>Your trusted tax team.</h1>
+  <p>Competence, speed, and accuracy for families and businesses.</p>
+  <div style="margin-top:30px;">
+    <a href="tel:+18089467297" class="btn-teal">Call 808-946-7297</a>
   </div>
 </div>
 
-<section class="team-section">
-  <div class="container">
-    <div class="section-tag">The People Behind RP Tax Service</div>
-    <h2 style="font-family:'Libre Baskerville',serif;font-size:clamp(28px,4vw,44px);font-weight:400;color:var(--navy);margin-bottom:8px">Real people. Real expertise.<br>Always a familiar face.</h2>
-    <p style="font-size:17px;color:var(--text-muted);max-width:520px;margin-top:12px">We've been serving Honolulu and beyond for over 15 years. When you call our office, you know who's picking up.</p>
-
-    <div class="team-grid">
-
-      <!-- ROBERT -->
-      <div class="team-card">
-        <div class="team-photo">
-          <img src="https://samoanfro.github.io/rptaxservice/Robert.jpg" alt="Robert Purcell">
-        </div>
-        <div class="team-info">
-          <div class="team-name">Robert Purcell</div>
-          <div class="team-title">Tax Advisor · IRS Enrolled Agent</div>
-          <p class="team-bio">Robert began his tax preparation career in California, quickly building a nationwide clientele. He embraced the industry's shift to online operations, leveraging his prior experience with online tools. After years of serving clients across the country, Robert decided to return to Hawaii, where he has called home for the past 13 years. His local upbringing in Waipahu adds to his understanding of the community's needs.</p>
-          <div class="team-creds">
-            <span class="team-cred">Tax Advisor</span>
-            <span class="team-cred">IRS Enrolled Agent</span>
-            <span class="team-cred">IRS Authorized e-File Provider</span>
-            <span class="team-cred">15+ Years Experience</span>
-          </div>
-          <div class="team-specialties">
-            <h4>Specialties</h4>
-            <div class="team-spec-list">
-              <div class="team-spec-item">IRS Resolution & Representation</div>
-              <div class="team-spec-item">Business Tax Planning & Strategy</div>
-              <div class="team-spec-item">S-Corp & Entity Optimization</div>
-              <div class="team-spec-item">Multi-State Tax Filing</div>
-              <div class="team-spec-item">Collectibles & Investment Taxation</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- JACOB -->
-      <div class="team-card">
-        <div class="team-photo">
-          <img src="https://samoanfro.github.io/rptaxservice/Jacob.jpeg" alt="Jacob Siaosi">
-        </div>
-        <div class="team-info">
-          <div class="team-name">Jacob Siaosi</div>
-          <div class="team-title">Tax Advisor · IRS Enrolled Agent</div>
-          <p class="team-bio">Jacob, an Enrolled Agent with the IRS, has been an integral part of RP Tax for four years. He specializes in overseeing the online portal business and brings a strong background in financial planning, which enhances his tax planning expertise. Jacob holds a degree from BYU-Utah and is fluent in Spanish, offering a valuable skill set to the RP Tax team and its clients.</p>
-          <div class="team-creds">
-            <span class="team-cred">IRS Enrolled Agent</span>
-            <span class="team-cred">Financial Planning</span>
-            <span class="team-cred">Fluent in Spanish</span>
-          </div>
-          <div class="team-specialties">
-            <h4>Specialties</h4>
-            <div class="team-spec-list">
-              <div class="team-spec-item">Personal & Family Tax Returns</div>
-              <div class="team-spec-item">Small Business Returns</div>
-              <div class="team-spec-item">Crypto & Investment Reporting</div>
-              <div class="team-spec-item">First-Time Filers & Education</div>
-              <div class="team-spec-item">Client Portal & Document Management</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<section class="values-section">
-  <div class="container">
-    <div class="section-tag">What We Stand For</div>
-    <h2 style="font-family:'Libre Baskerville',serif;font-size:clamp(28px,4vw,40px);font-weight:400;color:var(--navy);margin-bottom:8px">Our values.</h2>
-    <div class="values-grid">
-      <div class="value-card">
-        <h3>Competence</h3>
-        <p>We stay current with every change in the tax code — federal and state. Our clients get advice that reflects the law as it is today, not how it was five years ago.</p>
-      </div>
-      <div class="value-card">
-        <h3>Speed</h3>
-        <p>We know tax deadlines create stress. We work efficiently and communicate clearly so you always know where things stand — no chasing us down.</p>
-      </div>
-      <div class="value-card">
-        <h3>Accuracy</h3>
-        <p>We do it right the first time. Every return goes through a thorough review process so you can file with confidence and sleep at night.</p>
-      </div>
-      <div class="value-card">
-        <h3>Accessibility</h3>
-        <p>Quality tax service shouldn't be out of reach. We keep our rates fair and our service personal — no corporate runaround, no hidden fees.</p>
-      </div>
-      <div class="value-card">
-        <h3>Year-Round</h3>
-        <p>We're open all year — not just in April. Questions come up at any time, and we're here when they do.</p>
-      </div>
-      <div class="value-card">
-        <h3>Aloha</h3>
-        <p>We're a Hawaii firm at heart. We bring warmth, patience, and genuine care to every client interaction — because that's how we were raised to do business.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="cta-band">
-  <div class="container">
-    <h2>Ready to work with us?</h2>
-    <p>Your first consultation is free. Call us or send a message — we'll get back to you quickly.</p>
-    <a href="tel:+18089467297" class="btn-teal">Call 808-946-7297</a>
-    <a href="index.html#contact" class="btn-outline">Send a Message</a>
+<div class="content-wrapper">
+  <h2>Our Expertise</h2>
+  <div class="grid-3">
+    <div class="card"><h3>Tax Planning</h3><p>Proactive strategies to minimize your liability year-round.</p></div>
+    <div class="card"><h3>IRS Resolution</h3><p>Expert representation when you need it most.</p></div>
+    <div class="card"><h3>Business Services</h3><p>Optimized filing for S-Corps, LLCs, and partnerships.</p></div>
   </div>
 </div>
 
 <footer>
-  <p>© 2026 RP Tax Service · <a href="index.html">Home</a> · <a href="tel:+18089467297">808-946-7297</a> · <a href="mailto:Admin@rptaxes.com">Admin@rptaxes.com</a></p>
+  <p>© 2026 RP Tax Service</p>
+  <p style="margin-top:20px;"><a href="/">Home</a> | <a href="/about/">Meet the Team</a></p>
 </footer>
+
 </body>
 </html>
