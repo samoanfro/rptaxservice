@@ -126,7 +126,10 @@
     {
       "@type": "FAQPage",
       "mainEntity": [
-        {"@type": "Question","name": "How long should I keep my tax records?","acceptedAnswer": {"@type": "Answer","text": "Keep records for at least 3 years from the filing date. The IRS generally has 3 years to review your return. Keep investment, property, and business records longer."}},
+        {"@type": "Question","name": "What is an IRS Enrolled Agent?","acceptedAnswer": {"@type": "Answer","text": "An IRS Enrolled Agent (EA) is a federally licensed tax professional authorized by the U.S. Department of the Treasury. EAs have unlimited practice rights before the IRS — meaning they can represent any taxpayer for any tax matter, including audits, collections, and appeals. It is the highest credential the IRS issues to non-attorneys. Both of our advisors, Robert Purcell and Jacob Siaosi, hold this credential."}},
+        {"@type": "Question","name": "Does RP Tax Service handle Hawaii General Excise Tax (GET)?","acceptedAnswer": {"@type": "Answer","text": "Yes. Hawaii GET is a core part of our practice. Unlike a standard sales tax, Hawaii's General Excise Tax applies to gross business income — not just retail sales — and the rates vary by county (4% statewide, plus 0.5% surcharge on Oahu). We help Hawaii business owners understand their GET obligations, set up proper accounting, and file accurately."}},
+        {"@type": "Question","name": "What is the difference between tax preparation and tax planning?","acceptedAnswer": {"@type": "Answer","text": "Tax preparation is filing your return — organizing what happened last year and reporting it accurately. Tax planning is working before the year ends to change what you'll owe: structuring income timing, maximizing deductions, adjusting entity elections, and setting up retirement contributions. Preparation looks backward; planning looks forward. RP Tax Service does both, with planning as the foundation of every client relationship."}},
+        {"@type": "Question","name": "How long should I keep my tax records?","acceptedAnswer": {"@type": "Answer","text": "Keep records for at least 3 years from the filing date. The IRS generally has 3 years to review your return. Keep investment, property, and business records longer — we can advise on your specific situation."}},
         {"@type": "Question","name": "Does RP Tax Service offer online tax filing?","acceptedAnswer": {"@type": "Answer","text": "Yes. We serve clients entirely online through our secure TaxDome client portal. Upload documents, sign returns electronically, and communicate securely from anywhere in Hawaii, Nevada, Utah, Arizona, or California."}},
         {"@type": "Question","name": "What states does RP Tax Service work in?","acceptedAnswer": {"@type": "Answer","text": "We prepare tax returns and provide advisory services for clients in Hawaii, Nevada, Utah, Arizona, and California."}},
         {"@type": "Question","name": "Can RP Tax Service help with IRS problems?","acceptedAnswer": {"@type": "Answer","text": "Yes. As IRS Enrolled Agents, we represent clients before the IRS — negotiating Offers in Compromise, installment agreements, IRS examination representation, and back tax resolution."}},
@@ -243,6 +246,8 @@ nav.elevated { box-shadow:var(--shadow-md); }
 }
 .nav-cta-btn:hover { background:var(--teal-dark) !important; }
 .hamburger { display:none; background:none; border:none; cursor:pointer; padding:8px; color:var(--navy); font-size:22px; }
+
+/* ── HERO ── */
 .hero {
   background: linear-gradient(160deg, var(--navy) 0%, var(--navy-mid) 45%, var(--teal-deeper) 100%);
   min-height:0;
@@ -268,13 +273,28 @@ nav.elevated { box-shadow:var(--shadow-md); }
   color:var(--teal-light); margin-bottom:20px; font-weight:400;
 }
 .hero-eyebrow::before { content:''; width:24px; height:1px; background:var(--teal-light); }
-.hero h1 {
+
+/* FIX 1: Geo H1 — rankable keyword headline, visually subordinate */
+.hero-geo-h1 {
+  font-family:'Source Sans 3',sans-serif;
+  font-size:13px;
+  font-weight:500;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,0.45);
+  margin-bottom:14px;
+  line-height:1;
+}
+
+/* The tagline is now a <p>, styled to look like the old h1 */
+.hero-tagline {
   font-family:'Libre Baskerville',serif;
   font-size:clamp(38px,5.5vw,68px);
   font-weight:400; line-height:1.06;
   color:#fff; margin-bottom:24px; letter-spacing:-0.01em;
 }
-.hero h1 em { font-style:italic; color:var(--teal-light); }
+.hero-tagline em { font-style:italic; color:var(--teal-light); }
+
 .hero-sub {
   font-size:19px; color:rgba(255,255,255,0.75);
   line-height:1.75; max-width:480px;
@@ -546,9 +566,11 @@ section { padding:96px 0; }
 .ext-input::placeholder { color:var(--text-muted); }
 .ext-submit { width:100%; background:var(--teal); color:#fff; border:none; border-radius:6px; padding:13px; font-family:'Source Sans 3',sans-serif; font-size:14px; font-weight:500; cursor:pointer; margin-top:16px; transition:background 0.25s; letter-spacing:0.03em; }
 .ext-submit:hover { background:var(--teal-dark); }
+
+/* FIX 3: State tabs — 5 tabs now (added Nevada) */
 .state-section { background:var(--off-white); border-top:1px solid var(--border-sub); }
 .state-tabs { display:flex; gap:0; margin-top:48px; margin-bottom:0; border:1px solid var(--border-sub); border-radius:8px 8px 0 0; overflow:hidden; background:#fff; }
-.state-tab { flex:1; padding:18px 16px; cursor:pointer; border:none; background:transparent; font-family:'Source Sans 3',sans-serif; font-size:15px; font-weight:500; color:var(--text-muted); border-right:1px solid var(--border-sub); transition:all 0.25s; text-align:center; display:flex; align-items:center; justify-content:center; }
+.state-tab { flex:1; padding:18px 10px; cursor:pointer; border:none; background:transparent; font-family:'Source Sans 3',sans-serif; font-size:14px; font-weight:500; color:var(--text-muted); border-right:1px solid var(--border-sub); transition:all 0.25s; text-align:center; display:flex; align-items:center; justify-content:center; }
 .state-tab:last-child { border-right:none; }
 .state-tab.active { background:var(--teal); color:#fff; }
 .state-tab:not(.active):hover { background:var(--teal-pale); color:var(--teal-dark); }
@@ -598,8 +620,7 @@ footer { background:var(--navy); color:rgba(255,255,255,0.55); border-top:1px so
 .team-card { flex-direction:column; align-items:flex-start; } }
 .fade-up { opacity:0; transform:translateY(24px); transition:opacity 0.65s ease, transform 0.65s ease; }
 .fade-up.in { opacity:1; transform:translateY(0); }
-.d1 { transition-delay:0.08s; } .d2 { transition-delay:0.16s; } .d3 { transition-delay:0.24s; } .d4 { transition-delay:0.32s;
-}
+.d1 { transition-delay:0.08s; } .d2 { transition-delay:0.16s; } .d3 { transition-delay:0.24s; } .d4 { transition-delay:0.32s; }
 @media(max-width:900px){
 .hero-grid { grid-template-columns:1fr; }
 .portal-card { max-width:480px; }
@@ -630,12 +651,16 @@ footer { background:var(--navy); color:rgba(255,255,255,0.55); border-top:1px so
 .nav-links.open .nav-cta-btn { font-size:18px !important; background:var(--navy); border-radius:6px; padding:12px 28px !important; }
 .topbar { font-size:14px; padding:10px 16px; }
 }
+@media(max-width:700px){
+.state-tab { font-size:12px; padding:14px 6px; }
+.state-tab-name { font-size:11px; }
+}
 @media(max-width:600px){
 .container { padding:0 20px; }
 .topbar { font-size:13px; padding:9px 12px; }
 .topbar-locations { display:none; }
 .nav-inner { height:64px; }
-.hero h1 { font-size:clamp(34px,9vw,50px); }
+.hero-tagline { font-size:clamp(34px,9vw,50px); }
 .section-title { font-size:clamp(26px,7vw,36px); }
 .hero-sub { font-size:17px; }
 .section-body { font-size:17px; }
@@ -694,6 +719,7 @@ body { padding-bottom:72px; }
 </nav>
 
 <!-- HERO -->
+<!-- FIX 1: geo H1 added above tagline; tagline demoted to <p class="hero-tagline"> -->
 <section class="hero" id="home">
   <div class="hero-circle"></div>
   <svg class="hero-waves" viewBox="0 0 1440 120" preserveAspectRatio="none">
@@ -704,7 +730,8 @@ body { padding-bottom:72px; }
     <div class="hero-grid">
       <div>
         <div class="hero-eyebrow">Strategic Tax Services · Honolulu, Hawaii · 20+ Years in Tax</div>
-        <h1>You earned it.<br><em>We help you keep it.</em></h1>
+        <h1 class="hero-geo-h1">Tax Preparation and Tax Planning — Honolulu, Hawaii</h1>
+        <p class="hero-tagline">You earned it.<br><em>We help you keep it.</em></p>
         <p class="hero-sub">RP Tax Service is a family-owned advisory firm in Honolulu with over 20 years helping business owners, real estate investors, and families legally reduce what they owe — and keep more of what they've built.</p>
         <div class="hero-ctas">
           <a href="tel:+18089467297" class="btn-teal">Call 808-946-7297</a>
@@ -718,10 +745,10 @@ body { padding-bottom:72px; }
           <div class="hero-trust-item"><span>In-Office or Online</span></div>
         </div>
         <div class="hero-badges">
-          <img src="/irs-ea.jpg" alt="IRS Enrolled Agent">
-          <img src="/irs-efile.png" alt="IRS Authorized e-File Provider">
+          <img src="/irs-ea.jpg" alt="IRS Enrolled Agent — RP Tax Service Honolulu">
+          <img src="/irs-efile.png" alt="IRS Authorized e-File Provider — RP Tax Service">
           <img src="/irs-reg.png" alt="IRS Registered Tax Return Preparer">
-          <img src="/three-best.jpg" alt="Three Best Rated Honolulu">
+          <img src="/three-best.jpg" alt="Three Best Rated Tax Service Honolulu">
         </div>
       </div>
 
@@ -781,7 +808,6 @@ body { padding-bottom:72px; }
   </div>
 </div>
 
-
 <!-- TEAM -->
 <section class="team-section fade-up" id="team">
   <div class="container">
@@ -790,7 +816,7 @@ body { padding-bottom:72px; }
     <p class="section-body">An Enrolled Agent is the highest credential the IRS awards — federally licensed to represent taxpayers at every level of the agency. Both of our advisors hold it.</p>
     <div class="team-grid">
       <div class="team-card">
-        <img loading="lazy" src="/Robert.jpg" alt="Robert Purcell, Owner and IRS Enrolled Agent" class="team-photo" onerror="teamFallback(this,'RP')">
+        <img loading="lazy" src="/Robert.jpg" alt="Robert Purcell, Owner and IRS Enrolled Agent at RP Tax Service Honolulu" class="team-photo" onerror="teamFallback(this,'RP')">
         <div class="team-info">
           <h3>Robert Purcell</h3>
           <div class="team-role">Owner · IRS Enrolled Agent</div>
@@ -802,7 +828,7 @@ body { padding-bottom:72px; }
         </div>
       </div>
       <div class="team-card">
-        <img loading="lazy" src="/Jacob.jpeg" alt="Jacob Siaosi, Tax Advisor and IRS Enrolled Agent" class="team-photo" onerror="teamFallback(this,'JS')">
+        <img loading="lazy" src="/Jacob.jpeg" alt="Jacob Siaosi, Tax Advisor and IRS Enrolled Agent at RP Tax Service Honolulu" class="team-photo" onerror="teamFallback(this,'JS')">
         <div class="team-info">
           <h3>Jacob Siaosi</h3>
           <div class="team-role">Tax Advisor · IRS Enrolled Agent</div>
@@ -818,7 +844,6 @@ body { padding-bottom:72px; }
   </div>
 </section>
 
-
 <!-- MARQUEE -->
 <div class="marquee-wrap">
   <div class="marquee-track">
@@ -829,6 +854,7 @@ body { padding-bottom:72px; }
     <span class="m-item"><span class="m-dot"></span>Cost Segregation</span>
     <span class="m-item"><span class="m-dot"></span>Crypto &amp; Investments</span>
     <span class="m-item"><span class="m-dot"></span>IRS Resolution</span>
+    <span class="m-item"><span class="m-dot"></span>Hawaii GET</span>
     <span class="m-item"><span class="m-dot"></span>Retirement Planning</span>
     <span class="m-item"><span class="m-dot"></span>Bookkeeping</span>
     <span class="m-item"><span class="m-dot"></span>Payroll Services</span>
@@ -841,6 +867,7 @@ body { padding-bottom:72px; }
     <span class="m-item"><span class="m-dot"></span>Cost Segregation</span>
     <span class="m-item"><span class="m-dot"></span>Crypto &amp; Investments</span>
     <span class="m-item"><span class="m-dot"></span>IRS Resolution</span>
+    <span class="m-item"><span class="m-dot"></span>Hawaii GET</span>
     <span class="m-item"><span class="m-dot"></span>Retirement Planning</span>
     <span class="m-item"><span class="m-dot"></span>Bookkeeping</span>
     <span class="m-item"><span class="m-dot"></span>Payroll Services</span>
@@ -887,11 +914,12 @@ body { padding-bottom:72px; }
 </section>
 
 <!-- WHO WE HELP -->
+<!-- FIX 5: "Fifteen years" → "Over 20 years" in both h2 and p -->
 <section class="who-section fade-up">
   <div class="container">
     <div class="section-tag">Who We Serve</div>
-    <h2 class="section-title">Fifteen years of returns means<br>we've seen what costs people the most.</h2>
-    <p class="section-body">Fifteen years of returns means we've worked through the scenarios — the business owner who waited too long to elect S-Corp, the investor who missed the 1031 deadline, the crypto holder who didn't track cost basis. We help you avoid what we've watched others lose.</p>
+    <h2 class="section-title">Over 20 years of returns means<br>we've seen what costs people the most.</h2>
+    <p class="section-body">Over 20 years of returns means we've worked through the scenarios — the business owner who waited too long to elect S-Corp, the investor who missed the 1031 deadline, the crypto holder who didn't track cost basis. We help you avoid what we've watched others lose.</p>
     <div class="who-grid">
       <div class="who-card">
         <h3>Business Owners</h3>
@@ -966,7 +994,7 @@ body { padding-bottom:72px; }
           <h3>Entrepreneur Advisory</h3>
           <p>The financial decisions you make in your first few years compound for decades. Structure, compensation, retirement, reinvestment — these aren't accounting tasks. They're the difference between a business that builds wealth and one that generates income you can't keep.</p>
           <div class="svc-points">
-            <div class="svc-point">Business structure & entity selection</div>
+            <div class="svc-point">Business structure &amp; entity selection</div>
             <div class="svc-point">Growth-stage tax planning</div>
             <div class="svc-point">Founder compensation strategy</div>
           </div>
@@ -1041,6 +1069,7 @@ body { padding-bottom:72px; }
 </section>
 
 <!-- EDUCATION -->
+<!-- FIX 4: edu card links updated to real blog URLs -->
 <section class="edu-section" id="education">
   <div class="container">
     <div class="section-tag fade-up">Tax Strategy Insights</div>
@@ -1058,13 +1087,13 @@ body { padding-bottom:72px; }
         <div class="edu-cat">Entity &amp; Structure</div>
         <h4>LLC vs. S-Corp: Which Saves More?</h4>
         <p>The right entity isn't about simplicity — it's about math. We break down when the S-Corp election actually makes sense and when it costs more than it saves.</p>
-        <a href="#contact" class="edu-read">Read the Strategy →</a>
+        <a href="/blog/s-corp-vs-llc-hawaii/" class="edu-read">Read the Strategy →</a>
       </div>
       <div class="edu-card" data-cat="deductions">
         <div class="edu-cat">Deductions</div>
         <h4>The Augusta Rule: Rent Your Home Tax-Free</h4>
         <p>Section 280A lets you rent your home to your business for up to 14 days per year — tax-free to you — when there's a legitimate business purpose and rent is set at fair market value. Here's how to document it correctly.</p>
-        <a href="#contact" class="edu-read">Read the Strategy →</a>
+        <a href="/blog/augusta-rule-home-rental-deduction/" class="edu-read">Read the Strategy →</a>
       </div>
       <div class="edu-card" data-cat="realestate">
         <div class="edu-cat">Real Estate</div>
@@ -1077,6 +1106,18 @@ body { padding-bottom:72px; }
         <h4>Cost Basis Tracking: What the IRS Actually Wants</h4>
         <p>Your exchange's 1099 reports gross proceeds — not profit. Without proper cost basis records, you may be paying tax on revenue instead of gains. Here's how to fix that.</p>
         <a href="/services/crypto-capital-gains/" class="edu-read">Read the Strategy →</a>
+      </div>
+      <div class="edu-card" data-cat="realestate">
+        <div class="edu-cat">Real Estate · Hawaii</div>
+        <h4>Short-Term Rental Taxes in Hawaii: What Owners Must Know</h4>
+        <p>Hawaii STR owners face both GET and TAT obligations — and recent law changes have added county surcharges. Most owners are under-reporting. Here's what's actually required.</p>
+        <a href="/blog/hawaii-short-term-rental-taxes/" class="edu-read">Read the Strategy →</a>
+      </div>
+      <div class="edu-card" data-cat="entity">
+        <div class="edu-cat">Hawaii Business</div>
+        <h4>Hawaii GET: The Tax Most Businesses Get Wrong</h4>
+        <p>Hawaii's General Excise Tax isn't a sales tax — it applies to gross business income, it stacks at multiple levels, and the penalties for misreporting are real. Here's what you need to know.</p>
+        <a href="/blog/hawaii-get-tax-mistakes/" class="edu-read">Read the Strategy →</a>
       </div>
     </div>
     <div class="insight-feat fade-up">
@@ -1100,7 +1141,6 @@ body { padding-bottom:72px; }
     <p class="collect-intro">Our partner is a serious collector and dealer of trading cards, Pokémon, One Piece, Disney, and other premium collectibles. That means we don't just understand the hobby — we understand the business of collectibles and exactly how the IRS treats it.</p>
 
     <div class="card-showcase">
-      <!-- POKEMON PSA 10 -->
       <div class="card-slab">
         <div class="psa-slab">
           <div class="psa-label">
@@ -1120,8 +1160,6 @@ body { padding-bottom:72px; }
           <span>Gem Mint · Graded Collection</span>
         </div>
       </div>
-
-      <!-- ONE PIECE LUFFY PSA 10 -->
       <div class="card-slab">
         <div class="psa-slab">
           <div class="psa-label">
@@ -1141,8 +1179,6 @@ body { padding-bottom:72px; }
           <span>PSA 10 Gem Mint · SOLD</span>
         </div>
       </div>
-
-      <!-- DISNEY COMING SOON -->
       <div class="card-slab">
         <div class="psa-slab">
           <div class="psa-label">
@@ -1299,7 +1335,6 @@ body { padding-bottom:72px; }
     <div class="section-tag fade-up">Client Reviews</div>
     <h2 class="section-title fade-up">Real clients.<br>Real results.</h2>
     <div class="reviews-platforms">
-      <!-- GOOGLE -->
       <div class="reviews-platform">
         <div class="platform-header">
           <div class="platform-logo">
@@ -1315,12 +1350,9 @@ body { padding-bottom:72px; }
             <div class="rating-count">144 reviews</div>
           </div>
         </div>
-        <!-- Elfsight Google Reviews | RP Taxes -->
         <script src="https://elfsightcdn.com/platform.js" async></script>
         <div class="elfsight-app-124bcfeb-0755-4ba6-bf2d-b96df90bfb42" data-elfsight-app-lazy></div>
       </div>
-
-      <!-- YELP -->
       <div class="reviews-platform">
         <div class="platform-header">
           <div class="platform-logo">
@@ -1354,12 +1386,14 @@ body { padding-bottom:72px; }
 </section>
 
 <!-- LOCAL KNOWLEDGE -->
+<!-- FIX 3: Nevada tab added between Hawaii and Utah -->
 <section class="state-section" id="local-knowledge">
   <div class="container">
     <div class="section-tag">Local Knowledge</div>
     <h2 class="section-title">State tax updates —<br>what you need to know where you live.</h2>
     <div class="state-tabs" id="state-tabs">
       <button class="state-tab active" data-state="hawaii"><span class="state-tab-name">Hawaii</span></button>
+      <button class="state-tab" data-state="nevada"><span class="state-tab-name">Nevada</span></button>
       <button class="state-tab" data-state="utah"><span class="state-tab-name">Utah</span></button>
       <button class="state-tab" data-state="arizona"><span class="state-tab-name">Arizona</span></button>
       <button class="state-tab" data-state="california"><span class="state-tab-name">California</span></button>
@@ -1371,11 +1405,29 @@ body { padding-bottom:72px; }
         <div class="state-overview">
           <div class="state-overview-left">
             <h3>Hawaii State Tax Overview</h3>
-            <p>Hawaii features distinct rules regarding General Excise Tax (GET) compliance and unique filing deadlines that differ from standard federal schedules.</p>
+            <p>Hawaii features distinct rules that most mainland tax preparers miss entirely. The General Excise Tax (GET) applies to gross business income — not net profit — at 4% statewide plus a 0.5% surcharge on Oahu (4.5% total for most Honolulu businesses). Hawaii's filing deadline is April 20, not April 15, and the state offers its own set of deductions and credits for residents.</p>
           </div>
           <div class="state-stats">
             <div class="state-stat"><span class="state-stat-label">Top Income Tax Rate</span><span class="state-stat-val negative">11%</span></div>
+            <div class="state-stat"><span class="state-stat-label">GET Rate (Oahu)</span><span class="state-stat-val neutral">4.5%</span></div>
             <div class="state-stat"><span class="state-stat-label">State Filing Deadline</span><span class="state-stat-val neutral">April 20</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- NEVADA -->
+    <div class="state-panel" id="state-nevada">
+      <div class="state-panel-inner">
+        <div class="state-overview">
+          <div class="state-overview-left">
+            <h3>Nevada State Tax Overview</h3>
+            <p>Nevada has no personal income tax — a major advantage for business owners and high earners. However, businesses with gross revenue over $4 million per year may be subject to Nevada's Commerce Tax, and LLCs pay an annual state business license fee. For Hawaii residents who have income-producing activity in Nevada, residency and sourcing rules matter.</p>
+          </div>
+          <div class="state-stats">
+            <div class="state-stat"><span class="state-stat-label">Personal Income Tax</span><span class="state-stat-val positive">None</span></div>
+            <div class="state-stat"><span class="state-stat-label">Commerce Tax Threshold</span><span class="state-stat-val neutral">$4M+ gross revenue</span></div>
+            <div class="state-stat"><span class="state-stat-label">LLC Annual Fee</span><span class="state-stat-val neutral">$200</span></div>
           </div>
         </div>
       </div>
@@ -1392,6 +1444,7 @@ body { padding-bottom:72px; }
           <div class="state-stats">
             <div class="state-stat"><span class="state-stat-label">Flat Income Tax Rate</span><span class="state-stat-val neutral">4.55%</span></div>
             <div class="state-stat"><span class="state-stat-label">PTET Election</span><span class="state-stat-val positive">Available</span></div>
+            <div class="state-stat"><span class="state-stat-label">State Filing Deadline</span><span class="state-stat-val neutral">April 15</span></div>
           </div>
         </div>
       </div>
@@ -1408,6 +1461,7 @@ body { padding-bottom:72px; }
           <div class="state-stats">
             <div class="state-stat"><span class="state-stat-label">Flat Income Tax Rate</span><span class="state-stat-val positive">2.5%</span></div>
             <div class="state-stat"><span class="state-stat-label">TPT (Sales Tax)</span><span class="state-stat-val neutral">Varies by city</span></div>
+            <div class="state-stat"><span class="state-stat-label">State Filing Deadline</span><span class="state-stat-val neutral">April 15</span></div>
           </div>
         </div>
       </div>
@@ -1424,6 +1478,7 @@ body { padding-bottom:72px; }
           <div class="state-stats">
             <div class="state-stat"><span class="state-stat-label">Top Income Tax Rate</span><span class="state-stat-val negative">13.3%</span></div>
             <div class="state-stat"><span class="state-stat-label">LLC Annual Fee</span><span class="state-stat-val neutral">$800 minimum</span></div>
+            <div class="state-stat"><span class="state-stat-label">State Filing Deadline</span><span class="state-stat-val neutral">April 15</span></div>
           </div>
         </div>
       </div>
@@ -1432,14 +1487,37 @@ body { padding-bottom:72px; }
 </section>
 
 <!-- FAQ -->
+<!-- FIX 2: Expanded to 8 questions — EA definition, Hawaii GET, and prep vs planning added first -->
 <section class="faq-section" id="faq">
   <div class="container">
     <div class="faq-layout">
       <div class="faq-sidebar">
         <div class="section-tag">FAQ</div>
         <h3>Common questions,<br>straight answers.</h3>
+        <p>Don't see your question? <a href="#contact" style="color:var(--teal-dark);text-decoration:none;font-weight:500;">Ask us directly →</a></p>
       </div>
       <div class="faq-list" id="faq-list">
+        <div class="faq-item">
+          <button class="faq-q">
+            What is an IRS Enrolled Agent?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a">An IRS Enrolled Agent (EA) is a federally licensed tax professional authorized by the U.S. Department of the Treasury. EAs have unlimited practice rights before the IRS — meaning they can represent any taxpayer for any tax matter, including examinations, collections, and appeals. It is the highest credential the IRS issues to non-attorneys. Both of our advisors, Robert Purcell and Jacob Siaosi, hold this credential.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">
+            Does RP Tax Service handle Hawaii General Excise Tax (GET)?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a">Yes. Hawaii GET is a core part of our practice. Unlike a standard sales tax, Hawaii's General Excise Tax applies to gross business income — not just retail sales — and the rates vary by county (4% statewide, plus a 0.5% surcharge on Oahu). We help Hawaii business owners understand their GET obligations, set up proper accounting, and file accurately.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">
+            What's the difference between tax preparation and tax planning?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a">Tax preparation is filing your return — organizing what happened last year and reporting it accurately. Tax planning is working before the year ends to change what you'll owe: structuring income timing, maximizing deductions, adjusting entity elections, and setting up retirement contributions. Preparation looks backward; planning looks forward. RP Tax Service does both, with planning as the foundation of every client relationship.</div>
+        </div>
         <div class="faq-item">
           <button class="faq-q">
             How long should I keep my tax records and receipts?
@@ -1518,7 +1596,7 @@ body { padding-bottom:72px; }
 <!-- BACK TO TOP -->
 <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 
-<!-- CONTACT MODAL STRUCTURE -->
+<!-- CONTACT MODAL -->
 <div id="contact-modal" data-anchor="contact" style="display:none; position:fixed; inset:0; z-index:1000; background:rgba(28,48,80,0.7); backdrop-filter:blur(4px); align-items:center; justify-content:center; padding:20px;">
   <span id="contact" style="position:absolute;top:0;left:0;visibility:hidden;"></span>
   <div style="background:#fff; border-radius:12px; width:100%; max-width:520px; box-shadow:0 20px 60px rgba(28,48,80,0.25); overflow:hidden;">
@@ -1662,7 +1740,6 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
   });
 });
 
-// Team photo fallback — shows clean initials if the photo file isn't present yet
 function teamFallback(img, initials) {
   const d = document.createElement('div');
   d.className = 'team-photo';
@@ -1671,7 +1748,6 @@ function teamFallback(img, initials) {
   img.replaceWith(d);
 }
 
-// Nav links that target a specific service tab
 document.querySelectorAll('[data-svc]').forEach(link => {
   link.addEventListener('click', e => {
     const svc = link.dataset.svc;
@@ -1686,7 +1762,6 @@ document.querySelectorAll('[data-svc]').forEach(link => {
   });
 });
 
-// Fade-up animations
 const fadeObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -1697,7 +1772,6 @@ const fadeObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.1 });
 document.querySelectorAll('.fade-up').forEach(el => fadeObserver.observe(el));
 
-// Edu tab filtering
 document.querySelector('.edu-tabs')?.addEventListener('click', e => {
   const tab = e.target.closest('.edu-tab');
   if (!tab) return;
