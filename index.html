@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -278,13 +277,36 @@ nav.elevated { box-shadow:var(--shadow-md); }
 
 /* ── HERO ── */
 .hero {
-  background: linear-gradient(160deg, var(--navy) 0%, var(--navy-mid) 45%, var(--teal-deeper) 100%);
+  background:
+    linear-gradient(to right, rgba(18,34,60,0.93) 0%, rgba(18,34,60,0.78) 36%, rgba(18,34,60,0.22) 58%, rgba(18,34,60,0.10) 100%),
+    linear-gradient(to bottom, rgba(18,34,60,0.25) 0%, rgba(18,34,60,0.0) 40%),
+    url('/hero-team.jpg') center 20% / cover no-repeat;
   min-height:0;
   display:flex; align-items:center;
   position:relative; overflow:hidden;
   padding:80px 0 60px;
 }
-.hero-waves { position:absolute; bottom:0; left:0; right:0; opacity:0.07; }
+.hero-photo-label {
+  position:absolute; bottom:16px; right:24px;
+  display:flex; align-items:center; gap:16px;
+  background:rgba(10,20,40,0.55);
+  border:1px solid rgba(255,255,255,0.12);
+  backdrop-filter:blur(6px);
+  border-radius:6px;
+  padding:8px 16px;
+  z-index:2;
+}
+.hero-photo-name {
+  font-size:12px; font-weight:600; color:#fff; letter-spacing:0.03em;
+}
+.hero-photo-name span {
+  display:block; font-size:10px; font-weight:400;
+  color:rgba(255,255,255,0.55); letter-spacing:0.06em;
+  text-transform:uppercase; margin-top:1px;
+}
+.hero-photo-divider { width:1px; height:28px; background:rgba(255,255,255,0.18); }
+@media(max-width:600px){ .hero-photo-label { display:none; } }
+.hero-waves { position:absolute; bottom:0; left:0; right:0; opacity:0.06; }
 .hero-circle {
   position:absolute; right:-120px; top:50%;
   transform:translateY(-50%);
@@ -330,9 +352,43 @@ nav.elevated { box-shadow:var(--shadow-md); }
   margin-bottom:40px; font-weight:400;
 }
 .hero-ctas { display:flex; gap:14px; flex-wrap:wrap; margin-bottom:32px; }
-.hero-trust { display:flex; align-items:center; gap:16px; flex-wrap:wrap; }
+.hero-trust { display:flex; align-items:center; gap:16px; flex-wrap:wrap; margin-top:10px; }
 .hero-trust-item { display:flex; align-items:center; gap:7px; font-size:14px; color:rgba(255,255,255,0.65); }
 .hero-trust-sep { width:1px; height:16px; background:rgba(255,255,255,0.15); }
+.hero-review-bar {
+  display:flex; align-items:center; gap:0;
+  background:rgba(255,255,255,0.07);
+  border:1px solid rgba(255,255,255,0.13);
+  border-radius:8px;
+  padding:12px 20px;
+  margin-bottom:16px;
+  flex-wrap:wrap;
+  gap:4px;
+}
+.hero-review-platform { display:flex; align-items:center; }
+.hero-review-link {
+  display:flex; align-items:center; gap:8px;
+  text-decoration:none; color:rgba(255,255,255,0.9);
+  transition:color 0.2s;
+}
+.hero-review-link:hover { color:#fff; }
+.hero-review-logo {
+  width:22px; height:22px; border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  font-size:11px; font-weight:700; flex-shrink:0;
+}
+.google-dot { background:#fff; color:#4285F4; }
+.yelp-dot { background:#d32323; color:#fff; }
+.hero-review-stars { font-size:11px; color:#F4C542; letter-spacing:1px; }
+.hero-review-score { font-size:15px; font-weight:600; color:#fff; }
+.hero-review-count { font-size:12px; color:rgba(255,255,255,0.6); }
+.hero-review-badge {
+  font-size:11px; font-weight:600; letter-spacing:0.05em;
+  background:rgba(78,159,176,0.3); color:var(--teal-light);
+  border:1px solid rgba(78,159,176,0.3);
+  padding:2px 8px; border-radius:4px;
+}
+.hero-review-sep { width:1px; height:32px; background:rgba(255,255,255,0.12); margin:0 16px; }
 .hero-badges { display:flex; align-items:center; gap:16px; margin-top:28px; flex-wrap:wrap; }
 .hero-badges img { height:52px; width:auto; object-fit:contain; background:rgba(255,255,255,0.95); border-radius:6px; padding:5px 8px; box-shadow:0 2px 8px rgba(0,0,0,0.15); transition:transform 0.2s; }
 .hero-badges img:hover { transform:translateY(-2px); }
@@ -446,19 +502,29 @@ section { padding:96px 0; }
 .svc-point { padding:12px 16px; background:var(--off-white); border:1px solid var(--border-sub); border-radius:6px; font-size:15px; color:var(--text-body); display:flex; align-items:center; gap:9px; }
 .svc-point::before { content:''; width:5px; height:5px; border-radius:50%; background:var(--teal); flex-shrink:0; }
 .edu-section { background:var(--off-white); border-top:1px solid var(--border-sub); }
-.edu-tabs { display:flex; gap:0; margin-bottom:40px; border-radius:6px; overflow:hidden; border:1px solid var(--border-sub); width:fit-content; }
+.edu-tabs { display:flex; gap:0; margin-bottom:40px; border-radius:6px; overflow:hidden; border:1px solid var(--border-sub); width:fit-content; flex-wrap:wrap; }
 .edu-tab { padding:10px 22px; font-size:12px; letter-spacing:0.07em; text-transform:uppercase; cursor:pointer; border:none; background:transparent; color:var(--text-muted); font-family:'Source Sans 3',sans-serif; border-right:1px solid var(--border-sub); transition:all 0.25s; }
 .edu-tab:last-child { border-right:none; }
 .edu-tab.active { background:var(--teal); color:#fff; font-weight:500; }
 .edu-tab:not(.active):hover { background:var(--teal-pale); color:var(--teal-dark); }
 .edu-grid { display:grid; grid-template-columns:repeat(2, 1fr); gap:16px; }
+.edu-grid-deep { grid-template-columns:repeat(2, 1fr); }
 .edu-card { background:#fff; border-radius:8px; border:1px solid var(--border-sub); padding:28px 24px; box-shadow:var(--shadow-sm); cursor:pointer; transition:all 0.3s; display:flex; flex-direction:column; }
 .edu-card:hover { background:#fff; transform:translateY(-2px); box-shadow:var(--shadow-md); border-color:var(--border); }
-.edu-cat { font-size:10px; letter-spacing:0.18em; text-transform:uppercase; color:var(--teal); margin-bottom:12px; font-weight:500; }
+.edu-card-deep { padding:28px 28px 24px; }
+.edu-card-top { display:flex; align-items:center; justify-content:space-between; margin-bottom:10px; }
+.edu-read-time { font-size:11px; color:var(--text-muted); }
+.edu-cat { font-size:10px; letter-spacing:0.18em; text-transform:uppercase; color:var(--teal); font-weight:500; }
 .edu-card h4 { font-family:'Libre Baskerville',serif; font-size:21px; font-weight:400; color:var(--navy); line-height:1.25; margin-bottom:10px; flex:1; }
-.edu-card p { font-size:15px; color:var(--text-muted); line-height:1.6; margin-bottom:18px; }
-.edu-read { font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:var(--teal); text-decoration:none; display:flex; align-items:center; gap:6px; font-weight:500; transition:gap 0.25s; }
+.edu-card p { font-size:15px; color:var(--text-muted); line-height:1.6; margin-bottom:16px; }
+.edu-outcome { background:var(--teal-pale); border-left:3px solid var(--teal); border-radius:0 4px 4px 0; padding:10px 14px; margin-bottom:16px; display:flex; flex-direction:column; gap:2px; }
+.edu-outcome-label { font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:var(--teal); font-weight:600; }
+.edu-outcome-val { font-size:13px; color:var(--navy); font-weight:500; line-height:1.4; }
+.edu-read { font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:var(--teal); text-decoration:none; display:flex; align-items:center; gap:6px; font-weight:500; transition:gap 0.25s; margin-top:auto; }
 .edu-card:hover .edu-read { gap:10px; }
+.edu-cta-bar { background:var(--navy); border-radius:12px; padding:36px 40px; display:flex; align-items:center; justify-content:space-between; gap:32px; flex-wrap:wrap; margin-top:40px; margin-bottom:12px; }
+.edu-cta-bar h3 { font-family:'Libre Baskerville',serif; font-size:22px; font-weight:400; color:#fff; margin-bottom:6px; }
+.edu-cta-bar p { font-size:15px; color:rgba(255,255,255,0.65); margin:0; }
 .insight-feat { margin-top:48px; background:var(--teal-pale); border:1px solid var(--border); border-left:4px solid var(--teal); border-radius:0 8px 8px 0; padding:40px 44px; display:grid; grid-template-columns:140px 1fr; gap:44px; align-items:center; }
 .insight-num { font-family:'Libre Baskerville',serif; font-size:64px; font-weight:400; color:var(--navy); opacity:1; line-height:1; text-align:center; }
 .insight-num small { font-size:22px; display:block; }
@@ -650,6 +716,41 @@ footer { background:var(--navy); color:rgba(255,255,255,0.55); border-top:1px so
 .footer-cred { font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,255,0.3); display:flex; align-items:center; gap:6px; }
 .footer-cred-dot { width:4px; height:4px; border-radius:50%; background:var(--teal); }
 .team-section { background:#fff; border-top:1px solid var(--border-sub); }
+.vs-section { background:#fff; border-top:1px solid var(--border-sub); padding:80px 0; }
+.vs-table { display:grid; grid-template-columns:1fr 48px 1fr; gap:0; margin:48px 0 0; align-items:start; }
+.vs-col { padding:32px; }
+.vs-col-prep { background:var(--off-white); border-radius:12px 0 0 12px; border:1px solid var(--border-sub); }
+.vs-col-plan { background:var(--navy); border-radius:0 12px 12px 0; border:1px solid var(--navy); }
+.vs-col-header { margin-bottom:28px; }
+.vs-col-icon { font-size:28px; margin-bottom:12px; }
+.vs-col-prep h3 { font-size:22px; color:var(--text-dark); margin-bottom:4px; }
+.vs-col-plan h3 { font-size:22px; color:#fff; margin-bottom:4px; }
+.vs-col-sub { font-size:13px; }
+.vs-col-prep .vs-col-sub { color:var(--text-muted); }
+.vs-col-plan .vs-col-sub { color:rgba(255,255,255,0.5); }
+.vs-list { list-style:none; padding:0; margin:0 0 24px; display:flex; flex-direction:column; gap:10px; }
+.vs-list li { display:flex; align-items:flex-start; gap:10px; font-size:15px; }
+.vs-col-prep .vs-list li { color:var(--text-body); }
+.vs-col-plan .vs-list li { color:rgba(255,255,255,0.85); }
+.vs-icon { flex-shrink:0; font-size:13px; margin-top:2px; font-weight:700; }
+.vs-yes { color:var(--teal-light); }
+.vs-no { color:var(--text-muted); }
+.vs-result { font-size:13px; font-weight:600; padding:12px 16px; border-radius:6px; margin-top:4px; }
+.vs-result-prep { background:rgba(28,48,80,0.06); color:var(--text-muted); }
+.vs-result-plan { background:rgba(78,159,176,0.15); color:var(--teal-light); }
+.vs-divider { display:flex; flex-direction:column; align-items:center; justify-content:center; padding-top:80px; gap:8px; }
+.vs-divider-line { width:1px; height:40px; background:var(--border); }
+.vs-divider-label { font-size:16px; font-weight:700; color:var(--text-muted); }
+.vs-callout { margin-top:48px; background:var(--teal-pale); border-left:4px solid var(--teal); border-radius:0 8px 8px 0; padding:28px 32px; display:flex; align-items:center; justify-content:space-between; gap:32px; flex-wrap:wrap; }
+.vs-callout p { font-size:16px; color:var(--text-dark); font-style:italic; line-height:1.7; max-width:600px; margin:0; }
+@media(max-width:768px){
+  .vs-table { grid-template-columns:1fr; }
+  .vs-col-prep { border-radius:12px 12px 0 0; }
+  .vs-col-plan { border-radius:0 0 12px 12px; }
+  .vs-divider { flex-direction:row; padding-top:0; padding:8px 0; }
+  .vs-divider-line { width:40px; height:1px; }
+  .vs-callout { flex-direction:column; }
+}
 .team-grid { display:grid; grid-template-columns:1fr 1fr; gap:28px; margin-top:48px; }
 .team-card { display:flex; gap:24px; background:var(--off-white); border:1px solid var(--border-sub); border-radius:10px; padding:28px; box-shadow:var(--shadow-sm); transition:box-shadow 0.3s; }
 .team-card:hover { box-shadow:var(--shadow-md); }
@@ -682,6 +783,8 @@ footer { background:var(--navy); color:rgba(255,255,255,0.55); border-top:1px so
 .svc-nav { position:static; display:flex; flex-wrap:wrap; gap:6px; }
 .svc-nav-item { padding:9px 16px; font-size:14px; }
 .edu-grid { grid-template-columns:1fr 1fr; }
+.edu-grid-deep { grid-template-columns:1fr; }
+.edu-cta-bar { flex-direction:column; text-align:center; }
 .collect-feature { grid-template-columns:1fr; }
 .process-steps { grid-template-columns:1fr 1fr; gap:32px; }
 .process-steps::before { display:none; }
@@ -766,9 +869,10 @@ body { padding-bottom:72px; }
       </a>
       <ul class="nav-links" id="nav-links">
         <li><a href="/services/">Services</a></li>
-        <li><a href="/team/">Team</a></li>
-        <li><a href="/faq/">FAQ</a></li>
-        <li><a href="/blog/">Blog</a></li>
+        <li><a href="#planning">Tax Planning</a></li>
+        <li><a href="/team.html">Team</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="/blog.html">Blog</a></li>
         <li><a href="/documents-needed/">Documents</a></li>
         <li><a href="/tax-extension/">Extension</a></li>
         <li><a href="https://rptaxservice.taxdome.com/login" target="_blank" rel="noopener" class="nav-portal-btn">Client Portal</a></li>
@@ -790,20 +894,47 @@ body { padding-bottom:72px; }
   <div class="container">
     <div class="hero-grid">
       <div>
-        <div class="hero-eyebrow">Strategic Tax Services · Honolulu, Hawaii · 20+ Years in Tax</div>
+        <div class="hero-eyebrow">Honolulu Tax Advisors · IRS Enrolled Agents · Est. 20+ Years</div>
         <h1 class="hero-geo-h1">Honolulu Tax Preparer &amp; Tax Preparation Services — Honolulu, Hawaii</h1>
-        <p class="hero-tagline">You earned it.<br><em>We help you keep it.</em></p>
-        <p class="hero-sub">RP Tax Service is a family-owned advisory firm in Honolulu with over 20 years helping business owners, real estate investors, and families legally reduce what they owe — and keep more of what they've built.</p>
+        <p class="hero-tagline">Most business owners<br><em>overpay the IRS every year.</em></p>
+        <p class="hero-sub">Not because the tax code is unfair — because no one is planning ahead. RP Tax Service is a family-owned advisory firm in Honolulu. We work with business owners, self-employed professionals, and real estate investors year-round to legally reduce what they owe — before December 31st closes the window.</p>
         <div class="hero-ctas">
-          <a href="tel:+18089467297" class="btn-teal">Call 808-946-7297</a>
-          <a href="#contact" class="btn-outline-light" data-modal="Book A Discovery Call">Book A Discovery Call</a>
+          <a href="#contact" class="btn-teal" data-modal="Book A Discovery Call">Book A Discovery Call</a>
+          <a href="tel:+18089467297" class="btn-outline-light">Call 808-946-7297</a>
+        </div>
+        <!-- REVIEWS ABOVE THE FOLD -->
+        <div class="hero-review-bar">
+          <div class="hero-review-platform">
+            <a href="https://www.google.com/maps/place/RP+Tax+Service" target="_blank" rel="noopener" class="hero-review-link">
+              <span class="hero-review-logo google-dot">G</span>
+              <span class="hero-review-stars">★★★★★</span>
+              <span class="hero-review-score">4.6</span>
+              <span class="hero-review-count">144 Google reviews</span>
+            </a>
+          </div>
+          <div class="hero-review-sep"></div>
+          <div class="hero-review-platform">
+            <a href="https://www.yelp.com/biz/rp-tax-service-honolulu" target="_blank" rel="noopener" class="hero-review-link">
+              <span class="hero-review-logo yelp-dot">Y</span>
+              <span class="hero-review-stars">★★★★★</span>
+              <span class="hero-review-score">4.5</span>
+              <span class="hero-review-count">136 Yelp reviews</span>
+            </a>
+          </div>
+          <div class="hero-review-sep"></div>
+          <div class="hero-review-platform">
+            <a href="https://threebestrated.com/tax-services-in-honolulu-hi" target="_blank" rel="noopener" class="hero-review-link">
+              <span class="hero-review-badge">Three Best Rated®</span>
+              <span class="hero-review-count">Honolulu, Hawaii</span>
+            </a>
+          </div>
         </div>
         <div class="hero-trust">
-          <div class="hero-trust-item"><a href="#reviews" style="color:inherit;text-decoration:none;">★ 4.6 Google &nbsp;·&nbsp; 4.5 Yelp</a></div>
-          <div class="hero-trust-sep"></div>
-          <div class="hero-trust-item"><a href="https://threebestrated.com/tax-services-in-honolulu-hi" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Three Best Rated® · Honolulu</a></div>
+          <div class="hero-trust-item"><span>IRS Enrolled Agents</span></div>
           <div class="hero-trust-sep"></div>
           <div class="hero-trust-item"><span>In-Office or Online</span></div>
+          <div class="hero-trust-sep"></div>
+          <div class="hero-trust-item"><span>Hawaii · NV · UT · AZ · CA</span></div>
         </div>
         <div class="hero-badges">
           <img src="/irs-ea.jpg" alt="IRS Enrolled Agent — RP Tax Service Honolulu Hawaii Tax Preparer" width="100" height="52">
@@ -838,6 +969,7 @@ body { padding-bottom:72px; }
         </div>
       </div>
     </div>
+    <!-- Names already shown in photo label -->
   </div>
 </section>
 
@@ -868,6 +1000,58 @@ body { padding-bottom:72px; }
     </div>
   </div>
 </div>
+
+<!-- TAX PREP VS TAX PLANNING -->
+<section class="vs-section fade-up" id="planning">
+  <div class="container">
+    <div class="section-tag">The Difference That Matters</div>
+    <h2 class="section-title">Tax preparation looks backward.<br>Tax planning looks forward.</h2>
+    <p class="section-body">Filing your return is the minimum required by law. It records what already happened. Tax planning — the work we do before the year ends — is where real savings live. Most people never get this conversation. We make it the first one.</p>
+    <div class="vs-table">
+      <div class="vs-col vs-col-prep">
+        <div class="vs-col-header">
+          <div class="vs-col-icon">📋</div>
+          <h3>Tax Preparation</h3>
+          <p class="vs-col-sub">What every tax office does</p>
+        </div>
+        <ul class="vs-list">
+          <li><span class="vs-icon vs-no">✗</span> Organizes what already happened</li>
+          <li><span class="vs-icon vs-no">✗</span> Happens after December 31 — too late to change outcomes</li>
+          <li><span class="vs-icon vs-no">✗</span> Reports income and deductions as-is</li>
+          <li><span class="vs-icon vs-no">✗</span> One annual interaction — often rushed</li>
+          <li><span class="vs-icon vs-no">✗</span> Misses opportunities that closed during the year</li>
+          <li><span class="vs-icon vs-no">✗</span> Generic advice, not built around your situation</li>
+        </ul>
+        <div class="vs-result vs-result-prep">Result: You pay what you owe based on last year's decisions.</div>
+      </div>
+      <div class="vs-divider">
+        <div class="vs-divider-line"></div>
+        <div class="vs-divider-label">vs.</div>
+        <div class="vs-divider-line"></div>
+      </div>
+      <div class="vs-col vs-col-plan">
+        <div class="vs-col-header">
+          <div class="vs-col-icon">🎯</div>
+          <h3>Tax Planning</h3>
+          <p class="vs-col-sub">What RP Tax Service provides</p>
+        </div>
+        <ul class="vs-list">
+          <li><span class="vs-icon vs-yes">✓</span> Works before year-end — while you can still act</li>
+          <li><span class="vs-icon vs-yes">✓</span> Models income timing, deductions, and structure</li>
+          <li><span class="vs-icon vs-yes">✓</span> Identifies every legal reduction available to you</li>
+          <li><span class="vs-icon vs-yes">✓</span> Quarterly check-ins and year-round advisory access</li>
+          <li><span class="vs-icon vs-yes">✓</span> Entity structuring and S-Corp optimization analysis</li>
+          <li><span class="vs-icon vs-yes">✓</span> Strategy built around your income, business, and goals</li>
+        </ul>
+        <div class="vs-result vs-result-plan">Result: You pay less because you planned — legally and strategically.</div>
+      </div>
+    </div>
+    <div class="vs-callout fade-up">
+      <p>"The IRS doesn't require you to pay more than you legally owe. Most people do anyway — because no one told them what was possible before the deadline."</p>
+      <a href="#contact" class="btn-teal" data-modal="Book A Discovery Call">Book A Discovery Call — See What You Could Save</a>
+    </div>
+  </div>
+</section>
 
 <!-- TEAM -->
 <section class="team-section fade-up" id="team">
@@ -1014,7 +1198,7 @@ body { padding-bottom:72px; }
 <section class="services-section" id="services">
   <div class="container">
     <div class="section-tag fade-up">Strategic Services</div>
-    <h2 class="section-title fade-up">Every service connected to one goal.<br><em>More of your money stays yours.</em></h2>
+    <h2 class="section-title fade-up">What we do — and what it means<br><em>for what you keep.</em></h2>
     <div class="services-layout">
       <div class="svc-nav" id="svc-nav">
         <div class="svc-nav-item active" data-p="tax-plan"><span class="svc-nav-dot"></span>Tax Planning &amp; Strategy</div>
@@ -1134,64 +1318,161 @@ body { padding-bottom:72px; }
 </section>
 
 <!-- EDUCATION -->
-<!-- FIX 4: edu card links updated to real blog URLs -->
 <section class="edu-section" id="education">
   <div class="container">
-    <div class="section-tag fade-up">Tax Strategy Insights</div>
-    <h2 class="section-title fade-up">Hawaii tax strategies that put<br>money back in your pocket.</h2>
-    <p class="section-body fade-up" style="margin-bottom:36px">Real strategies used by smart business owners. Actionable insight, not theory.</p>
+    <div class="section-tag fade-up">Tax Strategy Library</div>
+    <h2 class="section-title fade-up">Most business owners leave money<br>on the table every single year.</h2>
+    <p class="section-body fade-up" style="margin-bottom:12px">Not from carelessness — from not knowing what's available. These are the strategies we use for our clients, explained plainly so you understand exactly what's possible.</p>
+    <p class="section-body fade-up" style="margin-bottom:40px;font-size:15px;color:var(--text-muted)">Each article is a real strategy with real tax implications. Read what applies to you — then let's talk about implementing it.</p>
+
     <div class="edu-tabs">
       <button class="edu-tab active" data-c="all">All Topics</button>
-      <button class="edu-tab" data-c="entity">Entity</button>
+      <button class="edu-tab" data-c="entity">Entity &amp; Structure</button>
       <button class="edu-tab" data-c="deductions">Deductions</button>
       <button class="edu-tab" data-c="realestate">Real Estate</button>
       <button class="edu-tab" data-c="crypto">Crypto</button>
+      <button class="edu-tab" data-c="hawaii">Hawaii</button>
     </div>
-    <div class="edu-grid" id="edu-grid">
-      <div class="edu-card" data-cat="entity">
-        <div class="edu-cat">Entity &amp; Structure</div>
-        <h4>LLC vs. S-Corp: Which Saves More?</h4>
-        <p>The right entity isn't about simplicity — it's about math. We break down when the S-Corp election actually makes sense and when it costs more than it saves.</p>
-        <a href="/blog/s-corp-vs-llc-hawaii/" class="edu-read">Read the Strategy →</a>
+
+    <div class="edu-grid edu-grid-deep" id="edu-grid">
+
+      <!-- Article 1 -->
+      <div class="edu-card edu-card-deep" data-cat="entity">
+        <div class="edu-card-top">
+          <div class="edu-cat">Entity &amp; Structure</div>
+          <div class="edu-read-time">6 min read</div>
+        </div>
+        <h4>LLC vs. S-Corp: Which Structure Actually Saves More?</h4>
+        <p>An LLC taxed as a sole proprietor and an S-Corp can generate very different tax bills on identical income. The difference comes down to self-employment tax — and the math only works in one direction past a certain income threshold. We break down the numbers, the risks, and the timing of the election.</p>
+        <div class="edu-outcome">
+          <span class="edu-outcome-label">Potential outcome</span>
+          <span class="edu-outcome-val">$5K–$15K+ in annual SE tax savings at the right income level</span>
+        </div>
+        <a href="#contact" class="edu-read" data-modal="S-Corp vs LLC Strategy">Talk to Us About Your Entity Structure →</a>
       </div>
-      <div class="edu-card" data-cat="deductions">
-        <div class="edu-cat">Deductions</div>
-        <h4>The Augusta Rule: Rent Your Home Tax-Free</h4>
-        <p>Section 280A lets you rent your home to your business for up to 14 days per year — tax-free to you — when there's a legitimate business purpose and rent is set at fair market value. Here's how to document it correctly.</p>
-        <a href="/blog/augusta-rule-home-rental-deduction/" class="edu-read">Read the Strategy →</a>
+
+      <!-- Article 2 -->
+      <div class="edu-card edu-card-deep" data-cat="deductions">
+        <div class="edu-card-top">
+          <div class="edu-cat">Deductions</div>
+          <div class="edu-read-time">5 min read</div>
+        </div>
+        <h4>The Augusta Rule: How to Rent Your Home to Your Business Tax-Free</h4>
+        <p>Section 280A allows you to rent your home to your business for up to 14 days per year — and the rental income is completely tax-free to you. The key is a legitimate business purpose, fair market rent, and proper documentation. Done right, it's one of the cleanest legal deductions in the tax code.</p>
+        <div class="edu-outcome">
+          <span class="edu-outcome-label">Potential outcome</span>
+          <span class="edu-outcome-val">$2K–$10K+ deducted by the business; zero income tax to you</span>
+        </div>
+        <a href="#contact" class="edu-read" data-modal="Augusta Rule Strategy">Ask Us How to Set This Up →</a>
       </div>
-      <div class="edu-card" data-cat="realestate">
-        <div class="edu-cat">Real Estate</div>
-        <h4>Cost Segregation: Accelerate Your Depreciation</h4>
-        <p>A cost segregation study reclassifies building components to depreciate them faster — unlocking major deductions in year one instead of over 39 years.</p>
-        <a href="/services/real-estate-tax-strategy/cost-segregation/" class="edu-read">Read the Strategy →</a>
+
+      <!-- Article 3 -->
+      <div class="edu-card edu-card-deep" data-cat="realestate">
+        <div class="edu-card-top">
+          <div class="edu-cat">Real Estate</div>
+          <div class="edu-read-time">7 min read</div>
+        </div>
+        <h4>Cost Segregation: Depreciate Your Property in Years, Not Decades</h4>
+        <p>A cost segregation study reclassifies components of your building — flooring, fixtures, landscaping, specialty systems — from 39-year property into 5, 7, or 15-year property. Combined with bonus depreciation, this can generate very large deductions in year one. Most rental property owners have never had this conversation.</p>
+        <div class="edu-outcome">
+          <span class="edu-outcome-label">Potential outcome</span>
+          <span class="edu-outcome-val">$20K–$100K+ in accelerated deductions on qualifying property</span>
+        </div>
+        <a href="/services/real-estate-tax-strategy/cost-segregation/" class="edu-read">Read the Full Strategy →</a>
       </div>
-      <div class="edu-card" data-cat="crypto">
-        <div class="edu-cat">Crypto &amp; Investments</div>
-        <h4>Cost Basis Tracking: What the IRS Actually Wants</h4>
-        <p>Your exchange's 1099 reports gross proceeds — not profit. Without proper cost basis records, you may be paying tax on revenue instead of gains. Here's how to fix that.</p>
-        <a href="/services/crypto-capital-gains/" class="edu-read">Read the Strategy →</a>
+
+      <!-- Article 4 -->
+      <div class="edu-card edu-card-deep" data-cat="hawaii">
+        <div class="edu-card-top">
+          <div class="edu-cat">Hawaii · Business Tax</div>
+          <div class="edu-read-time">5 min read</div>
+        </div>
+        <h4>Hawaii GET: The Tax Most Local Businesses Get Wrong</h4>
+        <p>Hawaii's General Excise Tax is not a sales tax — and that distinction matters. It applies to gross business income, stacks across transaction tiers, and carries a 4.712% effective rate on Oahu once the county surcharge is applied. GET applies to services, rental income, even certain online business activity. Most small business owners are either under-reporting or paying more than required.</p>
+        <div class="edu-outcome">
+          <span class="edu-outcome-label">Potential outcome</span>
+          <span class="edu-outcome-val">Accurate filing + avoidance of GET penalties and back assessments</span>
+        </div>
+        <a href="#contact" class="edu-read" data-modal="Hawaii GET Question">Talk to Us About GET Compliance →</a>
       </div>
-      <div class="edu-card" data-cat="realestate">
-        <div class="edu-cat">Real Estate · Hawaii</div>
-        <h4>Short-Term Rental Taxes in Hawaii: What Owners Must Know</h4>
-        <p>Hawaii STR owners face both GET and TAT obligations — and recent law changes have added county surcharges. Most owners are under-reporting. Here's what's actually required.</p>
-        <a href="/blog/hawaii-short-term-rental-taxes/" class="edu-read">Read the Strategy →</a>
+
+      <!-- Article 5 -->
+      <div class="edu-card edu-card-deep" data-cat="hawaii">
+        <div class="edu-card-top">
+          <div class="edu-cat">Real Estate · Hawaii</div>
+          <div class="edu-read-time">6 min read</div>
+        </div>
+        <h4>Short-Term Rental Taxes in Hawaii: GET, TAT, and the County Surcharges</h4>
+        <p>Hawaii STR owners owe both GET (on gross rental income) and TAT (a transient accommodations tax) — and since 2022, county surcharges have been added on top. Many owners are collecting and remitting the wrong amounts, and some aren't remitting at all. Here's exactly what's required, how to calculate it, and how to stay compliant.</p>
+        <div class="edu-outcome">
+          <span class="edu-outcome-label">Potential outcome</span>
+          <span class="edu-outcome-val">Full GET/TAT compliance + avoidance of back taxes and penalties</span>
+        </div>
+        <a href="#contact" class="edu-read" data-modal="Short-Term Rental Tax Question">Talk to Us About STR Compliance →</a>
       </div>
-      <div class="edu-card" data-cat="entity">
-        <div class="edu-cat">Hawaii Business</div>
-        <h4>Hawaii GET: The Tax Most Businesses Get Wrong</h4>
-        <p>Hawaii's General Excise Tax isn't a sales tax — it applies to gross business income, it stacks at multiple levels, and the penalties for misreporting are real. Here's what you need to know.</p>
-        <a href="/blog/hawaii-get-tax-mistakes/" class="edu-read">Read the Strategy →</a>
+
+      <!-- Article 6 -->
+      <div class="edu-card edu-card-deep" data-cat="deductions">
+        <div class="edu-card-top">
+          <div class="edu-cat">Deductions · S-Corp</div>
+          <div class="edu-read-time">5 min read</div>
+        </div>
+        <h4>The Accountable Plan: Tax-Free Reimbursements for S-Corp Owners</h4>
+        <p>If you use personal funds for business expenses — home office, phone, vehicle, equipment — and your S-Corp doesn't reimburse you through an accountable plan, those deductions may be lost entirely. An accountable plan lets the business reimburse you with zero income tax or payroll tax on the payment. No W-2 income, no SE tax. It's one of the most consistently underused tools for S-Corp owners.</p>
+        <div class="edu-outcome">
+          <span class="edu-outcome-label">Potential outcome</span>
+          <span class="edu-outcome-val">$3K–$12K+ recovered annually in previously lost deductions</span>
+        </div>
+        <a href="#contact" class="edu-read" data-modal="Accountable Plan Setup">Talk to Us About Setting This Up →</a>
       </div>
+
+      <!-- Article 7 -->
+      <div class="edu-card edu-card-deep" data-cat="deductions">
+        <div class="edu-card-top">
+          <div class="edu-cat">Retirement &amp; Deductions</div>
+          <div class="edu-read-time">5 min read</div>
+        </div>
+        <h4>Solo 401(k) vs. SEP-IRA: Which Plan Shelters More Income?</h4>
+        <p>Most self-employed business owners default to a SEP-IRA because it's simple. But a Solo 401(k) allows both an employee and employer contribution — which means it can shelter significantly more income at the same profit level. At $100K net income, the difference can be tens of thousands of dollars in additional tax-deferred contributions. We model which plan actually fits your numbers.</p>
+        <div class="edu-outcome">
+          <span class="edu-outcome-label">Potential outcome</span>
+          <span class="edu-outcome-val">$15K–$40K+ in additional tax-deferred income at qualifying income levels</span>
+        </div>
+        <a href="#contact" class="edu-read" data-modal="Retirement Plan Strategy">Book a Retirement Strategy Session →</a>
+      </div>
+
+      <!-- Article 8 -->
+      <div class="edu-card edu-card-deep" data-cat="crypto">
+        <div class="edu-card-top">
+          <div class="edu-cat">Crypto &amp; Investments</div>
+          <div class="edu-read-time">6 min read</div>
+        </div>
+        <h4>Crypto Taxes: Why Your 1099 From the Exchange Is Wrong</h4>
+        <p>Crypto exchanges report gross proceeds — not your taxable gain. Without proper cost basis tracking from your first transaction forward, you may be calculating taxes on revenue instead of profit. This mistake gets compounded every year and can lead to massive overpayment — or IRS notices when the numbers don't reconcile. Here's how to build an accurate cost basis record and what to do if yours is incomplete.</p>
+        <div class="edu-outcome">
+          <span class="edu-outcome-label">Potential outcome</span>
+          <span class="edu-outcome-val">Accurate gain reporting; potential for significant overpayment recovery</span>
+        </div>
+        <a href="/services/crypto-capital-gains/" class="edu-read">Read the Full Strategy →</a>
+      </div>
+
     </div>
+
+    <div class="edu-cta-bar fade-up">
+      <div>
+        <h3>Not sure which strategies apply to you?</h3>
+        <p>Tell us about your situation and we'll identify where the real opportunities are. No obligation.</p>
+      </div>
+      <a href="#contact" class="btn-teal" data-modal="Book A Discovery Call">Book A Discovery Call</a>
+    </div>
+
     <div class="insight-feat fade-up">
       <div class="insight-num" style="font-size:40px;line-height:1.15">Tax-<br>free<small style="font-size:15px">when set up right</small></div>
       <div>
         <div class="insight-feat-label">Featured Strategy</div>
         <h3>The Accountable Plan: Tax-Free Reimbursements</h3>
         <p>An accountable plan lets your S-Corp reimburse you for business expenses paid personally — with no income tax or payroll tax on qualifying reimbursements. When structured and documented correctly, this one tool can recover meaningful amounts each year that were previously lost.</p>
-        <a href="#contact" class="btn-teal" style="font-size:12px;padding:10px 22px;margin-top:18px">Get This Set Up →</a>
+        <a href="#contact" class="btn-teal" style="font-size:12px;padding:10px 22px;margin-top:18px" data-modal="Accountable Plan Setup">Get This Set Up →</a>
       </div>
     </div>
   </div>
@@ -2168,7 +2449,7 @@ document.querySelector('.edu-tabs')?.addEventListener('click', e => {
 
   <div class="faq-widget-footer">
     <a href="tel:+18089467297" class="faq-footer-btn faq-footer-call">📞 Call Now</a>
-    <a href="/contact/" class="faq-footer-btn faq-footer-consult">Book A Discovery Call</a>
+    <a href="#contact" class="faq-footer-btn faq-footer-consult">Book A Discovery Call</a>
   </div>
 </div>
 
@@ -2184,7 +2465,7 @@ const faqData = [
   },
   {
     q: "What is an IRS Enrolled Agent?",
-    a: "An IRS Enrolled Agent (EA) is the highest credential the IRS awards to non-attorneys — federally licensed to represent taxpayers at every level of the IRS. Both Robert Purcell and Jacob Siaosi hold this credential. <a href='/team/'>Meet the team →</a>"
+    a: "An IRS Enrolled Agent (EA) is the highest credential the IRS awards to non-attorneys — federally licensed to represent taxpayers at every level of the IRS. Both Robert Purcell and Jacob Siaosi hold this credential. <a href='/team.html'>Meet the team →</a>"
   },
   {
     q: "Do you handle Hawaii GET?",
