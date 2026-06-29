@@ -161,7 +161,14 @@
         {"@type": "Question","name": "Does RP Tax Service offer online tax filing?","acceptedAnswer": {"@type": "Answer","text": "Yes. We serve clients entirely online through our secure TaxDome client portal. Upload documents, sign returns electronically, and communicate securely from anywhere in Hawaii, Nevada, Utah, Arizona, or California."}},
         {"@type": "Question","name": "What states does RP Tax Service work in?","acceptedAnswer": {"@type": "Answer","text": "We prepare tax returns and provide advisory services for clients in Hawaii, Nevada, Utah, Arizona, and California."}},
         {"@type": "Question","name": "Can RP Tax Service help with IRS problems?","acceptedAnswer": {"@type": "Answer","text": "Yes. As IRS Enrolled Agents, we represent clients before the IRS — negotiating Offers in Compromise, installment agreements, IRS examination representation, and back tax resolution."}},
-        {"@type": "Question","name": "Do you handle cryptocurrency taxes?","acceptedAnswer": {"@type": "Answer","text": "Yes. We handle crypto tax reporting, cost basis tracking, capital gains strategy, DeFi income, NFT transactions, and 1099-K reconciliation for collectors and investors."}}
+        {"@type": "Question","name": "Do you handle cryptocurrency taxes?","acceptedAnswer": {"@type": "Answer","text": "Yes. We handle crypto tax reporting, cost basis tracking, capital gains strategy, DeFi income, NFT transactions, and 1099-K reconciliation for collectors and investors."}},
+        {"@type": "Question","name": "Should I form an S-Corp for my small business?","acceptedAnswer": {"@type": "Answer","text": "S-Corp election can reduce self-employment tax significantly, but it only makes sense once your net profit clears approximately $40,000–$60,000, because the payroll and administrative costs have to be worth it. The right answer depends on your income level, business type, and how you are currently structured."}},
+        {"@type": "Question","name": "I got married last year — how do I file?","acceptedAnswer": {"@type": "Answer","text": "If you were married by December 31st of the tax year, the IRS considers you married for the entire year. You have two options: Married Filing Jointly or Married Filing Separately. Joint filing is usually more favorable, but there are situations where filing separately is worth analyzing."}},
+        {"@type": "Question","name": "I sell my home at a profit — will I owe taxes?","acceptedAnswer": {"@type": "Answer","text": "Not necessarily. The IRS allows you to exclude up to $250,000 in gains ($500,000 for married couples) on the sale of your primary residence, if you have lived there for at least 2 of the last 5 years."}},
+        {"@type": "Question","name": "What is the Augusta Rule?","acceptedAnswer": {"@type": "Answer","text": "The Augusta Rule (IRC Section 280A) allows homeowners to rent their home for up to 14 days per year without reporting that income as taxable. Business owners can pay themselves rent for legitimate business meetings held at their home, which is deductible to the business and tax-free to the homeowner personally."}},
+        {"@type": "Question","name": "How do I pay estimated quarterly taxes?","acceptedAnswer": {"@type": "Answer","text": "Self-employed individuals and business owners generally need to pay estimated taxes four times per year. For federal payments, use eftps.gov. For Hawaii state payments, use Hawaii Tax Online at hitax.hawaii.gov."}},
+        {"@type": "Question","name": "Can I deduct my vehicle for business?","acceptedAnswer": {"@type": "Answer","text": "Yes, if it is used for legitimate business purposes. You can use the standard mileage rate or deduct actual expenses. Business owners who purchase vehicles may also qualify for Section 179 or bonus depreciation to deduct a large portion of the cost in Year 1. Mileage logs are essential."}},
+        {"@type": "Question","name": "What documents do I need to get started?","acceptedAnswer": {"@type": "Answer","text": "For individuals: W-2s, 1099s, last year's return, and mortgage interest statements. For business owners: the above plus a profit and loss summary, any 1099s you issued, vehicle mileage logs, and home office details. A full checklist is available on our Documents Needed page."}}
       ]
     }
   ]
@@ -788,7 +795,7 @@ footer { background:var(--navy); color:rgba(255,255,255,0.55); border-top:1px so
 @media(max-width:640px){
 .hero-grid { grid-template-columns:1fr; }
 .portal-card { max-width:480px; }
-.hero-team-photo { display:none; }
+.hero-team-photo { display:block; max-height:260px; } .hero-team-photo img { height:260px; }
 .prob-cols { grid-template-columns:1fr; }
 .who-grid { grid-template-columns:1fr 1fr; }
 .services-layout { grid-template-columns:1fr; }
@@ -1025,17 +1032,17 @@ body { padding-bottom:72px; }
     <div class="vs-table">
       <div class="vs-col vs-col-prep">
         <div class="vs-col-header">
-          <div class="vs-col-icon">📋</div>
+          <div class="vs-col-icon"></div>
           <h3>Tax Preparation</h3>
           <p class="vs-col-sub">What every tax office does</p>
         </div>
         <ul class="vs-list">
-          <li><span class="vs-icon vs-no">✗</span> Organizes what already happened</li>
-          <li><span class="vs-icon vs-no">✗</span> Happens after December 31 — too late to change outcomes</li>
-          <li><span class="vs-icon vs-no">✗</span> Reports income and deductions as-is</li>
-          <li><span class="vs-icon vs-no">✗</span> One annual interaction — often rushed</li>
-          <li><span class="vs-icon vs-no">✗</span> Misses opportunities that closed during the year</li>
-          <li><span class="vs-icon vs-no">✗</span> Generic advice, not built around your situation</li>
+          <li><span class="vs-icon vs-no"></span> Organizes what already happened</li>
+          <li><span class="vs-icon vs-no"></span> Happens after December 31 — too late to change outcomes</li>
+          <li><span class="vs-icon vs-no"></span> Reports income and deductions as-is</li>
+          <li><span class="vs-icon vs-no"></span> One annual interaction — often rushed</li>
+          <li><span class="vs-icon vs-no"></span> Misses opportunities that closed during the year</li>
+          <li><span class="vs-icon vs-no"></span> Generic advice, not built around your situation</li>
         </ul>
         <div class="vs-result vs-result-prep">Result: You pay what you owe based on last year's decisions.</div>
       </div>
@@ -1046,17 +1053,17 @@ body { padding-bottom:72px; }
       </div>
       <div class="vs-col vs-col-plan">
         <div class="vs-col-header">
-          <div class="vs-col-icon">🎯</div>
+          <div class="vs-col-icon"></div>
           <h3>Tax Planning</h3>
           <p class="vs-col-sub">What RP Tax Service provides</p>
         </div>
         <ul class="vs-list">
-          <li><span class="vs-icon vs-yes">✓</span> Works before year-end — while you can still act</li>
-          <li><span class="vs-icon vs-yes">✓</span> Models income timing, deductions, and structure</li>
-          <li><span class="vs-icon vs-yes">✓</span> Identifies every legal reduction available to you</li>
-          <li><span class="vs-icon vs-yes">✓</span> Quarterly check-ins and year-round advisory access</li>
-          <li><span class="vs-icon vs-yes">✓</span> Entity structuring and S-Corp optimization analysis</li>
-          <li><span class="vs-icon vs-yes">✓</span> Strategy built around your income, business, and goals</li>
+          <li><span class="vs-icon vs-yes"></span> Works before year-end — while you can still act</li>
+          <li><span class="vs-icon vs-yes"></span> Models income timing, deductions, and structure</li>
+          <li><span class="vs-icon vs-yes"></span> Identifies every legal reduction available to you</li>
+          <li><span class="vs-icon vs-yes"></span> Quarterly check-ins and year-round advisory access</li>
+          <li><span class="vs-icon vs-yes"></span> Entity structuring and S-Corp optimization analysis</li>
+          <li><span class="vs-icon vs-yes"></span> Strategy built around your income, business, and goals</li>
         </ul>
         <div class="vs-result vs-result-plan">Result: You pay less because you planned — legally and strategically.</div>
       </div>
@@ -1074,6 +1081,23 @@ body { padding-bottom:72px; }
     <div class="section-tag">Meet the Team</div>
     <h2 class="section-title">Honolulu's family-owned tax firm,<br>led by IRS Enrolled Agents.</h2>
     <p class="section-body">An Enrolled Agent is the highest credential the IRS awards — federally licensed to represent taxpayers at every level of the agency. Both of our advisors hold it.</p>
+
+    <!-- EA CREDENTIAL EXPLAINER -->
+    <div style="background:var(--teal-pale);border:1px solid rgba(78,159,176,0.25);border-left:4px solid var(--teal);border-radius:8px;padding:28px 32px;margin:32px 0 40px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;">
+      <div>
+        <div style="font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--teal-dark);font-weight:600;margin-bottom:8px;">What is an EA?</div>
+        <p style="font-size:14px;color:var(--text-body);line-height:1.7;margin:0;">An IRS Enrolled Agent is a federally licensed tax professional — the <strong>highest credential</strong> the IRS issues to non-attorneys. EAs pass a rigorous three-part exam and complete ongoing continuing education required by the IRS.</p>
+      </div>
+      <div>
+        <div style="font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--teal-dark);font-weight:600;margin-bottom:8px;">EA vs. CPA vs. Preparer</div>
+        <p style="font-size:14px;color:var(--text-body);line-height:1.7;margin:0;">A CPA's primary license is for accounting and auditing. A general preparer has no federal license. An EA is <strong>IRS-specialized by design</strong> — the only credential issued directly by the U.S. Treasury for tax expertise.</p>
+      </div>
+      <div>
+        <div style="font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--teal-dark);font-weight:600;margin-bottom:8px;">What it means for you</div>
+        <p style="font-size:14px;color:var(--text-body);line-height:1.7;margin:0;">EAs have <strong>unlimited representation rights</strong> before the IRS — audits, collections, appeals, and back-tax issues. If the IRS ever comes calling, your advisor can stand next to you and speak for you.</p>
+      </div>
+    </div>
+
     <div class="team-grid">
       <div class="team-card">
         <img loading="lazy" src="/Robert.jpg" alt="Robert Purcell, Owner and IRS Enrolled Agent at RP Tax Service Honolulu" class="team-photo" onerror="teamFallback(this,'RP')">
@@ -1552,7 +1576,7 @@ body { padding-bottom:72px; }
             </div>
           </div>
           <div class="card-placeholder">
-            <span class="card-placeholder-icon">✨</span>
+            <span class="card-placeholder-icon"></span>
             <span class="card-placeholder-text">Disney<br>Lorcana<br>Coming Soon</span>
           </div>
           <div class="psa-bottom">DISNEY COLLECTIBLES</div>
@@ -1633,11 +1657,11 @@ body { padding-bottom:72px; }
         <p class="section-body" style="margin-bottom:36px">We use TaxDome — a secure, professional client portal — so working with us is organized, efficient, and fully transparent.</p>
         <div class="portal-features">
           <div class="pf-item">
-            <div class="pf-icon">🔒</div>
+            <div class="pf-icon"></div>
             <div><h4>Secure Document Portal</h4><p>Upload, receive, and sign documents in one encrypted location with bank-level security.</p></div>
           </div>
           <div class="pf-item">
-            <div class="pf-icon">✍️</div>
+            <div class="pf-icon"></div>
             <div><h4>E-Signatures</h4><p>Sign returns, authorizations, and engagement letters digitally with no printing required.</p></div>
           </div>
         </div>
@@ -1657,9 +1681,9 @@ body { padding-bottom:72px; }
               <div><h4>Johnson Consulting LLC</h4><p>S-Corp · Q4 Advisory Session Scheduled</p></div>
             </div>
             <div style="font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted);margin-bottom:10px;">Document Center</div>
-            <div class="pm-row"><span class="pm-row-icon">📄</span><span class="pm-row-label">2023 Federal Return</span><span class="pm-badge b-done">Complete</span></div>
-            <div class="pm-row"><span class="pm-row-icon">📋</span><span class="pm-row-label">Q3 Tax Projections</span><span class="pm-badge b-done">Delivered</span></div>
-            <div class="pm-row"><span class="pm-row-icon">✍️</span><span class="pm-row-label">S-Corp Election — 2024</span><span class="pm-badge b-pend">In Review</span></div>
+            <div class="pm-row"><span class="pm-row-icon"></span><span class="pm-row-label">2023 Federal Return</span><span class="pm-badge b-done">Complete</span></div>
+            <div class="pm-row"><span class="pm-row-icon"></span><span class="pm-row-label">Q3 Tax Projections</span><span class="pm-badge b-done">Delivered</span></div>
+            <div class="pm-row"><span class="pm-row-icon"></span><span class="pm-row-label">S-Corp Election — 2024</span><span class="pm-badge b-pend">In Review</span></div>
             <div class="pm-note"><strong>Advisor Note</strong>Based on Q3 revenue, look closely at the Section 179 immediate expensing threshold before Dec 31 closes.</div>
           </div>
         </div>
@@ -1914,6 +1938,62 @@ body { padding-bottom:72px; }
           </button>
           <div class="faq-a">Yes. We handle crypto tax reporting, cost basis tracking, capital gains strategy, DeFi income, NFT transactions, and 1099-K reconciliation for collectors and investors.</div>
         </div>
+        <div class="faq-item">
+          <button class="faq-q">
+            Should I form an S-Corp for my small business?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a">S-Corp election can reduce self-employment tax significantly — but it only makes sense once your net profit clears a certain threshold (typically around $40,000–$60,000 net), because the payroll and administrative costs have to be worth it. The right answer depends on your income level, business type, and how you're currently structured. This is one of the first things we look at in a discovery call.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">
+            I got married last year — how do I file?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a">If you were married by December 31st of the tax year, the IRS considers you married for the entire year. You have two options: Married Filing Jointly or Married Filing Separately. Joint filing is usually more favorable, but there are specific situations — such as certain income-based repayment plans, separated finances, or liability concerns — where filing separately is worth analyzing. We help you run both scenarios.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">
+            I sell my home at a profit — will I owe taxes?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a">Not necessarily. The IRS allows you to exclude up to $250,000 in gains ($500,000 for married couples) on the sale of your primary residence — if you've lived there for at least 2 of the last 5 years. Improvements you've made to the home also increase your cost basis and reduce taxable gain. If you're thinking about selling, a pre-sale conversation with us can clarify exactly what you'll owe (or not owe).</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">
+            What is the Augusta Rule and can I use it?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a">The Augusta Rule (IRC Section 280A) allows homeowners to rent their home for up to 14 days per year without reporting that income. Business owners who also use their home for legitimate business meetings can pay themselves rent — which is deductible to the business and tax-free to you personally. It requires proper documentation and a fair market rate to hold up. We can set this up correctly so you capture the benefit without the risk.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">
+            How do I pay estimated quarterly taxes?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a">Self-employed individuals and business owners generally need to pay estimated taxes four times per year to avoid IRS underpayment penalties. For federal payments, use the IRS Electronic Federal Tax Payment System at eftps.gov. For Hawaii state payments, use Hawaii Tax Online at hitax.hawaii.gov. We help clients calculate the right amounts and set up reminders so you're never caught off guard.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">
+            I renovated my home — can I deduct any of it?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a">For a personal residence, home improvements are generally not deductible in the year you pay for them. However, they increase your cost basis in the home — which reduces the taxable gain when you eventually sell. If you operate a business from home or rent part of your property, a portion of renovation costs may be deductible or depreciable. The answer varies by your situation.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">
+            Can I deduct my vehicle for business?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a">Yes — if it's used for legitimate business purposes. You can deduct using either the standard mileage rate or actual expenses (gas, insurance, depreciation, repairs). Business owners who purchase vehicles for their business may also qualify for Section 179 or bonus depreciation to deduct a large portion of the cost in Year 1. Proper mileage logs are essential to substantiate the deduction.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">
+            What should I bring (or upload) to get started?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a">For individuals: W-2s, 1099s, last year's return, mortgage interest statements (1098), and any notices from the IRS or state. For business owners: the above plus a profit &amp; loss summary, any 1099s you issued, vehicle mileage logs, and home office details if applicable. We have a full documents checklist on the <a href="/documents-needed/" style="color:var(--teal-dark);text-decoration:none;font-weight:500;">Documents Needed page →</a></div>
+        </div>
       </div>
     </div>
   </div>
@@ -1932,28 +2012,28 @@ body { padding-bottom:72px; }
         <div class="parking-badge">FREE PARKING</div>
         <div style="display:flex;flex-direction:column;gap:12px;">
           <div class="parking-detail">
-            <div class="parking-icon">🅿️</div>
+            <div class="parking-icon">P</div>
             <div>
               <h4>Free Client Parking On-Site</h4>
               <p>Complimentary parking is available for all clients visiting our office. No meters, no pay lots, no stress.</p>
             </div>
           </div>
           <div class="parking-detail">
-            <div class="parking-icon">📍</div>
+            <div class="parking-icon"></div>
             <div>
               <h4>930 McCully Street, Suite 203</h4>
               <p>Honolulu, HI 96826. We're located on McCully Street, convenient to the H-1 freeway and accessible from most parts of Oahu.</p>
             </div>
           </div>
           <div class="parking-detail">
-            <div class="parking-icon">🕐</div>
+            <div class="parking-icon"></div>
             <div>
               <h4>Office Hours</h4>
               <p>Monday – Friday: 9:00 AM – 5:00 PM<br>Saturday: By appointment only<br><span style="color:var(--teal-dark);font-weight:500;">Prefer to work online? Our TaxDome portal is open 24/7.</span></p>
             </div>
           </div>
           <div class="parking-detail">
-            <div class="parking-icon">💻</div>
+            <div class="parking-icon"></div>
             <div>
               <h4>Or Work With Us Remotely</h4>
               <p>Many clients across Hawaii and the mainland never come in at all — upload documents, sign returns, and communicate through our secure client portal.</p>
@@ -2000,7 +2080,7 @@ body { padding-bottom:72px; }
 <footer>
   <div class="container">
     <p style="font-size:12px;line-height:1.6;color:rgba(255,255,255,0.45);max-width:880px;margin-bottom:20px;">The strategies, examples, and figures on this site are for general educational purposes only and do not constitute tax, legal, or financial advice. Results vary based on individual facts and circumstances, and no specific outcome or savings is guaranteed. Please consult RP Tax Service directly for advice tailored to your situation.</p>
-    <p>© 2026 RP Tax Service · All rights reserved.</p>
+    <p>© 2026 RP Tax Service · All rights reserved. &nbsp;<span style="color:rgba(255,255,255,0.28);font-size:11px;">· Powered by Poke and Palusami </span></p>
     <p style="font-size:11px;color:rgba(255,255,255,0.3);margin-top:8px;">Honolulu tax preparer · Personal &amp; business tax returns · IRS Enrolled Agent · Hawaii GET · 930 McCully Street, Suite 203, Honolulu, HI 96826</p>
     <div style="display:flex;align-items:center;gap:24px;flex-wrap:wrap;margin-bottom:24px;">
       <img src="/irs-ea.jpg" alt="IRS Enrolled Agent" style="height:60px;width:auto;object-fit:contain;background:#fff;border-radius:6px;padding:4px;">
@@ -2077,7 +2157,7 @@ const ham = document.getElementById('hamburger');
 const navLinks = document.getElementById('nav-links');
 ham.addEventListener('click', () => {
   navLinks.classList.toggle('open');
-  ham.textContent = navLinks.classList.contains('open') ? '✕' : '☰';
+  ham.textContent = navLinks.classList.contains('open') ? '' : '☰';
 });
 navLinks.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => {
@@ -2151,10 +2231,10 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
   .then(r => r.json())
   .then(data => {
     if (data.success) {
-      status.textContent = '✓ Message sent! We\'ll be in touch shortly.';
+      status.textContent = ' Message sent! We\'ll be in touch shortly.';
       status.style.color = '#166534';
       status.style.display = 'block';
-      btn.textContent = 'Sent ✓';
+      btn.textContent = 'Sent ';
       setTimeout(() => { closeModal(); btn.disabled = false; btn.textContent = 'Send Message →'; status.style.display = 'none'; e.target.reset(); }, 2500);
     } else {
       throw new Error('Send failed');
@@ -2427,13 +2507,13 @@ document.querySelector('.edu-tabs')?.addEventListener('click', e => {
 <div class="faq-widget-panel" id="faqWidgetPanel">
   <div class="faq-widget-header">
     <div class="faq-widget-header-left">
-      <div class="faq-widget-avatar">🏢</div>
+      <div class="faq-widget-avatar"></div>
       <div>
         <div class="faq-widget-title">RP Tax Service</div>
         <div class="faq-widget-sub">Honolulu, Hawaii · IRS Enrolled Agents</div>
       </div>
     </div>
-    <button class="faq-widget-close" onclick="toggleFaqWidget()" aria-label="Close">✕</button>
+    <button class="faq-widget-close" onclick="toggleFaqWidget()" aria-label="Close"></button>
   </div>
 
   <div class="faq-widget-body" id="faqWidgetBody">
@@ -2463,7 +2543,7 @@ document.querySelector('.edu-tabs')?.addEventListener('click', e => {
   </div>
 
   <div class="faq-widget-footer">
-    <a href="tel:+18089467297" class="faq-footer-btn faq-footer-call">📞 Call Now</a>
+    <a href="tel:+18089467297" class="faq-footer-btn faq-footer-call"> Call Now</a>
     <a href="#contact" class="faq-footer-btn faq-footer-consult">Book A Discovery Call</a>
   </div>
 </div>
