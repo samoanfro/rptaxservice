@@ -277,10 +277,7 @@ nav.elevated { box-shadow:var(--shadow-md); }
 
 /* ── HERO ── */
 .hero {
-  background:
-    linear-gradient(to right, rgba(18,34,60,0.93) 0%, rgba(18,34,60,0.78) 36%, rgba(18,34,60,0.22) 58%, rgba(18,34,60,0.10) 100%),
-    linear-gradient(to bottom, rgba(18,34,60,0.25) 0%, rgba(18,34,60,0.0) 40%),
-    url('/hero-team.jpg') center 20% / cover no-repeat;
+  background: linear-gradient(160deg, var(--navy) 0%, var(--navy-mid) 45%, var(--teal-deeper) 100%);
   min-height:0;
   display:flex; align-items:center;
   position:relative; overflow:hidden;
@@ -425,6 +422,20 @@ nav.elevated { box-shadow:var(--shadow-md); }
   transition:all 0.3s;
 }
 .btn-outline-light:hover { background:var(--teal-dark); border-color:var(--teal-dark); color:#fff; }
+.hero-team-photo {
+  border-radius:10px;
+  overflow:hidden;
+  margin-bottom:14px;
+  border:1px solid rgba(255,255,255,0.10);
+  line-height:0;
+}
+.hero-team-photo img {
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  object-position:center 22%;
+  display:block;
+}
 .portal-card { background:rgba(255,255,255,0.06); border:1px solid rgba(74,155,171,0.25); border-radius:12px; overflow:hidden; backdrop-filter:blur(8px); }
 .portal-card-header { background:var(--teal-deeper); padding:18px 24px; display:flex; align-items:center; gap:12px; }
 .portal-card-header h3 { color:#fff; font-size:14px; font-weight:500; }
@@ -777,6 +788,7 @@ footer { background:var(--navy); color:rgba(255,255,255,0.55); border-top:1px so
 @media(max-width:640px){
 .hero-grid { grid-template-columns:1fr; }
 .portal-card { max-width:480px; }
+.hero-team-photo { display:none; }
 .prob-cols { grid-template-columns:1fr; }
 .who-grid { grid-template-columns:1fr 1fr; }
 .services-layout { grid-template-columns:1fr; }
@@ -946,6 +958,9 @@ body { padding-bottom:72px; }
 
       <!-- PORTAL CARD IN HERO -->
       <div>
+        <div class="hero-team-photo">
+          <img src="/hero-team.jpg" alt="Robert Purcell and Jacob Siaosi — RP Tax Service Honolulu">
+        </div>
         <div class="portal-card">
           <div class="portal-card-header">
             <img src="/logo.png" alt="RP Tax Service" style="height:36px;width:auto;object-fit:contain;filter:brightness(0) invert(1);opacity:0.9;">
